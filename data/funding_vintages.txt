@@ -1,0 +1,24 @@
+# Indian spacetech private funding (USD m), as REPORTED in successive publications, almost all citing Tracxn.
+# Purpose: show measurement instability of the only available "hard" investment series (cf. Millennium Post on data opacity).
+# vintage_date|publisher (relay)|source cited|year|usd_m|rounds|note|url
+2023-08-26|DT Next (IANS)|Tracxn|2020|28||annual|https://www.dtnext.in/news/business/indian-space-tech-sector-gets-62-mn-in-funding-this-year-up-60-732265
+2023-08-26|DT Next (IANS)|Tracxn|2021|96||annual|https://www.dtnext.in/news/business/indian-space-tech-sector-gets-62-mn-in-funding-this-year-up-60-732265
+2023-08-26|DT Next (IANS)|Tracxn|2022|112||annual|https://www.dtnext.in/news/business/indian-space-tech-sector-gets-62-mn-in-funding-this-year-up-60-732265
+2023-08-26|DT Next (IANS)|Tracxn|2023|62||YTD (to Aug)|https://www.dtnext.in/news/business/indian-space-tech-sector-gets-62-mn-in-funding-this-year-up-60-732265
+2024-07-31|Tele.net|Tracxn|2021|37.6||annual|https://tele.net.in/indian-space-tech-startups-secured-126-million-in-funding-in-2023/
+2024-07-31|Tele.net|Tracxn|2022|118||annual|https://tele.net.in/indian-space-tech-startups-secured-126-million-in-funding-in-2023/
+2024-07-31|Tele.net|Tracxn|2023|126||annual|https://tele.net.in/indian-space-tech-startups-secured-126-million-in-funding-in-2023/
+2024-07-31|Tele.net|Tracxn|2024|10.8||YTD|https://tele.net.in/indian-space-tech-startups-secured-126-million-in-funding-in-2023/
+2025-01-06|Business Standard (Reuters)|Tracxn|2023|130.2||annual|https://business-standard.com/industry/news/india-s-space-sector-funding-drops-55-in-2024-amid-global-downturn-125010600404_1.html
+2025-01-06|Business Standard (Reuters)|Tracxn|2022|98.0||derived: 130.2/1.329 (reported +32.9% y/y)|https://business-standard.com/industry/news/india-s-space-sector-funding-drops-55-in-2024-amid-global-downturn-125010600404_1.html
+2025-01-06|Business Standard (Reuters)|Tracxn|2024|59.1||annual|https://business-standard.com/industry/news/india-s-space-sector-funding-drops-55-in-2024-amid-global-downturn-125010600404_1.html
+2025-01-06|Business Standard (Reuters)|Tracxn|2020-2024|353.5|72|cumulative|https://business-standard.com/industry/news/india-s-space-sector-funding-drops-55-in-2024-amid-global-downturn-125010600404_1.html
+2026-07-29|Entrepreneur India|Tracxn|2021|43|12|annual|https://india.entrepreneur.com/business-news/indias-spacetech-attracts-usd-871-mn-skyroot-leads-the-pack-tracxn-report
+2026-07-29|Entrepreneur India|Tracxn|2025|200|53|annual (record)|https://india.entrepreneur.com/business-news/indias-spacetech-attracts-usd-871-mn-skyroot-leads-the-pack-tracxn-report
+2026-07-29|Entrepreneur India|Tracxn|2026|113|24|YTD (to Jul)|https://india.entrepreneur.com/business-news/indias-spacetech-attracts-usd-871-mn-skyroot-leads-the-pack-tracxn-report
+2026-07-29|Entrepreneur India|Tracxn|all-time|871|241|cumulative to Jul-2026, 285 companies|https://india.entrepreneur.com/business-news/indias-spacetech-attracts-usd-871-mn-skyroot-leads-the-pack-tracxn-report
+2026-08-12|Telangana Today (Lok Sabha written reply)|Govt of India|all-time|618.5||cumulative to 31-Mar-2026|https://telanganatoday.com/113-space-activity-approvals-granted-to-52-non-government-entities-jitendra-singh
+# IN-SPACe regulatory pipeline (Parliament replies relayed in press)
+2023-02-09|Tele.net (Lok Sabha)|Govt|applications|135||cumulative NGE applications to IN-SPACe|https://tele.net.in/in-space-has-received-135-applications-from-non-governmental-entities-till-date-government-informs-parliament/
+2025-12-11|Tribune (Parliament)|Govt|authorisations|110||cumulative since 2020|https://www.tribuneindia.com/news/india/110-in-space-authorisations-issued-to-pvt-players-since-2020
+2026-08-12|Telangana Today (Lok Sabha)|Govt|authorisations|113||to 52 NGEs (18 start-ups); ~440 registered space start-ups|https://telanganatoday.com/113-space-activity-approvals-granted-to-52-non-government-entities-jitendra-singh
