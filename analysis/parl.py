@@ -1,5 +1,5 @@
 import pandas as pd, json
-rows=[l.strip().split("|") for l in open("/home/claude/data/lok_sabha_space_questions.txt") if l[:2] in ("16","17","18") and "/" in l.split("|")[0]]
+rows=[l.strip().split("|") for l in open("../data/lok_sabha_space_questions.txt") if l[:2] in ("16","17","18") and "/" in l.split("|")[0]]
 cols="session|first_date|last_date|all_q|space_q|newspace|policy|sustain_security|international|exploration_hsf|launch_infra|applications|budget_workforce|general".split("|")
 df=pd.DataFrame(rows,columns=cols)
 for c in cols[3:]: df[c]=df[c].astype(int)

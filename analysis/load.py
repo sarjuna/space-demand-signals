@@ -1,5 +1,5 @@
 import re, pandas as pd, numpy as np
-D = "/home/claude/data/"
+D = "../data/"
 
 def months(start, n):
     return pd.period_range(pd.Period(f"{start[:4]}-{start[4:]}", "M"), periods=n, freq="M")

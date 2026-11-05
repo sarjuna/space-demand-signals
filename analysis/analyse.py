@@ -120,5 +120,5 @@ out = dict(
     payload_table=[dict(date=str(r.date.date()), name=r.name, owner=r.owner, cls=r.cls) for r in P.itertuples()],
     annual=yr.round(3).reset_index().rename(columns={"index": "year"}).to_dict("records"),
     stats=res)
-json.dump(json.loads(json.dumps(out, default=str)), open("/home/claude/analysis/out.json", "w"))
+json.dump(json.loads(json.dumps(out, default=str)), open("out.json", "w"))
 print(json.dumps(res, indent=1, default=str))
