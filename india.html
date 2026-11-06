@@ -120,7 +120,7 @@
 <section class="rq"><div class="rq-head"><div class="rq-num">SRC</div><h2>Sources</h2><p>Raw files, analysis code and checksums accompany this dashboard in the conversation.</p></div>
 <ol class="sources" id="src"></ol></section>
 
-<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School. Figures are reproducible from the cited public sources as pulled on 5 Nov 2026; Google Trends values are sampled indices and shift slightly between pulls.</footer>
+<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on 5 Nov 2026</footer>
 </div>
 
 
@@ -300,7 +300,7 @@ const src=[
  ['ISRO: ₹1,000 crore VC fund approved (24 Oct 2024)','https://www.isro.gov.in/UnionCabinetapprovesestablishment_INSPACe.html'],
  ['Chandrayaan-3 landing time (18:04 IST, 23 Aug 2023)','https://thesouthfirst.com/news/604-pm-23-august-chandrayaan-3-all-set-to-soft-land-on-the-moon/']
 ].concat(D.funding.map(f=>[f.pub+' ('+f.vintage+')',f.url]).filter((v,i,a)=>a.findIndex(x=>x[1]===v[1])===i))
- .concat([['Millennium Post: Financing India\'s space future','https://www.millenniumpost.in/opinion/financing-indias-space-future-674267']]);
+ ;
 document.getElementById('src').innerHTML=src.map(([t,u])=>`<li><a href="${u}" target="_blank" rel="noopener">${t}</a></li>`).join('');
 
 /* ---------- render & theme ---------- */

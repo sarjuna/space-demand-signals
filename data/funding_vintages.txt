@@ -1,5 +1,5 @@
 # Indian spacetech private funding (USD m), as REPORTED in successive publications, almost all citing Tracxn.
-# Purpose: show measurement instability of the only available "hard" investment series (cf. Millennium Post on data opacity).
+# Purpose: show measurement instability of the only available "hard" investment series.
 # vintage_date|publisher (relay)|source cited|year|usd_m|rounds|note|url
 2023-08-26|DT Next (IANS)|Tracxn|2020|28||annual|https://www.dtnext.in/news/business/indian-space-tech-sector-gets-62-mn-in-funding-this-year-up-60-732265
 2023-08-26|DT Next (IANS)|Tracxn|2021|96||annual|https://www.dtnext.in/news/business/indian-space-tech-sector-gets-62-mn-in-funding-this-year-up-60-732265

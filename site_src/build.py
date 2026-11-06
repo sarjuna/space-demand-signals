@@ -49,7 +49,11 @@ us_scripts = f'{data_tag(U)}\n{CHART}\n<script src="assets/charts.js"></script>\
 src = open(IN_SRC).read()
 in_body = src[src.index('<div class="wrap">'):src.index('<script id="data"')]
 in_body = in_body.replace("<h1>India Space Demand Signals</h1>", "<h1>India</h1>")
+import re as _re
+in_body = _re.sub(r"<footer>.*?</footer>", "<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on 5 Nov 2026</footer>", in_body, flags=_re.S)
 in_scripts = src[src.index('<script id="data"'):src.rindex("</body>")].strip()
+in_scripts = in_scripts.replace(".concat([['Millennium Post: Financing India\\'s space future','https://www.millenniumpost.in/opinion/financing-indias-space-future-674267']])", "")
+assert "millenniumpost" not in in_scripts
 assert "chart.umd.min.js" in in_scripts
 
 # ---------- Overview ----------
