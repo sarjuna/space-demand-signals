@@ -1,0 +1,120 @@
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Space Economy Initiative · Working dashboard · United States</div>
+  <h1>United States</h1>
+  <p class="lede">The same test as the India page, run on the world's largest space economy: do public attention, online sentiment, investor prices and federal policy activity track the real build-out in launches, satellites and licensed operations? Every series below is pulled from a public source and traced to it.</p>
+  <div class="meta">
+    <span>Data as of <b>6 Nov 2026</b></span>
+    <span>Window <b>Jan 2016 – Oct 2026</b> (monthly)</span>
+    <span>Discourse: <b>Google Trends (US) · Wikipedia · Hacker News · NYSE/Nasdaq prices · Congress · Federal Register · SEC EDGAR</b></span>
+    <span>Capacity: <b>GCAT launch & satellite catalogue · FAA licensed operations</b></span>
+  </div>
+</header>
+
+<div class="findings six" id="findings"></div>
+
+<!-- RQ1 -->
+<section class="rq" id="rq1">
+  <div class="rq-head"><div class="rq-num">RQ1</div><h2>Does public attention track launch cadence?</h2>
+  <p>Public Attention Index (PAI): mean z-score of log Google Trends (US) for NASA, Artemis and Space Force, English-Wikipedia reading of the NASA, Artemis program and US Space Force articles (per million total views), and the monthly count of Hacker News stories about NASA, Artemis or the Space Force. NewSpace Attention Index (NAI): Google Trends for SpaceX, Starlink, Blue Origin, Rocket Lab and "space stocks", Wikipedia reading of SpaceX, Starlink, Blue Origin, Rocket Lab and Starship, and Hacker News stories about SpaceX, Starship, Starlink, Blue Origin or Rocket Lab.</p></div>
+  <div class="panel">
+    <div class="controls"><div class="seg" role="group" aria-label="Index view">
+      <button id="v-idx" aria-pressed="true">Indices</button><button id="v-pai" aria-pressed="false">PAI components</button><button id="v-nai" aria-pressed="false">NAI components</button></div></div>
+    <div class="legend" id="lg1"></div>
+    <div class="chartbox tall"><canvas id="c-index" aria-label="Monthly attention indices"></canvas></div>
+    <div class="sub" style="margin:10px 0 4px">US orbital launch attempts per month (same time axis). Red: months with a failure.</div>
+    <div class="chartbox short"><canvas id="c-lm" aria-label="Monthly US orbital launch attempts"></canvas></div>
+    <div class="statline" id="sl1"></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Launches by provider, per year</h3><div class="sub">US orbital launch attempts (GCAT; launch provider registered in the US). 2026 runs to October.</div><div class="legend" id="lg-ly"></div>
+      <div class="chartbox"><canvas id="c-ly"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read1"></div></div>
+  </div>
+  <div class="panel" style="margin-top:16px"><h3>Wikipedia reading, per million English-Wikipedia views</h3><div class="sub">Annual mean of monthly user page views per million total English-Wikipedia views. Log scale. Each series starts once the article reaches 1,000 views a month. 2026 to October.</div><div class="legend" id="lg-wiki"></div>
+    <div class="chartbox"><canvas id="c-wiki" aria-label="Annual Wikipedia reading of US space articles"></canvas></div></div>
+</section>
+
+<!-- RQ2 -->
+<section class="rq" id="rq2">
+  <div class="rq-head"><div class="rq-num">RQ2</div><h2>Do investors price space events, and does attention lead prices?</h2>
+  <p>Unlike India, the US has listed NewSpace companies. NewSpace basket: equal-weight portfolio of ten space-native firms, each entering after its de-SPAC or IPO date (Virgin Galactic, AST SpaceMobile, Spire, Rocket Lab, Redwire, BlackSky, Planet, Intuitive Machines, Voyager, Firefly). SpaceX (SPCX, listed 12 June 2026) is kept out of the basket. Benchmark: S&amp;P 500. Also shown: the Procure Space ETF (UFO), a broader, partly non-US basket.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Cumulative return above the S&amp;P 500</h3><div class="sub">Compounded monthly return relative to the S&amp;P 500 (−50% means half the S&amp;P's performance). Basket from Sep 2021 (when it reached six members); UFO from May 2019.</div><div class="legend" id="lg-cum"></div>
+      <div class="chartbox"><canvas id="c-cum"></canvas></div></div>
+    <div class="panel"><h3>Lead–lag: NewSpace attention vs basket</h3><div class="sub">Correlation of monthly ΔNAI at t with basket excess return at t+k, Sep 2021–Oct 2026. Positive k: attention leads; negative k: prices lead. Filled bars: p &lt; 0.05 (uncorrected).</div>
+      <div class="chartbox"><canvas id="c-xc"></canvas></div></div>
+  </div>
+  <div class="tablewrap"><table id="t-events"><thead><tr><th>Event</th><th>t0</th><th class="num">Members</th><th class="num">Basket [0,+1]</th><th class="num">t</th><th class="num">Basket [0,+5]</th><th class="num">t</th><th class="num">UFO [0,+1]</th><th class="num">t</th><th class="num">UFO [0,+5]</th><th class="num">t</th></tr></thead><tbody></tbody></table></div>
+  <div class="grid2">
+    <div class="panel"><h3>Two windows: Artemis II and the SpaceX IPO</h3><div class="sub">Cumulative basket return minus S&amp;P 500, trading days −10 to +10.</div><div class="legend" id="lg-win"></div>
+      <div class="chartbox"><canvas id="c-win"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read2"></div></div>
+  </div>
+</section>
+
+<!-- RQ3 -->
+<section class="rq" id="rq3">
+  <div class="rq-head"><div class="rq-num">RQ3</div><h2>Does policy activity lead or follow the build-out?</h2>
+  <p>Two federal records. Congress: all 415 bills and resolutions indexed by the Library of Congress under "Space flight and exploration" or "Spacecraft and satellites", 113th–119th Congresses (2013–2026), classified by title. Federal Register: all 1,072 documents from 2014 to October 2026 whose text mentions launch vehicles, spacecraft, orbital debris, outer space, space launch or commercial space.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Commercial share of space legislation</h3><div class="sub">Share of space-indexed bills and resolutions whose title concerns commercial or private activity, by Congress. 119th Congress still being indexed.</div>
+      <div class="chartbox"><canvas id="c-bills"></canvas></div></div>
+    <div class="panel"><h3>Space-related Federal Register documents</h3><div class="sub">Per year, by issuing agency. FAA licenses launches; FCC licenses satellites and spectrum. 2026 runs to October.</div><div class="legend" id="lg-fr"></div>
+      <div class="chartbox"><canvas id="c-fr"></canvas></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel read"><h3>Reading</h3><div id="read3"></div></div>
+    <div class="panel"><h3>Policy timeline</h3><div class="sub">Space rules, proposed rules (FAA, FCC, NOAA) and presidential documents in the Federal Register.</div>
+      <div class="tablewrap" style="max-height:360px;overflow:auto"><table id="t-fr"><thead><tr><th>Date</th><th>Type</th><th>Agency</th><th>Title</th></tr></thead><tbody></tbody></table></div>
+      <details style="margin-top:10px"><summary>All commercial-space bill titles</summary><div class="tablewrap" style="max-height:260px;overflow:auto;margin-top:8px"><table id="t-bills"><tbody></tbody></table></div></details></div>
+  </div>
+</section>
+
+<!-- RQ4 -->
+<section class="rq" id="rq4">
+  <div class="rq-head"><div class="rq-num">RQ4</div><h2>What does online sentiment say, and does it move with events?</h2>
+  <p>NLP layer: 17,640 Hacker News story titles (2016–2026) mentioning US space programmes or companies, each scored with VADER, a standard lexicon-based sentiment model (compound score −1 to +1). Hacker News stands in for X and Reddit, which could not be collected here; it is an English-language, tech-industry audience.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Story volume</h3><div class="sub">Hacker News stories per month mentioning state programmes (NASA, Artemis, Space Force) or NewSpace firms.</div><div class="legend" id="lg-hnv"></div>
+      <div class="chartbox"><canvas id="c-hnv"></canvas></div></div>
+    <div class="panel"><h3>Title sentiment</h3><div class="sub">Monthly mean VADER compound score (thin) and 12-month rolling mean (thick).</div>
+      <div class="chartbox"><canvas id="c-hns"></canvas></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Sentiment around triggers</h3><div class="sub">Mean title sentiment in the 7 days from the event minus the mean over days −60 to −8, with 95% interval (Welch). Filled: p &lt; 0.05.</div>
+      <div class="chartbox tall"><canvas id="c-hne"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read4"></div>
+      <details><summary>Most-upvoted stories in each event window</summary><div class="tablewrap" style="max-height:260px;overflow:auto;margin-top:8px"><table id="t-tops"><thead><tr><th>Event</th><th class="num">Points</th><th class="num">VADER</th><th>Title</th></tr></thead><tbody></tbody></table></div></details></div>
+  </div>
+</section>
+
+<!-- RQ5 -->
+<section class="rq" id="rq5">
+  <div class="rq-head"><div class="rq-num">RQ5</div><h2>What do the hard indicators show, and is capital observable?</h2>
+  <p>The capacity side. Launch and satellite counts come from the GCAT catalogue; licensed operations from the FAA. Capital is tracked through securities filings: how often companies' SEC filings use the language of the space economy.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>US-owned satellites launched per year</h3><div class="sub">Starlink vs other commercial vs government (civil and defence). 2026 catalogue complete only to July.</div><div class="legend" id="lg-pl"></div>
+      <div class="chartbox"><canvas id="c-pl"></canvas></div></div>
+    <div class="panel"><h3>FAA-licensed operations vs GCAT launches</h3><div class="sub">FAA: licensed launches and re-entries by fiscal year (FY2015–FY2024). GCAT: US orbital launch attempts by calendar year.</div><div class="legend" id="lg-faa"></div>
+      <div class="chartbox"><canvas id="c-faa"></canvas></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>"Space economy" in SEC filings</h3><div class="sub">EDGAR full-text hits, all form types, by year. 2026 to 5 November.</div>
+      <div class="chartbox short"><canvas id="c-sec1"></canvas></div>
+      <h3 style="margin-top:14px">"Low Earth orbit" in annual reports</h3><div class="sub">EDGAR full-text hits in 10-K filings, by year.</div>
+      <div class="chartbox short"><canvas id="c-sec2"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read5"></div></div>
+  </div>
+</section>
+
+<section class="rq" id="coverage">
+  <div class="rq-head"><div class="rq-num">DATA</div><h2>What could and could not be measured</h2><p>Sources mirror the India study where possible. Full method notes are on the Methods &amp; data page.</p></div>
+  <div class="cov" id="cov"></div>
+</section>
+
+<section class="rq"><div class="rq-head"><div class="rq-num">SRC</div><h2>Sources</h2><p>Raw files and analysis code are in the repository's data and analysis folders.</p></div>
+<ol class="sources" id="src"></ol></section>
+
+<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School. Figures are reproducible from the cited public sources as pulled on 6 Nov 2026; Google Trends values are sampled indices and shift slightly between pulls.</footer>
+</div>

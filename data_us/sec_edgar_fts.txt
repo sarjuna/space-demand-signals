@@ -1,0 +1,16 @@
+# SEC EDGAR full-text search (efts.sec.gov/LATEST/search-index), hits.total by filing-date year, retrieved 2026-11-06.
+# A hit is one matching document in EDGAR's full-text index (a filing's main document or exhibit). All values had relation "eq".
+# 2026 covers 1 Jan - 5 Nov 2026.
+# year|lowearthorbit_10K|spaceeconomy_allforms
+# lowearthorbit_10K = q="low earth orbit", forms=10-K ; spaceeconomy_allforms = q="space economy", all form types
+2016|13|1
+2017|14|1
+2018|13|28
+2019|17|23
+2020|25|25
+2021|27|244
+2022|40|209
+2023|48|136
+2024|50|99
+2025|44|142
+2026|54|560

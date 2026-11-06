@@ -1,0 +1,134 @@
+# Federal Register API (federalregister.gov/api/v1), pulled 2026-11-06. Full-text term query:
+#   "launch vehicle" | spacecraft | "orbital debris" | "outer space" | "space launch" | "commercial space"
+# publication dates 2014-01-01..2026-10-31. 1,072 documents (matches the API's yearly facet totals exactly).
+# commercial flag = title or abstract matches /\bcommercial\b|licens|private sector|\bindustry\b|\bmarket/i
+# YEAR year|n|commercial|Rule|Proposed Rule|Notice|Presidential
+2014|94|42|26|21|47|0
+2015|61|27|17|20|24|0
+2016|88|41|28|15|43|2
+2017|44|15|10|11|21|2
+2018|71|32|7|15|44|5
+2019|66|28|12|16|38|0
+2020|68|30|17|6|39|6
+2021|71|31|17|13|40|1
+2022|101|28|22|17|62|0
+2023|124|34|26|25|72|1
+2024|124|42|36|21|67|0
+2025|84|29|18|12|52|2
+2026|76|29|6|16|53|1
+# TOP AGENCIES (count of documents whose first listed sub-agency is):
+# FAA 227 | BIS (export controls) 146 | FCC 137 | NOAA 86 | PHMSA 83 | NASA 61 | State 54 | Energy 27 | Coast Guard 25 | Office of the Secretary 24 | EPA 23 | EOP 21
+# AGENCY-YEAR (documents listing the agency anywhere) year|FAA|FCC|BIS|NOAA|NASA|PHMSA
+2014|29|10|8|4|12|0
+2015|14|3|9|1|12|3
+2016|20|4|6|10|3|3
+2017|7|4|4|8|5|2
+2018|22|5|3|7|3|10
+2019|12|8|6|10|4|7
+2020|13|9|8|6|5|8
+2021|19|12|4|5|2|7
+2022|11|10|24|10|2|8
+2023|23|19|28|5|9|11
+2024|16|21|26|12|4|10
+2025|20|17|13|6|0|10
+2026|21|15|7|2|3|12
+# SELECTED rules, proposed rules (FAA/FCC/NOAA, space-related title) and presidential documents: date|type|agency|title
+2014-02-12|Rule|FCC|Comprehensive Review of Licensing and Operating Rules for Satellite Services
+2014-02-24|Rule|NOAA|Taking and Importing Marine Mammals; Taking Marine Mammals Incidental to U.S. Air Force Launches, Aircraft and Helicopter Operations, and Harbor Activities Related to Launch Vehicles From Vandenberg Air Force Base (VAFB), California
+2014-07-21|PropRule|FAA|Changing the Collective Risk Limits for Launches and Reentries and Clarifying the Risk Limit Used To Establish Hazard Areas for Ships and Aircraft
+2014-07-22|PropRule|FAA|Exclusion of Tethered Launches From Licensing Requirements
+2014-09-03|Rule|FCC|Rules Governing the Licensing of, and Spectrum Usage by, Commercial Earth Stations and Space Stations
+2014-10-16|Rule|FAA|Civil Penalty Inflation Adjustment for Commercial Space Adjudications; Second Amendment
+2014-10-31|PropRule|FCC|Comprehensive Review of Licensing and Operating Rules for Satellite Services
+2015-01-13|PropRule|FAA|Reciprocal Waivers of Claims for Licensed or Permitted Launch and Reentry Activities
+2015-06-04|Rule|FAA|Exclusion of Tethered Launches From Licensing Requirements
+2015-09-02|PropRule|FAA|Temporary Flight Restrictions in the Proximity of Launch and Reentry Operations
+2016-06-29|Pres|EOP|Establishment of the Stonewall National Monument
+2016-07-20|Rule|FAA|Changing the Collective Risk Limits for Launches and Reentries and Clarifying the Risk Limit Used To Establish Hazard Areas for Ships and Aircraft
+2016-08-18|Rule|FCC|Comprehensive Review of Licensing and Operating Rules for Satellite Services
+2016-08-18|Rule|FAA|Reciprocal Waivers of Claims for Licensed or Permitted Launch and Reentry Activities
+2016-08-30|Rule|FAA|Licensing and Safety Requirements for Launch; Technical Amendment
+2016-08-30|Rule|FAA|Commercial Space Transportation Reusable Launch Vehicle and Reentry Licensing Regulations; Technical Amendment
+2016-12-21|Pres|EOP|Wright Brothers Day, 2016
+2017-01-19|PropRule|NOAA|Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to Space Vehicle and Missile Launch Operations at Pacific Spaceport Complex Alaska, Kodiak Island, Alaska
+2017-03-24|Rule|NOAA|Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to Space Vehicle and Missile Launch Operations
+2017-07-07|Pres|EOP|Reviving the National Space Council
+2017-08-02|PropRule|FAA|Temporary Flight Restrictions in the Proximity of Launch and Reentry Operations; Withdrawal
+2017-12-21|Pres|EOP|Wright Brothers Day, 2017
+2018-01-11|PropRule|FAA|Proposed Amendment for Restricted Area R-4403A; Stennis Space Center, MS
+2018-04-25|Pres|EOP|Delegation of Authority To Approve Certain Military Decorations
+2018-05-01|Rule|FAA|Amendment for Restricted Area R-4403A; Stennis Space Center, MS
+2018-05-24|PropRule|FCC|Streamlining Licensing Procedures for Small Satellites
+2018-05-30|Pres|EOP|Streamlining Regulations on Commercial Use of Space
+2018-06-21|Pres|EOP|National Space Traffic Management Policy
+2018-06-29|PropRule|NOAA|Licensing Private Remote Sensing Space Systems
+2018-10-30|Pres|EOP|Developing a Sustainable Spectrum Strategy for America's Future
+2018-12-19|Pres|EOP|Wright Brothers Day, 2018
+2019-01-24|PropRule|NOAA|Taking and Importing Marine Mammals; Taking Marine Mammals Incidental to U.S. Air Force Launches and Operations at Vandenberg Air Force Base, California
+2019-02-11|PropRule|NOAA|Taking and Importing Marine Mammals; Taking Marine Mammals Incidental to U.S. Air Force Launches and Operations at Vandenberg Air Force Base, California
+2019-02-19|PropRule|FCC|Mitigation of Orbital Debris in the New Space Age
+2019-04-10|Rule|NOAA|Taking and Importing Marine Mammals; Taking Marine Mammals Incidental to U.S. Air Force Launches and Operations at Vandenberg Air Force Base, California
+2019-04-15|PropRule|FAA|Streamlined Launch and Reentry Licensing Requirements
+2019-05-14|PropRule|NOAA|Licensing of Private Remote Sensing Space Systems
+2019-05-31|PropRule|FAA|Streamlined Launch and Reentry Licensing Requirements; Extension of Comment Period
+2019-07-22|PropRule|FAA|Streamlined Launch and Reentry Licensing Requirements; Notice of Availability and Extension of Comment Period
+2020-04-10|Pres|EOP|Encouraging International Support for the Recovery and Use of Space Resources
+2020-05-20|Rule|NOAA|Licensing of Private Remote Sensing Space Systems
+2020-06-29|Pres|EOP|Presidential Determination Pursuant to Section 303 of the Defense Production Act of 1950, as Amended
+2020-07-20|Rule|FCC|Streamlining Licensing Procedures for Small Satellites
+2020-08-25|PropRule|FCC|Mitigation of Orbital Debris in the New Space Age
+2020-08-25|Rule|FCC|Mitigation of Orbital Debris in the New Space Age
+2020-09-10|Pres|EOP|Cybersecurity Principles for Space Systems
+2020-12-10|Rule|FAA|Streamlined Launch and Reentry License Requirements
+2020-12-16|Pres|EOP|The National Space Policy
+2020-12-21|Pres|EOP|Wright Brothers Day, 2020
+2020-12-21|Pres|EOP|National Strategy for Space Nuclear Power and Propulsion
+2021-01-14|Pres|EOP|Promoting Small Modular Reactors for National Defense and Space Exploration
+2021-02-01|PropRule|FCC|Commission Rules To Enable GSO Fixed-Satellite Service (Space-to-Earth) Operations in the 17.3-17.8 GHz Band, To Modernize Certain Rules Applicable to 17/24 GHz BSS Space Stations, and To Establish Off-Axis Uplink Power Limits for Extended Ka-Band FSS Operations
+2021-03-09|Rule|FAA|Streamlined Launch and Reentry License Requirements
+2021-04-21|Rule|FAA|Statement of Policy on Waiving Ground Safety Regulations at Cape Canaveral Air Force Station, Vandenberg Air Force Base, Wallops Flight Facility, and Kennedy Space Center
+2021-06-10|PropRule|FCC|Allocation of Spectrum for Non-Federal Space Launch Operations
+2021-06-28|Rule|FCC|Allocation of Spectrum for Non-Federal Space Launch Operations
+2021-09-20|Rule|FCC|Mitigation of Orbital Debris in the New Space Age
+2022-09-14|PropRule|FCC|Space Innovation; Facilitating Capabilities for In-Space Servicing, Assembly, and Manufacturing
+2022-11-25|Rule|FCC|Amendment to Enable GSO Fixed-Satellite Service (Space-to-Earth) Operations in the 17.3-17.8 GHz Band, To Modernize Certain Rules Applicable to 17/24 GHz BSS Space Stations, and To Establish Off-Axis Uplink Power Limits for Extended Ka-Band FSS Operations
+2023-01-17|PropRule|FCC|Expediting Initial Processing of Satellite and Earth Station Applications; Space Innovation
+2023-04-10|Rule|FCC|Establishment of the Space Bureau and the Office of International Affairs and Reorganization of the Consumer and Governmental Affairs Bureau and the Office of the Managing Director
+2023-04-12|PropRule|FCC|Single Network Future: Supplemental Coverage From Space; Space Innovation
+2023-06-14|Pres|EOP|Flag Day and National Flag Week, 2023
+2023-06-20|Rule|FCC|Revising Spectrum Sharing Rules for Non-Geostationary Orbit, Fixed-Satellite Service Systems
+2023-08-18|PropRule|FAA|U.S. Commercial Space Launch Competitiveness Act Incorporation
+2023-09-26|PropRule|FAA|Mitigation Methods for Launch Vehicle Upper Stages on the Creation of Orbital Debris
+2023-12-06|Rule|FCC|Expediting Initial Processing of Satellite and Earth Station Applications
+2023-12-08|PropRule|FCC|Expediting Initial Processing of Satellite and Earth Station Applications
+2024-01-29|PropRule|NOAA|Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to U.S. Space Force Launches and Supporting Activities at Vandenberg Space Force Base, Vandenberg, California
+2024-02-01|PropRule|FCC|Allocation of Spectrum for Non-Federal Space Launch Operations
+2024-02-22|Rule|FCC|Mitigation of Orbital Debris in the New Space Age
+2024-03-15|PropRule|FCC|Space Innovation; Facilitating Capabilities for In-Space Servicing, Assembly, and Manufacturing
+2024-03-25|PropRule|FCC|Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review of the Commission's Assessment and Collection of Regulatory Fees for Fiscal Year 2024
+2024-04-10|Rule|NOAA|Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to U.S. Space Force Launches and Supporting Activities at Vandenberg Space Force Base, Vandenberg, California
+2024-05-28|PropRule|FCC|Space Innovation; Mitigation of Orbital Debris in the New Space Age
+2024-07-26|Rule|FCC|Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review of the Commission's Assessment and Collection of Regulatory Fees for Fiscal Year 2024
+2024-08-05|Rule|FCC|Allocation of Spectrum for Non-Federal Space Launch Operations; Federal Earth Stations Communicating With Non-Federal Fixed Satellite Service Space Stations; and Federal Space Station Use of the 399.9-400.05 MHz Band
+2024-08-09|Rule|FCC|Space Innovation; Mitigation of Orbital Debris in the New Space Age
+2024-08-29|Rule|FCC|Allocation of Spectrum for Non-Federal Space Launch Operations; Federal Earth Stations Communicating With Non-Federal Fixed Satellite Service Space Stations; and Federal Space Station Use of the 399.9-400.05 MHz Band
+2024-09-19|Rule|FAA|U.S. Commercial Space Launch Competitiveness Act Incorporation
+2024-09-25|Rule|FCC|Review of the Commission's Assessment and Collection of Regulatory Fees for Fiscal Year 2024; Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024, Second Report and Order
+2024-12-04|Rule|FCC|Single Network Future: Supplemental Coverage From Space Information Collection Approval for Space Station and Earth Station Applications
+2024-12-23|PropRule|FCC|Wireless Telecommunications Bureau Seeks Comment on Licensing and Coordination Procedures for the Space Launch Service
+2024-12-23|PropRule|FCC|Wireless Telecommunications Bureau Seeks Comment on Mechanism and Criteria for Selecting Space Launch Frequency Coordinator
+2025-03-07|Rule|FCC|Allocation of Spectrum for Non-Federal Space Launch Operations
+2025-03-13|PropRule|FCC|Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024
+2025-05-02|Rule|FCC|Wireless Telecommunications Bureau Announces Mechanism and Criteria for Selecting Space Launch Frequency Coordinator
+2025-05-02|Rule|FCC|Wireless Telecommunications Bureau Announces Licensing and Coordination Procedures for the Space Launch Service
+2025-06-13|PropRule|FCC|Modernizing Spectrum Sharing for Satellite Broadband
+2025-07-07|Rule|FCC|Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024
+2025-08-19|Pres|EOP|Enabling Competition in the Commercial Space Industry
+2025-08-27|Rule|FCC|Expediting Initial Processing of Satellite and Earth Station Applications; Space Innovation
+2025-12-05|PropRule|FCC|Space Modernization for the 21st Century
+2025-12-23|Pres|EOP|Ensuring American Space Superiority
+2026-01-15|PropRule|FAA|Mitigation Methods for Launch Vehicle Upper Stages on the Creation of Orbital Debris; Withdrawal
+2026-04-09|PropRule|FCC|Spectrum Abundance for Weird Space Stuff
+2026-07-30|PropRule|FAA|Waiver of Specified Statutory Requirements for Commercial Space Launch and Reentry Actions
+2026-08-25|Pres|EOP|The National Space Transportation Policy
+2026-10-26|PropRule|FCC|Space Modernization for the 21st Century

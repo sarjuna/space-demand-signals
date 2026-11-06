@@ -1,0 +1,54 @@
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Space Economy Initiative · Working dashboard · Cambridge Judge Business School</div>
+  <h1>Space Demand Signals</h1>
+  <p class="lede">Investors in the space economy say they cannot get good data. This project tests whether the signals people usually reach for instead (public attention, online sentiment, stock prices and policy activity) actually track the real build-out of launches, satellites and capital. It runs the same tests on two very different space economies, India and the United States, using only public data that can be traced to its source.</p>
+  <div class="meta">
+    <span>Data as of <b>6 Nov 2026</b></span>
+    <span>Window <b>Jan 2016 – Oct 2026</b></span>
+    <span>Motivation: <b><a href="https://www.millenniumpost.in/opinion/financing-indias-space-future-674267" target="_blank" rel="noopener">Millennium Post, "Financing India's space future"</a></b></span>
+  </div>
+</header>
+
+<section class="rq" style="border-top:0;margin-top:22px;padding-top:0">
+  <div class="cards">
+    <a class="card-link" href="india.html"><span class="flag">IN</span><h3>India</h3>
+      <p>A state-led programme opening to private firms after the June 2020 reforms. ISRO and NSIL flew every orbital launch until Skyroot's Vikram-1 in July 2026; NewSpace firms are unlisted.</p>
+      <dl class="kv" id="kv-in"></dl><span class="go">Open the India dashboard →</span></a>
+    <a class="card-link" href="us.html"><span class="flag">US</span><h3>United States</h3>
+      <p>A commercial launch market with listed NewSpace firms and, since June 2026, a listed SpaceX. Launch cadence rose almost eightfold in a decade, nearly all of it SpaceX.</p>
+      <dl class="kv" id="kv-us"></dl><span class="go">Open the US dashboard →</span></a>
+  </div>
+</section>
+
+<section class="rq" id="verdict">
+  <div class="rq-head"><div class="rq-num">TL;DR</div><h2>What the two countries say together</h2>
+  <p>The short version, with the evidence behind each line in the table below and on the country pages.</p></div>
+  <div class="panel read" id="verdict-text"></div>
+</section>
+
+<section class="rq" id="cmp">
+  <div class="rq-head"><div class="rq-num">CMP</div><h2>Side by side</h2>
+  <p>The same research questions, answered separately for each country. Green: the signal tracks build-out or reacts as expected; red: it does not; amber: mixed or not robust.</p></div>
+  <div class="tablewrap"><table class="cmp"><thead><tr><th>Question</th><th>India</th><th>United States</th></tr></thead><tbody id="cmp-body"></tbody></table></div>
+</section>
+
+<section class="rq" id="scale">
+  <div class="rq-head"><div class="rq-num">SCALE</div><h2>Two very different build-outs</h2>
+  <p>Orbital launch attempts per year from the GCAT catalogue. Each chart has its own scale: the US flew more launches in 2025 than India did in the whole decade. 2026 runs to October.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>India</h3><div class="sub">Orbital launch attempts from Indian sites or by Indian operators. Hover for failures.</div><div class="chartbox"><canvas id="c-in"></canvas></div></div>
+    <div class="panel"><h3>United States</h3><div class="sub">Orbital launch attempts by US-registered providers (Rocket Lab's New Zealand launches excluded). Hover for failures.</div><div class="chartbox"><canvas id="c-us"></canvas></div></div>
+  </div>
+</section>
+
+<section class="rq">
+  <div class="rq-head"><div class="rq-num">USE</div><h2>How to read and reuse this</h2>
+  <p>Each country page states its research questions, the data behind every chart, the statistical test used and what could not be measured. The Methods &amp; data page sets out sources, definitions and limitations for both. All raw files and analysis code are in the repository.</p></div>
+  <div class="cards">
+    <a class="card-link" href="methods.html"><h3>Methods &amp; data</h3><p>Sources, index construction, event-study and sentiment methods, verification steps and known limitations.</p><span class="go">Read the methods →</span></a>
+  </div>
+</section>
+
+<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School. Figures are reproducible from the cited public sources as pulled on 5–6 Nov 2026.</footer>
+</div>

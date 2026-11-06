@@ -1,0 +1,427 @@
+# Bills and resolutions indexed by the Library of Congress (CRS) under the legislative subject terms "Space flight and exploration" (id 6315)
+# and/or "Spacecraft and satellites" (id 6314), 113th-119th Congresses (2013-2026). Source: GovTrack.us bill search (which mirrors Congress.gov
+# subject indexing), pulled 2026-11-06. 415 measures. CRS subject indexing of the 119th Congress (2025-26) is still in progress, so its count is provisional.
+# TOTALS congress|all_bills_and_resolutions
+113|10637
+114|12063
+115|13556
+116|16601
+117|17817
+118|19315
+119|19826
+# BILLS congress|bill|introduced|tags|title
+113|H.J.Res. 59|Sept. 10, 2013|6314|Continuing Appropriations Resolution, 2014
+113|H.J.Res. 66|Sept. 27, 2013|6314|Continuing Appropriations Resolution, 2014
+113|H.J.Res. 67|Sept. 30, 2013|6314|Continuing Appropriations Resolution, 2014
+113|H.J.Res. 69|Sept. 30, 2013|6314|Continuing Appropriations Resolution, 2014
+113|H.J.Res. 94|Oct. 15, 2013|6315|Making continuing appropriations for the National Aeronautics and Space Administration for fiscal year 2014, and for other purposes.
+113|H.R. 1446|April 9, 2013|6315|REAL Space Act
+113|H.R. 1793|April 26, 2013|6314|Global Partnerships Act of 2013
+113|H.R. 230|Jan. 14, 2013|6315|Johnson Space Center Workforce of 2013
+113|H.R. 2413|June 18, 2013|6314|Weather Forecasting Improvement Act of 2014
+113|H.R. 2422|June 18, 2013|6315|Sally K. Ride Congressional Gold Medal Act of 2013
+113|H.R. 2616|July 8, 2013|6315+6314|National Aeronautics and Space Administration Authorization Act of 2013
+113|H.R. 2617|July 8, 2013|6315+6314|Apollo Lunar Landing Legacy Act
+113|H.R. 2687|July 15, 2013|6315+6314|National Aeronautics and Space Administration Authorization Act of 2013
+113|H.R. 2775|July 22, 2013|6314|Continuing Appropriations Act, 2014
+113|H.R. 3038|Aug. 2, 2013|6315+6314|SOARS Act
+113|H.R. 3304|Oct. 22, 2013|6314|National Defense Authorization Act for Fiscal Year 2014
+113|H.R. 3547|Nov. 20, 2013|6315+6314|Consolidated Appropriations Act, 2014
+113|H.R. 3561|Nov. 20, 2013|6315+6314|Prevent Russian Infiltration Act of 2013
+113|H.R. 3603|Nov. 21, 2013|6314|To limit the construction on United States soil of satellite positioning ground monitoring stations of foreign governments, and for other purposes.
+113|H.R. 3625|Dec. 2, 2013|6314|To provide for termination liability costs for certain National Aeronautics and Space Administration projects, and for other purposes.
+113|H.R. 3845|Jan. 10, 2014|6315+6314|Assessing NASA Science Mission Extensions Act
+113|H.R. 3979|Jan. 31, 2014|6314|Carl Levin and Howard P. "Buck" McKeon National Defense Authorization Act for Fiscal Year 2015
+113|H.R. 4412|April 7, 2014|6315+6314|National Aeronautics and Space Administration Authorization Act of 2014
+113|H.R. 4433|April 9, 2014|6315|Forging Peace Through Strength in Ukraine and the Transatlantic Alliance Act
+113|H.R. 4495|April 28, 2014|6314|Asia-Pacific Region Priority Act
+113|H.R. 4520|April 29, 2014|6314|Aircraft Positioning Modernization Act
+113|H.R. 4660|May 15, 2014|6315|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2015
+113|H.R. 4702|May 21, 2014|6314|Space Protection Strategy Extension Act
+113|H.R. 5063|July 10, 2014|6315+6314|American Space Technology for Exploring Resource Opportunities In Deep Space Act
+113|H.R. 667|Feb. 13, 2013|6315|To redesignate the Dryden Flight Research Center as the Neil A. Armstrong Flight Research Center and the Western Aeronautical Test Range as the Hugh L. Dryden Aeronautical Test Range.
+113|H.R. 823|Feb. 26, 2013|6315+6314|Space Leadership Preservation Act of 2013
+113|H.R. 893|Feb. 28, 2013|6314|Iran, North Korea, and Syria Nonproliferation Accountability Act of 2013
+113|H.Res. 400|Oct. 30, 2013|6315|Honoring the life and work of Commander M. Scott Carpenter, the second American to orbit the Earth.
+113|S. 1197|June 20, 2013|6314|National Defense Authorization Act for Fiscal Year 2014
+113|S. 1317|July 17, 2013|6315+6314|National Aeronautics and Space Administration Authorization Act of 2013
+113|S. 1329|July 18, 2013|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2014
+113|S. 1372|July 25, 2013|6314|Department of State, Foreign Operations, and Related Programs Appropriations Act, Fiscal Year 2014
+113|S. 1636|Oct. 31, 2013|6315|A bill to redesignate certain facilities of the National Aeronautics and Space Administration.
+113|S. 1679|Nov. 12, 2013|6314|National Security Rocket Engine Study Act of 2013
+113|S. 1753|Nov. 20, 2013|6315+6314|A bill to extend Government liability, subject to appropriation, for certain third-party claims arising from commercial space launches.
+113|S. 2140|March 13, 2014|6314|A bill to improve the transition between experimental permits and commercial licenses for commercial reusable launch vehicles.
+113|S. 2410|June 2, 2014|6314|Carl Levin National Defense Authorization Act for Fiscal Year 2015
+113|S. 2437|June 5, 2014|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2015
+113|S. 2757|July 31, 2014|6315|America COMPETES Reauthorization Act of 2014
+113|S. 2836|Sept. 17, 2014|6315+6314|Integrated Space Launch Policy Act of 2014
+113|S. 2925|Nov. 13, 2014|6315|Reports Reduction Act of 2014
+113|S.Res. 24|Jan. 31, 2013|6315+6314|A resolution commemorating the 10-year anniversary of the loss of the Space Shuttle Columbia.
+114|H.R. 1508|March 19, 2015|6315+6314|Space Resource Exploration and Utilization Act of 2015
+114|H.R. 1561|March 24, 2015|6314|Weather Research and Forecasting Innovation Act of 2016
+114|H.R. 1678|March 26, 2015|6314|National Positioning, Navigation, and Timing Resilience and Security Act of 2015
+114|H.R. 1735|April 13, 2015|6315+6314|National Defense Authorization Act for Fiscal Year 2016
+114|H.R. 1864|April 16, 2015|6314|To direct the Secretary of Defense to designate a single senior official of the Department of Defense to procure wideband satellite communications necessary to meet the requirements of the Department of Defense, and for other purposes.
+114|H.R. 1898|April 21, 2015|6315|America Competes Reauthorization Act of 2015
+114|H.R. 2029|April 24, 2015|6315+6314|Consolidated Appropriations Act, 2016
+114|H.R. 2036|April 27, 2015|6315|REAL Space Act
+114|H.R. 2039|April 28, 2015|6315+6314|National Aeronautics and Space Administration Authorization Act for 2016 and 2017
+114|H.R. 2093|April 29, 2015|6315+6314|Space Leadership Preservation Act of 2015
+114|H.R. 2261|May 12, 2015|6314|Commercial Remote Sensing Act of 2015
+114|H.R. 2262|May 12, 2015|6315+6314|U.S. Commercial Space Launch Competitiveness Act
+114|H.R. 2263|May 12, 2015|6315|Office of Space Commerce Act
+114|H.R. 2578|May 27, 2015|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2016
+114|H.R. 2726|June 10, 2015|6315|Apollo 11 50th Anniversary Commemorative Coin Act
+114|H.R. 2886|June 25, 2015|6314|Future TRIP Act
+114|H.R. 3182|July 23, 2015|6315+6314|PLUTO Act
+114|H.R. 3413|July 29, 2015|6315+6314|Efficient Space Exploration Act
+114|H.R. 3614|Sept. 25, 2015|6315|Airport and Airway Extension Act of 2015
+114|H.R. 4127|Nov. 30, 2015|6314|Intelligence Authorization Act for Fiscal Year 2016
+114|H.R. 4395|Jan. 28, 2016|6314|To repeal the provision permitting the use of rocket engines from the Russian Federation for the evolved expendable launch vehicle program.
+114|H.R. 4721|March 10, 2016|6315|Airport and Airway Extension Act of 2016
+114|H.R. 4752|March 16, 2016|6315|Space Exploration, Development, and Settlement Act of 2016
+114|H.R. 4755|March 16, 2016|6315|Inspiring the Next Space Pioneers, Innovators, Researchers, and Explorers (INSPIRE) Women Act
+114|H.R. 4815|March 21, 2016|6314|Iran Ballistic Missile Sanctions Act of 2016
+114|H.R. 4909|April 12, 2016|6314|National Defense Authorization Act for Fiscal Year 2017
+114|H.R. 4945|April 14, 2016|6315+6314|American Space Renaissance Act
+114|H.R. 5168|May 6, 2016|6315|Christa McAuliffe Commemorative Coin Act of 2016
+114|H.R. 5293|May 19, 2016|6314|Department of Defense Appropriations Act, 2017
+114|H.R. 5325|May 25, 2016|6315+6314|Continuing Appropriations and Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2017, and Zika Response and Preparedness Act
+114|H.R. 5393|June 7, 2016|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2017
+114|H.R. 5466|June 14, 2016|6314|Aeronautics Innovation Act
+114|H.R. 591|Jan. 28, 2015|6315|Engineering Biology Research and Development Act of 2015
+114|H.R. 6007|Sept. 13, 2016|6315+6314|To amend title 49, United States Code, to include consideration of certain impacts on commercial space launch and reentry activities in a navigable airspace analysis, and for other purposes.
+114|H.R. 6147|Sept. 22, 2016|6315+6314|Apollo I Memorial Act
+114|H.R. 636|Feb. 2, 2015|6314|FAA Extension, Safety, and Security Act of 2016
+114|H.R. 6393|Nov. 22, 2016|6314|Intelligence Authorization Act for Fiscal Year 2017
+114|H.R. 6480|Dec. 8, 2016|6314|Intelligence Authorization Act for Fiscal Year 2017
+114|H.R. 6531|Dec. 20, 2016|6315+6314|National Aeronautics and Space Administration Transition Authorization Act of 2016
+114|H.R. 810|Feb. 9, 2015|6315+6314|National Aeronautics and Space Administration Authorization Act of 2015
+114|S. 1297|May 12, 2015|6315+6314|U.S. Commercial Space Launch Competitiveness Act
+114|S. 1331|May 13, 2015|6314|Seasonal Forecasting Improvement Act
+114|S. 1376|May 19, 2015|6315+6314|National Defense Authorization Act for Fiscal Year 2016
+114|S. 1705|July 7, 2015|6314|Intelligence Authorization Act for Fiscal Year 2016
+114|S. 1725|July 9, 2015|6314|Department of State, Foreign Operations, and Related Programs Appropriations Act, 2016
+114|S. 1829|July 22, 2015|6315+6314|Efficient Space Exploration Act
+114|S. 2130|Oct. 5, 2015|6314|An Act Making Appropriations for National Security and for Other Purposes, 2016
+114|S. 2131|Oct. 5, 2015|6315+6314|An Act Making Appropriations for Law Enforcement and for Other Purposes, 2016
+114|S. 2470|Jan. 28, 2016|6314|A bill to repeal the provision permitting the use of rocket engines from the Russian Federation for the evolved expendable launch vehicle program.
+114|S. 2617|March 2, 2016|6315+6314|MANIFEST for Human Spaceflight Act of 2016
+114|S. 2658|March 9, 2016|6314|Federal Aviation Administration Reauthorization Act of 2016
+114|S. 2725|March 17, 2016|6314|Iran Ballistic Missile Sanctions Act of 2016
+114|S. 2726|March 17, 2016|6314|Iran Terrorism and Human Rights Sanctions Act of 2016
+114|S. 2817|April 19, 2016|6314|Space Weather Research and Forecasting Act
+114|S. 2837|April 21, 2016|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2017
+114|S. 2890|April 28, 2016|6315|Christa McAuliffe Commemorative Coin Act of 2016
+114|S. 2957|May 19, 2016|6315|Apollo 11 50th Anniversary Commemorative Coin Act
+114|S. 3017|June 6, 2016|6314|Intelligence Authorization Act for Fiscal Year 2017
+114|S. 3084|June 22, 2016|6315|American Innovation and Competitiveness Act
+114|S. 3346|Sept. 15, 2016|6315+6314|National Aeronautics and Space Administration Transition Authorization Act of 2016
+114|S. 592|Feb. 26, 2015|6314|A bill to improve the transition between experimental permits and commercial licenses for commercial reusable launch vehicles.
+114|S. 976|April 16, 2015|6315+6314|Space Resource Exploration and Utilization Act of 2015
+114|S.Res. 107|March 23, 2015|6314|A resolution recognizing the 70th anniversary of White Sands Missile Range in New Mexico and commemorating the unique place in history, and national security importance, of the range.
+114|S.Res. 149|April 23, 2015|6314|A resolution recognizing the importance and inspiration of the Hubble Space Telescope.
+114|S.Res. 153|April 28, 2015|6315|A resolution recognizing the importance of the United States-Japan relationship to safeguarding global security, prosperity, and human rights.
+114|S.Res. 240|Aug. 3, 2015|6315+6314|A resolution recognizing the National Aeronautics and Space Administration and its partners for the success of the historic flyby of Pluto by the New Horizons spacecraft.
+114|S.Res. 352|Jan. 28, 2016|6315+6314|A resolution commemorating the 30th anniversary of the loss of the Space Shuttle Challenger and of Teacher in Space S. Christa McAuliffe of Concord, New Hampshire.
+114|S.Res. 385|March 3, 2016|6315|A resolution recognizing the historic achievement of astronaut Scott Joseph Kelly of the National Aeronautics and Space Administration as the first person of the United States to complete a continuous 1-year mission in space.
+114|S.Res. 430|April 14, 2016|6314|A resolution supporting the designation of April 20, 2016, as "Cheyenne Mountain Day".
+114|S.Res. 548|July 14, 2016|6315+6314|A resolution celebrating the 40th anniversary of the National Aeronautics and Space Administration's Viking Mission Landing on the surface of Mars.
+114|S.Res. 607|Sept. 29, 2016|6314|A resolution recognizing the National Geospatial-Intelligence Agency on its 20th anniversary.
+114|S.Res. 640|Dec. 10, 2016|6315|A resolution recognizing the death of John Glenn, former Senator for the State of Ohio and the first individual from the United States to orbit the Earth.
+115|H.Con.Res. 109|Feb. 27, 2018|6315+6314|WeissSat-1 Resolution
+115|H.Con.Res. 26|Feb. 15, 2017|6315+6314|To express the sense of Congress that the first launch of the Space Launch System should be named for Captain Eugene Andrew "Gene" Cernan.
+115|H.R. 1159|Feb. 16, 2017|6315|United States and Israel Space Cooperation Act
+115|H.R. 1407|March 7, 2017|6314|METALS Act
+115|H.R. 195|Jan. 3, 2017|6315|Extension of Continuing Appropriations Act, 2018; HEALTHY KIDS Act; Federal Register Printing Savings Act of 2017
+115|H.R. 2256|April 28, 2017|6315|Christa McAuliffe Commemorative Coin Act of 2017
+115|H.R. 244|Jan. 4, 2017|6315+6314|Consolidated Appropriations Act, 2017
+115|H.R. 2571|May 19, 2017|6315+6314|STAR Act
+115|H.R. 2809|June 7, 2017|6315+6314|American Space Commerce Free Enterprise Act
+115|H.R. 2810|June 7, 2017|6315+6314|National Defense Authorization Act for Fiscal Year 2018
+115|H.R. 2912|June 15, 2017|6314|Advancing America's Missile Defense Act of 2017
+115|H.R. 3033|June 23, 2017|6315+6314|Aeronautics Innovation Act
+115|H.R. 3086|June 27, 2017|6314|Space Weather Research and Forecasting Act
+115|H.R. 321|Jan. 5, 2017|6315|Inspiring the Next Space Pioneers, Innovators, Researchers, and Explorers (INSPIRE) Women Act
+115|H.R. 3354|July 21, 2017|6315+6314|Interior and Environment, Agriculture and Rural Development, Commerce, Justice, Science, Financial Services and General Government, Homeland Security, Labor, Health and Human Services, Education, State and Foreign Operations, Transport
+115|H.R. 353|Jan. 6, 2017|6314|Weather Research and Forecasting Innovation Act of 2017
+115|H.R. 4254|Nov. 6, 2017|6315|Women in Aerospace Education Act
+115|H.R. 4763|Jan. 10, 2018|6314|Space Debris Removal Act
+115|H.R. 4821|Jan. 18, 2018|6314|Iran Freedom Policy and Sanctions Act
+115|H.R. 4872|Jan. 20, 2018|6315|End The Shutdown Act of 2018
+115|H.R. 4874|Jan. 22, 2018|6315|End The Shutdown Act of 2018
+115|H.R. 5141|March 1, 2018|6315|United States-Israel Security Assistance Authorization Act of 2018
+115|H.R. 5256|March 13, 2018|6315|To direct the Attorney General to acquire data, for each calendar year, about sexual offenses, including rape, that occur aboard any mode of transportation over which the Federal Government exercises jurisdiction.
+115|H.R. 5345|March 20, 2018|6315+6314|ALSTAR Act
+115|H.R. 5346|March 20, 2018|6315+6314|Commercial Space Support Vehicle Act
+115|H.R. 5503|April 13, 2018|6315+6314|National Aeronautics and Space Administration Authorization Act of 2018
+115|H.R. 5515|April 13, 2018|6314|John S. McCain National Defense Authorization Act for Fiscal Year 2019
+115|H.R. 6226|June 26, 2018|6315+6314|American Space Situational Awareness and Framework for Entity Management Act
+115|H.R. 6342|July 12, 2018|6315+6314|To make revisions in title 51, United States Code, as necessary to keep the title current, and to make technical amendments to improve the United States Code.
+115|H.R. 6385|July 16, 2018|6314|Department of State, Foreign Operations, and Related Programs Appropriations Act, 2019
+115|H.R. 650|Jan. 24, 2017|6315+6314|MANIFEST for Human Spaceflight Act of 2017
+115|H.R. 6795|Sept. 13, 2018|6315|Hidden Figures Congressional Gold Medal Act
+115|H.R. 6910|Sept. 26, 2018|6315+6314|Leading Human Spaceflight Act
+115|H.R. 703|Jan. 27, 2017|6315+6314|Apollo I Memorial Act
+115|H.R. 7171|Nov. 27, 2018|6315|Engineering Biology Research and Development Act of 2019
+115|H.R. 870|Feb. 3, 2017|6315|REAL Space Act
+115|H.Res. 1052|Sept. 6, 2018|6315|Affirming United States-Australia cooperation on space research, exploration, and utilization.
+115|H.Res. 1120|Oct. 5, 2018|6315|Expressing support for designation of the week of October 4, 2018, through October 10, 2018, as World Space Week and for the designation of the week of October 14, 2018, through October 20, 2018, as Earth Science Week.
+115|H.Res. 306|May 2, 2017|6315|Recognizing the impact of tribology on the United States economy and competitiveness in providing solutions to critical technical problems in manufacturing, energy production and use, transportation vehicles and infrastructure, greenh
+115|H.Res. 566|Oct. 10, 2017|6315|Expressing support for designation of the week of October 4, 2017, through October 10, 2017, as World Space Week and for the designation of the week of October 8, 2017, through October 14, 2017, as Earth Science Week.
+115|S. 1196|May 22, 2017|6314|Advancing America's Missile Defense Act of 2017
+115|S. 133|Jan. 12, 2017|6314|Intelligence Authorization Act for Fiscal Year 2017
+115|S. 141|Jan. 12, 2017|6314|Space Weather Coordination Act
+115|S. 15|Jan. 3, 2017|6314|Iran Ballistic Missile Sanctions Act
+115|S. 212|Jan. 24, 2017|6315+6314|MANIFEST for Human Spaceflight Act of 2017
+115|S. 2220|Dec. 12, 2017|6314|National Timing Resilience and Security Act of 2017
+115|S. 2497|March 5, 2018|6315|United States-Israel Security Assistance Authorization Act of 2018
+115|S. 2504|March 6, 2018|6315|United States and Israel Space Cooperation Act
+115|S. 2977|May 24, 2018|6315+6314|Aeronautics Innovation Act
+115|S. 2980|May 24, 2018|6314|Integrated Missile Defense Act of 2018
+115|S. 2987|June 5, 2018|6314|John S. McCain National Defense Authorization Act for Fiscal Year 2019
+115|S. 3142|June 26, 2018|6314|North Korea Policy Oversight Act of 2018
+115|S. 3277|July 25, 2018|6315+6314|Space Frontier Act of 2019
+115|S. 3321|Aug. 1, 2018|6315|Hidden Figures Congressional Gold Medal Act
+115|S. 3774|Dec. 18, 2018|6314|A bill to amend title 10, United States Code, to establish the position of Assistant Secretary of Defense for Space, and for other purposes.
+115|S. 3799|Dec. 19, 2018|6315+6314|National Aeronautics and Space Administration Authorization Act of 2018
+115|S. 42|Jan. 5, 2017|6315|Inspiring the Next Space Pioneers, Innovators, Researchers, and Explorers (INSPIRE) Women Act
+115|S. 442|Feb. 17, 2017|6315+6314|National Aeronautics and Space Administration Transition Authorization Act of 2017
+115|S. 570|March 8, 2017|6314|Weather Research and Forecasting Innovation Act of 2017
+115|S.Res. 27|Jan. 24, 2017|6315|A resolution honoring the life and achievements of Eugene A. "Gene" Cernan.
+115|S.Res. 344|Nov. 29, 2017|6315|A resolution honoring the life and achievements of Dr. Robert Lawrence Jr.
+115|S.Res. 82|March 7, 2017|6315|A resolution congratulating the Johns Hopkins University Applied Physics Laboratory on the 75th anniversary of the founding of the Laboratory.
+116|H.Con.Res. 47|June 6, 2019|6315|Celebrating the 50th anniversary of the Apollo 11 Moon landing.
+116|H.Con.Res. 85|Jan. 24, 2020|6315+6314|Wolverine CubeSats for Education Resolution
+116|H.J.Res. 59|June 4, 2019|6315|Expressing support for designation of July 20th as "National Space Exploration Day" to commemorate the anniversary of the Apollo 11 moon landing.
+116|H.J.Res. 60|June 10, 2019|6315|Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on July 16, 2019 and ending on July 20, 2019.
+116|H.R. 1029|Feb. 6, 2019|6315|Space Resources Institute Act
+116|H.R. 12|Oct. 20, 2020|6315+6314|CTF Act
+116|H.R. 133|Jan. 3, 2019|6315+6314|Consolidated Appropriations Act, 2021 [Including Coronavirus Stimulus & Relief]
+116|H.R. 1396|Feb. 27, 2019|6315|Hidden Figures Congressional Gold Medal Act
+116|H.R. 1562|March 6, 2019|6315+6314|Commercial Space Transportation Safety Act of 2019
+116|H.R. 1746|March 13, 2019|6315|To direct the President to establish a unified United States Space Command.
+116|H.R. 1837|March 21, 2019|6315|United States-Israel Cooperation Enhancement and Regional Security Act
+116|H.R. 2926|May 22, 2019|6315|Navigation Safety Act of 2019
+116|H.R. 336|Jan. 8, 2019|6315|Strengthening America's Security in the Middle East Act of 2019
+116|H.R. 3409|June 21, 2019|6315|Coast Guard Authorization Act of 2019
+116|H.R. 3606|July 2, 2019|6315|High Speed Gunfire Prevention Act
+116|H.R. 3610|July 2, 2019|6315+6314|American Space Commerce Free Enterprise Act of 2019
+116|H.R. 3766|July 16, 2019|6315+6314|One Small Step to Protect Human Heritage in Space Act
+116|H.R. 4720|Oct. 17, 2019|6314|To amend title 10, United States Code, to establish the Assistant Secretary of Defense for Space, and for other purposes.
+116|H.R. 4790|Oct. 22, 2019|6315+6314|Neil A. Armstrong Test Facility Act
+116|H.R. 4904|Oct. 29, 2019|6314|Smarter Approaches to Nuclear Expenditures Act
+116|H.R. 500|Jan. 11, 2019|6315|Christa McAuliffe Commemorative Coin Act of 2019
+116|H.R. 5136|Nov. 18, 2019|6315+6314|Aeronautics Innovation Act
+116|H.R. 5260|Nov. 22, 2019|6314|PROSWIFT Act
+116|H.R. 5470|Dec. 17, 2019|6315+6314|U.S. Leadership in Space Act of 2019
+116|H.R. 5977|Feb. 26, 2020|6315|National Evaluation of Aviation and Aerospace Solutions to Climate Change Act of 2020
+116|H.R. 6208|March 11, 2020|6315|Protecting American Space Assets Act
+116|H.R. 6388|March 25, 2020|6315+6314|Space Technology Advancement Report (STAR) Act of 2020
+116|H.R. 6604|April 23, 2020|6315|Commerce Spectrum Coordination Act of 2020
+116|H.R. 6783|May 8, 2020|6315+6314|American Space Commerce Act of 2020
+116|H.R. 7021|May 26, 2020|6315|LAUNCHES Act
+116|H.R. 7236|June 18, 2020|6315|Space Research Innovation Act
+116|H.R. 7608|July 13, 2020|6314|State, Foreign Operations, Agriculture, Rural Development, Interior, Environment, Military Construction, and Veterans Affairs Appropriations Act, 2021
+116|H.R. 7667|July 16, 2020|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2021
+116|H.R. 7856|July 30, 2020|6314|Intelligence Authorization Act for Fiscal Year 2021
+116|H.R. 8716|Oct. 30, 2020|6314|Advancing Competitiveness, Transparency, and Security in the Americas Act of 2020
+116|H.R. 8854|Dec. 3, 2020|6314|Aerospace Debris Safety Act
+116|H.Res. 1109|Sept. 15, 2020|6315|Recognizing the 40th anniversary of the founding of The Planetary Society.
+116|H.Res. 1169|Oct. 1, 2020|6314|Recognizing the 50th Anniversary of the National Oceanic and Atmospheric Administration.
+116|H.Res. 1243|Nov. 30, 2020|6315|Recognizing the 20th anniversary of the International Space Station.
+116|H.Res. 219|March 12, 2019|6314|Recognizing the contributions made by the men and women of the Air Force who are responsible for operating and maintaining the Global Positioning System constellation and affirming the importance of continuous availability, accuracy,
+116|H.Res. 405|May 23, 2019|6315|Commemorating the 50th anniversary of the Apollo 11 Mission, and supporting the week of July 16 through July 20 as the Apollo 50 Celebration Week.
+116|H.Res. 443|June 13, 2019|6315|Recognizing the 50th anniversary of the Apollo 11 Moon landing, and for other purposes.
+116|H.Res. 473|July 2, 2019|6315+6314|To declare that space launch is a developmental activity, not a form of transportation, and that a process exists for investigating commercial space launch reentry activities.
+116|S. 1|Jan. 3, 2019|6315|Strengthening America's Security in the Middle East Act of 2019
+116|S. 1215|April 11, 2019|6314|National Defense Authorization Act for Fiscal Year 2020
+116|S. 1690|May 23, 2019|6314|Modernizing America's Missile Defense Act of 2019
+116|S. 1694|May 23, 2019|6315+6314|One Small Step to Protect Human Heritage in Space Act
+116|S. 1713|June 4, 2019|6315+6314|Aeronautics Innovation Act
+116|S. 1771|June 11, 2019|6314|A bill to amend title 10, United States Code, to establish the Assistant Secretary of Defense for Space, and for other purposes.
+116|S. 239|Jan. 28, 2019|6315|Christa McAuliffe Commemorative Coin Act of 2019
+116|S. 2472|Sept. 12, 2019|6315+6314|Neil A. Armstrong Test Facility Act
+116|S. 2617|Oct. 17, 2019|6315|Contracts and Obligations Modernization for Efficient Terms of Service Act
+116|S. 2727|Oct. 29, 2019|6314|Smarter Approaches to Nuclear Expenditures Act
+116|S. 2780|Nov. 5, 2019|6315+6314|LIFTS Act
+116|S. 2800|Nov. 6, 2019|6315+6314|National Aeronautics and Space Administration Authorization Act of 2020
+116|S. 2831|Nov. 12, 2019|6315|21st Century Space Grant Modernization Act of 2019
+116|S. 3734|May 14, 2020|6315|Bioeconomy Research and Development Act of 2020
+116|S. 381|Feb. 7, 2019|6315|Space Resources Institute Act
+116|S. 3843|May 21, 2020|6314|Future of Arms Control Act
+116|S. 3875|June 3, 2020|6315+6314|American Space Commerce Act of 2020
+116|S. 3905|June 8, 2020|6314|Intelligence Authorization Act for Fiscal Year 2021
+116|S. 4049|June 23, 2020|6314|National Defense Authorization Act for Fiscal Year 2021
+116|S. 4272|July 22, 2020|6314|STRATEGIC Act
+116|S. 4320|July 27, 2020|6315+6314|A bill making emergency supplemental appropriations for the fiscal year ending September 30, 2020, and for other purposes.
+116|S. 4528|Aug. 13, 2020|6314|Advancing Competitiveness, Transparency, and Security in the Americas Act of 2020
+116|S. 4624|Sept. 17, 2020|6314|Innovation Centers Acceleration Act
+116|S. 4629|Sept. 17, 2020|6315|America LEADS Act
+116|S. 584|Feb. 27, 2019|6315+6314|Advancing Human Spaceflight Act
+116|S. 590|Feb. 27, 2019|6315|Hidden Figures Congressional Gold Medal Act
+116|S. 881|March 26, 2019|6314|PROSWIFT Act
+116|S. 919|March 27, 2019|6315+6314|Space Frontier Act of 2019
+116|S.Con.Res. 19|June 5, 2019|6315|A concurrent resolution celebrating the 50th anniversary of the Apollo 11 Moon landing.
+116|S.Res. 216|May 21, 2019|6314|A resolution recognizing the contributions made by the men and women of the Air Force who are responsible for operating and maintaining the Global Positioning System constellation and affirming the importance of continuous availabilit
+116|S.Res. 314|Sept. 17, 2019|6314|A resolution honoring the centennial of the Aerospace Industries Association.
+116|S.Res. 386|Oct. 30, 2019|6315+6314|A resolution supporting international cooperation and continued United States leadership to maintain access to space and achieve advances in space technology.
+116|S.Res. 441|Nov. 21, 2019|6315|A resolution celebrating the 50th anniversary of the Apollo 12 Moon landing.
+116|S.Res. 451|Dec. 10, 2019|6315|A resolution congratulating astronauts Dr. Jessica U. Meir and Christina H. Koch for the historic accomplishment of completing the first all-female spacewalk.
+116|S.Res. 460|Dec. 19, 2019|6315|A resolution congratulating the American Geophysical Union on the occasion of its centennial.
+116|S.Res. 519|Feb. 27, 2020|6315|A resolution honoring the life and achievements of Katherine Coleman Goble Johnson.
+117|H.R. 1369|Feb. 25, 2021|6315+6314|American Space Commerce Act of 2021
+117|H.R. 2140|March 23, 2021|6315|American Innovation Act
+117|H.R. 2624|April 16, 2021|6314|Aerospace Debris Safety Act
+117|H.R. 2731|April 21, 2021|6315+6314|Endless Frontier Act
+117|H.R. 3524|May 25, 2021|6314|Ensuring American Global Leadership and Engagement Act
+117|H.R. 3593|May 28, 2021|6315|Department of Energy Science for the Future Act
+117|H.R. 3653|June 1, 2021|6314|Smarter Approaches to Nuclear Expenditures Act
+117|H.R. 3748|June 8, 2021|6314|BLUE GLOBE Act
+117|H.R. 4505|July 19, 2021|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2022
+117|H.R. 4521|July 19, 2021|6315|United States Innovation and Competition Act of 2021
+117|H.R. 476|Jan. 25, 2021|6314|Innovation Centers Acceleration Act
+117|H.R. 4832|July 29, 2021|6314|Open Access Evapotranspiration Data Act
+117|H.R. 52|Jan. 4, 2021|6315|Space Research Innovation Act
+117|H.R. 5250|Sept. 14, 2021|6315+6314|Advancing Human Spaceflight Act of 2021
+117|H.R. 5304|Sept. 21, 2021|6315|Extending Government Funding and Delivering Emergency Assistance Act
+117|H.R. 5305|Sept. 21, 2021|6315|Extending Government Funding and Delivering Emergency Assistance Act
+117|H.R. 5376|Sept. 27, 2021|6314|Inflation Reduction Act of 2022
+117|H.R. 5412|Sept. 29, 2021|6314|Intelligence Authorization Act for Fiscal Year 2022
+117|H.R. 5982|Nov. 16, 2021|6315+6314|To make revisions in title 51, United States Code, as necessary to keep the title current, and to make technical amendments to improve the United States Code.
+117|H.R. 6391|Jan. 12, 2022|6315+6314|U.S. Leadership in Space Act of 2022
+117|H.R. 6845|Feb. 25, 2022|6314|Commercial Remote Sensing Amendment Act of 2022
+117|H.R. 7629|April 28, 2022|6314|Satellite Cybersecurity Act
+117|H.R. 8503|July 26, 2022|6314|Securing Global Telecommunications Act
+117|H.Res. 827|Dec. 1, 2021|6315|Recognizing the contributions made by the 305-meter radio telescope at the Arecibo Observatory.
+117|H.Res. 937|Feb. 22, 2022|6314|Recognizing the duty of the Federal Government to preserve liberty by operating within the enumerated powers in the Constitution of the United States and its founding principles.
+117|S. 1041|March 25, 2021|6314|RENACER Act
+117|S. 1064|March 25, 2021|6314|RENACER Act
+117|S. 1260|April 20, 2021|6315+6314|United States Innovation and Competition Act of 2021
+117|S. 140|Jan. 28, 2021|6314|BLUE GLOBE Act
+117|S. 1418|April 28, 2021|6315|Bioeconomy Research and Development Act of 2021
+117|S. 1549|May 11, 2021|6315|A bill to require a review of the National Aeronautics and Space Administration preference for domestic suppliers.
+117|S. 1552|May 11, 2021|6315|A bill to require a report on defense and aerospace manufacturing supply chains.
+117|S. 1556|May 11, 2021|6315+6314|A bill to require a report on the feasibility and benefits of establishing a supply chain center of excellence.
+117|S. 1605|May 13, 2021|6315+6314|National Defense Authorization Act for Fiscal Year 2022
+117|S. 1756|May 20, 2021|6315+6314|Advancing Human Spaceflight Act of 2021
+117|S. 1862|May 26, 2021|6314|Smarter Approaches to Nuclear Expenditures Act
+117|S. 1871|May 27, 2021|6315|COMETS Act
+117|S. 1968|June 8, 2021|6315+6314|American Space Commerce Act of 2021
+117|S. 2568|July 29, 2021|6314|Open Access Evapotranspiration Data Act
+117|S. 2610|Aug. 4, 2021|6315+6314|Intelligence Authorization Act for Fiscal Year 2022
+117|S. 2789|Sept. 21, 2021|6315|Extending Government Funding and Delivering Emergency Assistance Act
+117|S. 2792|Sept. 22, 2021|6314|National Defense Authorization Act for Fiscal Year 2022
+117|S. 3042|Oct. 21, 2021|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2022
+117|S. 3306|Dec. 2, 2021|6315+6314|SPACE Act
+117|S. 3511|Jan. 13, 2022|6314|Satellite Cybersecurity Act
+117|S. 360|Feb. 23, 2021|6315|21st Century Space Grant Modernization Act of 2021
+117|S. 3699|Feb. 17, 2022|6315|Department of Energy Science for the Future Act of 2022
+117|S. 4814|Sept. 12, 2022|6314|ORBITS Act of 2022
+117|S. 687|March 10, 2021|6314|STRATEGIC Act
+117|S. 871|March 18, 2021|6314|Innovation Centers Acceleration Act
+117|S. 961|March 24, 2021|6315|American Innovation Act
+117|S.Res. 467|Dec. 2, 2021|6315|A resolution recognizing the contributions made by the 305-meter radio telescope at the Arecibo Observatory.
+117|S.Res. 721|July 26, 2022|6314|A resolution celebrating the 50th anniversary of the inaugural launch of the Landsat series of Earth Observation satellites, a joint mission of the United States Geological Survey and the National Aeronautics and Space Administration.
+117|S.Res. 756|Sept. 8, 2022|6315|A resolution commemorating the 75th anniversary of the establishment of the Department of the Air Force and celebrating the United States Air Force for 75 years of serving and defending the United States.
+117|S.Res. 783|Sept. 20, 2022|6315|A resolution commemorating the 75th anniversary of the establishment of the Department of the Air Force and celebrating the United States Air Force for 75 years of serving and defending the United States.
+118|H.R. 102|Jan. 9, 2023|6315|Space Research Innovation Act
+118|H.R. 1338|March 3, 2023|6315+6314|SAT Streamlining Act
+118|H.R. 1339|March 3, 2023|6314|Precision Agriculture Satellite Connectivity Act
+118|H.R. 1363|March 3, 2023|6315+6314|American Space Commerce Act of 2023
+118|H.R. 2429|March 30, 2023|6314|Open Access Evapotranspiration Data Act
+118|H.R. 2670|April 18, 2023|6315+6314|National Defense Authorization Act for Fiscal Year 2024
+118|H.R. 2789|April 20, 2023|6314|American Cooperation with Our Neighbors Act
+118|H.R. 290|Jan. 11, 2023|6314|Commercial Remote Sensing Amendment Act of 2023
+118|H.R. 3559|May 22, 2023|6314|FAA Research and Development Act of 2023
+118|H.R. 4032|June 12, 2023|6314|Hydrogen Aviation Strategy Act
+118|H.R. 4152|June 15, 2023|6315|Space Resources Institute Act
+118|H.R. 4211|June 20, 2023|6314|Technology Assessment for Air Quality Management Act of 2023
+118|H.R. 4741|July 19, 2023|6314|Securing Global Telecommunications Act
+118|H.R. 5009|July 27, 2023|6314|To authorize appropriations for fiscal year 2025 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for suc
+118|H.R. 5525|Sept. 18, 2023|6314|Continuing Appropriations and Border Security Enhancement Act, 2024
+118|H.R. 5617|Sept. 21, 2023|6315+6314|Space Transformation And Reliability Act
+118|H.R. 5893|Oct. 6, 2023|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2024
+118|H.R. 6093|Oct. 26, 2023|6314|Weather Act Reauthorization Act of 2023
+118|H.R. 6131|Nov. 1, 2023|6315+6314|Commercial Space Act of 2023
+118|H.R. 6219|Nov. 3, 2023|6315+6314|ASCEND Act
+118|H.R. 675|Jan. 31, 2023|6314|Secure Space Act of 2023
+118|H.R. 682|Jan. 31, 2023|6315+6314|Launch Communications Act
+118|H.R. 6967|Jan. 11, 2024|6315+6314|Safe Airspace for Americans Act
+118|H.R. 7339|Feb. 13, 2024|6315+6314|To make revisions in title 51, United States Code, as necessary to keep the title current, and to make technical amendments to improve the United States Code.
+118|H.R. 8070|April 18, 2024|6314|Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025
+118|H.R. 8774|June 17, 2024|6314|Department of Defense Appropriations Act, 2025
+118|H.R. 8958|July 9, 2024|6315+6314|NASA Reauthorization Act of 2024
+118|H.R. 9026|July 11, 2024|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2025
+118|S. 1118|March 30, 2023|6314|Evapotranspiration Data Act
+118|S. 1425|May 3, 2023|6314|Satellite Cybersecurity Act
+118|S. 1648|May 17, 2023|6315+6314|Launch Communications Act
+118|S. 1902|June 8, 2023|6314|Hydrogen Aviation Strategy Act
+118|S. 2045|June 20, 2023|6314|Technology Assessment for Air Quality Management Act of 2023
+118|S. 2226|July 11, 2023|6315+6314|National Defense Authorization Act for Fiscal Year 2024
+118|S. 2321|July 13, 2023|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2024
+118|S. 2634|July 27, 2023|6315+6314|ASCEND Act
+118|S. 3658|Jan. 25, 2024|6315+6314|SAFE Orbit Act
+118|S. 4443|June 3, 2024|6315|Intelligence Authorization Act for Fiscal Year 2025
+118|S. 447|Feb. 15, 2023|6314|ORBITS Act of 2023
+118|S. 4638|July 8, 2024|6315+6314|National Defense Authorization Act for Fiscal Year 2025
+118|S. 4795|July 25, 2024|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2025
+118|S. 503|Feb. 16, 2023|6315+6314|Space National Guard Establishment Act
+118|S. 589|March 1, 2023|6315+6314|American Space Commerce Act of 2023
+118|S. 990|March 27, 2023|6314|A bill to require the Commander of the North American Aerospace Defense Command to conduct a gap analysis of the capabilities of the North American Aerospace Defense Command.
+118|S.Res. 28|Feb. 2, 2023|6315+6314|A resolution commemorating the 20-year anniversary of the loss of Space Shuttle Columbia.
+118|S.Res. 646|April 16, 2024|6315|A resolution honoring the life and legacy of Lieutenant General Thomas P. Stafford.
+118|S.Res. 665|April 30, 2024|6315+6314|A resolution supporting May 3, 2024, as "National Space Day" in recognition of the significant positive impact the aerospace community has and will continue to have on the United States of America.
+119|H.R. 1|May 20, 2025|6314|An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.
+119|H.R. 1187|Feb. 11, 2025|6314|UAP Transparency Act
+119|H.R. 1325|Feb. 13, 2025|6314|Commercial Remote Sensing Amendment Act of 2025
+119|H.R. 1618|Feb. 26, 2025|6314|Precision Agriculture Satellite Connectivity Act
+119|H.R. 1768|March 3, 2025|6314|Lower Costs for Everyday Americans Act
+119|H.R. 2313|March 25, 2025|6315+6314|Celestial Time Standardization Act
+119|H.R. 2458|March 27, 2025|6314|Secure Space Act of 2025
+119|H.R. 2474|March 27, 2025|6314|Expanding Appalachia's Broadband Access Act
+119|H.R. 2482|March 31, 2025|6314|NTIA Reauthorization Act of 2025
+119|H.R. 2600|April 2, 2025|6315+6314|ASCEND Act
+119|H.R. 2984|April 24, 2025|6315|ASTRO Act
+119|H.R. 3838|June 9, 2025|6315+6314|Streamlining Procurement for Effective Execution and Delivery and National Defense Authorization Act for Fiscal Year 2026
+119|H.R. 4065|June 20, 2025|6315+6314|Bring the Space Shuttle Home Act
+119|H.R. 4360|July 10, 2025|6315+6314|Frank Wolf Space Security Act
+119|H.R. 5089|Sept. 2, 2025|6314|Weather Act Reauthorization Act of 2025
+119|H.R. 5174|Sept. 8, 2025|6315+6314|To make revisions in title 51, United States Code, as necessary to keep the title current, and to make technical amendments to improve the United States Code.
+119|H.R. 5248|Sept. 10, 2025|6315|PROFIT Act of 2026
+119|H.R. 5342|Sept. 12, 2025|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2026
+119|H.R. 6469|Dec. 4, 2025|6314|FREEDOM Act
+119|H.R. 6638|Dec. 11, 2025|6315+6314|To require a report on merits and options for establishing an institute relating to space resources, and for other purposes.
+119|H.R. 6938|Jan. 6, 2026|6315+6314|Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026
+119|H.R. 7022|Jan. 12, 2026|6314|Mystic Alerts Act
+119|H.R. 7273|Jan. 30, 2026|6315+6314|NASA Reauthorization Act of 2026
+119|H.R. 7380|Feb. 4, 2026|6314|IRAN Act
+119|H.R. 7813|March 5, 2026|6314|NOAA Weather Radio Modernization Act
+119|H.R. 8255|April 14, 2026|6315+6314|SAT Streamlining Act
+119|H.R. 8845|May 15, 2026|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2027
+119|H.Res. 596|July 17, 2025|6315|Supporting the designation of July 20, 2025, as "National Moon Landing Day".
+119|S. 1403|April 10, 2025|6315+6314|Bring the Space Shuttle Home Act
+119|S. 1437|April 10, 2025|6315+6314|ASCEND Act
+119|S. 1898|May 22, 2025|6314|ORBITS Act of 2025
+119|S. 1962|June 5, 2025|6314|Secure Space Act of 2026
+119|S. 2296|July 15, 2025|6315+6314|National Defense Authorization Act for Fiscal Year 2026
+119|S. 2342|July 17, 2025|6315+6314|Intelligence Authorization Act for Fiscal Year 2026
+119|S. 2351|July 17, 2025|6315|Space Exploration Research Act
+119|S. 2354|July 17, 2025|6315+6314|Commerce, Justice, Science, and Related Agencies Appropriations Act, 2026
+119|S. 2572|July 31, 2025|6314|Department of Defense Appropriations Act, 2026
+119|S. 3360|Dec. 4, 2025|6314|FREEDOM Act
+119|S. 3404|Dec. 9, 2025|6314|Satellite Cybersecurity Act of 2025
+119|S. 3639|Jan. 14, 2026|6314|SAT Streamlining Act
+119|S. 428|Feb. 5, 2025|6315+6314|SAFE Orbit Act
+119|S. 434|Feb. 5, 2025|6315+6314|Space Commerce Advisory Committee Act
+119|S. 435|Feb. 5, 2025|6314|IRONDOME Act of 2025
+119|S. 4938|June 24, 2026|6314|Bycatch Reduction Act
+119|S. 5123|July 23, 2026|6315|Lunar Landing Day Act
+119|S. 582|Feb. 13, 2025|6315|Astronaut Ground Travel Support Act
+119|S. 933|March 11, 2025|6315+6314|NASA Transition Authorization Act of 2025
+119|S.Res. 228|May 14, 2025|6315+6314|A resolution supporting May 2, 2025, as "National Space Day" in recognition of the significant positive impact the aerospace community has and will continue to have on the United States of America.
+119|S.Res. 302|June 25, 2025|6315|A resolution designating June 30, 2025 as "Asteroid Day".
+119|S.Res. 309|June 26, 2025|6315|A resolution commemorating the 65th anniversary of the Marshall Space Flight Center and recognizing its continued leadership in the development of the Space Launch System and human space exploration.
+119|S.Res. 456|Oct. 16, 2025|6315+6314|A resolution commemorating the 40th anniversary of the inaugural flight of Space Shuttle Atlantis and recognizing Kennedy Space Center for its economic, educational, and cultural contributions to the State of Florida and the United States.
+119|S.Res. 695|April 28, 2026|6315+6314|A resolution commemorating April 6, 2026, as the day the Artemis II crew surpassed the record for the farthest distance traveled by astronauts into deep space and celebrating the success of the Artemis II mission.
+119|S.Res. 792|June 24, 2026|6315|A resolution designating June 30, 2026, as "Asteroid Day".
