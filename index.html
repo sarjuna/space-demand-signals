@@ -15,7 +15,7 @@
 <nav class="sitebar" aria-label="Site"><div class="sitebar-in"><a class="brand" href="index.html"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.2" fill="var(--accent)"/><ellipse cx="10" cy="10" rx="8.6" ry="3.6" fill="none" stroke="var(--ink-2)" stroke-width="1.3" transform="rotate(-28 10 10)"/></svg>Space Demand Signals</a><div class="sitenav"><a href="index.html" aria-current="page">Overview</a><a href="india.html">India</a><a href="us.html">United States</a><a href="methods.html">Methods &amp; data</a></div></div></nav>
 <div class="wrap">
 <header class="top">
-  <div class="eyebrow">Space Economy Initiative · Cambridge Judge Business School</div>
+  <div class="eyebrow">Space Economy Initiative · Centre for India and Global Business · Cambridge Judge Business School</div>
   <h1>Space Demand Signals</h1>
   <p class="lede">Is demand for the space economy real, or is it hype? Quarter by quarter, the <b>Space Signals Index</b> compares how much attention people pay to space with how much is actually being built, in India and the United States, using only public data that can be traced to its source.</p>
   <div class="meta" id="meta"></div>
@@ -240,16 +240,16 @@ const AUD=[
   `<b>Extendable:</b> the same pipeline can add further countries and signals.`]]];
 document.getElementById('aud').innerHTML=AUD.map(([h,s,li])=>`<div class="panel"><h3>${h}</h3><div class="sub">${s}</div><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
 // citation
-document.getElementById('cite-text').innerHTML=`Sathiaseelan, A. (2026). <i>Space Demand Signals: Space Signals Index for India and the United States</i> [Dashboard and dataset]. Space Economy Initiative, Cambridge Judge Business School, University of Cambridge. https://sarjuna.github.io/space-demand-signals/`;
+document.getElementById('cite-text').innerHTML=`Sathiaseelan, A. (2026). <i>Space Demand Signals: Space Signals Index for India and the United States</i> [Dashboard and dataset]. Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School, University of Cambridge. https://sarjuna.github.io/space-demand-signals/`;
 document.getElementById('cite-bib').textContent=`@misc{sathiaseelan2026sds,
   author       = {Sathiaseelan, Arjuna},
   title        = {Space Demand Signals: Space Signals Index for India and the United States},
   year         = {2026},
-  howpublished = {Dashboard and dataset, Space Economy Initiative, Cambridge Judge Business School, University of Cambridge},
+  howpublished = {Dashboard and dataset, Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School, University of Cambridge},
   url          = {https://sarjuna.github.io/space-demand-signals/},
   note         = {Index to ${qlab(L.us.quarter)}}
 }`;
-document.getElementById('foot').textContent=`Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on ${O.pulled} · Index reported by quarter`;
+document.getElementById('foot').textContent=`Dr Arjuna Sathiaseelan · Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School · Data pulled on ${O.pulled} · Index reported by quarter`;
 
 /* ---------- VAR lead-lag ---------- */
 const V=O.var, VM={}; V.forEach(v=>VM[v.id]=v);
