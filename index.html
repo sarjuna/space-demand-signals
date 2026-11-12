@@ -15,16 +15,41 @@
 <nav class="sitebar" aria-label="Site"><div class="sitebar-in"><a class="brand" href="index.html"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.2" fill="var(--accent)"/><ellipse cx="10" cy="10" rx="8.6" ry="3.6" fill="none" stroke="var(--ink-2)" stroke-width="1.3" transform="rotate(-28 10 10)"/></svg>Space Demand Signals</a><div class="sitenav"><a href="index.html" aria-current="page">Overview</a><a href="india.html">India</a><a href="us.html">United States</a><a href="methods.html">Methods &amp; data</a></div></div></nav>
 <div class="wrap">
 <header class="top">
-  <div class="eyebrow">Space Economy Initiative · Working dashboard · Cambridge Judge Business School</div>
+  <div class="eyebrow">Space Economy Initiative · Cambridge Judge Business School</div>
   <h1>Space Demand Signals</h1>
-  <p class="lede">Investors in the space economy say they cannot get good data. This project tests whether the signals people usually reach for instead (public attention, online sentiment, stock prices and policy activity) actually track the real build-out of launches, satellites and capital. It runs the same tests on two very different space economies, India and the United States, using only public data that can be traced to its source.</p>
-  <div class="meta">
-    <span>Data as of <b>6 Nov 2026</b></span>
-    <span>Window <b>Jan 2016 – Oct 2026</b></span>
-  </div>
+  <p class="lede">Is demand for the space economy real, or is it hype? Quarter by quarter, the <b>Space Signals Index</b> compares how much attention people pay to space with how much is actually being built, in India and the United States, using only public data that can be traced to its source.</p>
+  <div class="meta" id="meta"></div>
 </header>
 
-<section class="rq" style="border-top:0;margin-top:22px;padding-top:0">
+<section class="hero" aria-labelledby="headline">
+  <p class="eyebrow" id="hl-eyebrow"></p>
+  <h2 id="headline" class="headline"></h2>
+  <p class="hl-sub" id="hl-sub"></p>
+  <div class="idx-grid" id="idx-cards"></div>
+  <p class="note" id="prov"></p>
+  <p class="note">How to read the numbers: 100 is each country’s own 2016–2025 average, and every 10 points is one standard deviation (a clearly unusual year). A gap within ±5 points is treated as in line. Each value covers the 12 months to the end of the quarter. Each country is measured against its own history, so compare directions, not levels.</p>
+</section>
+
+<section class="rq" id="index">
+  <div class="rq-head"><div class="rq-num">INDEX</div><h2>Attention against build-out since 2016</h2>
+  <p>Orange shading marks periods when attention ran ahead of what was being built; blue shading marks build-out the public was not noticing. The pale band shows how far attention moves if any one of its components is dropped.</p></div>
+  <div class="panel">
+    <div class="controls"><div class="seg" role="group" aria-label="Country" id="idx-seg"><button type="button" data-c="india" aria-pressed="true">India</button><button type="button" data-c="us" aria-pressed="false">United States</button></div></div>
+    <div class="legend"><span><i class="sw" style="background:var(--s2)"></i>Attention: searches and Wikipedia reading (US: plus Hacker News stories)</span><span><i class="sw" style="background:var(--s1)"></i>Build-out: launches and commercial satellites</span><span><i class="sw" style="background:var(--muted);height:1px"></i>Key events</span></div>
+    <div class="chartbox tall"><canvas id="c-idx" role="img" aria-label="Attention and build-out sub-indices, monthly, 2016 to 2026"></canvas></div>
+    <div class="statline" id="idx-stat"></div>
+  </div>
+</section>
+
+<section class="rq" id="audiences">
+  <div class="rq-head"><div class="rq-num">USE</div><h2>What it means for you</h2>
+  <p>The same evidence read for three audiences. Figures come from the index above or from the country pages, where the test behind each is set out.</p></div>
+  <div class="aud" id="aud"></div>
+</section>
+
+<section class="rq" id="countries">
+  <div class="rq-head"><div class="rq-num">DEEP</div><h2>The evidence, country by country</h2>
+  <p>Each country page asks the same research questions of attention, sentiment, markets and policy, with the data and test behind every chart.</p></div>
   <div class="cards">
     <a class="card-link" href="india.html"><span class="flag">IN</span><h3>India</h3>
       <p>A state-led programme opening to private firms after the June 2020 reforms. ISRO and NSIL flew every orbital launch until Skyroot's Vikram-1 in July 2026; NewSpace firms are unlisted.</p>
@@ -56,18 +81,28 @@
   </div>
 </section>
 
-<section class="rq">
-  <div class="rq-head"><div class="rq-num">USE</div><h2>How to read and reuse this</h2>
-  <p>Each country page states its research questions, the data behind every chart, the statistical test used and what could not be measured. The Methods &amp; data page sets out sources, definitions and limitations for both. All raw files and analysis code are in the repository.</p></div>
-  <div class="cards">
-    <a class="card-link" href="methods.html"><h3>Methods &amp; data</h3><p>Sources, index construction, event-study and sentiment methods, verification steps and known limitations.</p><span class="go">Read the methods →</span></a>
+<section class="rq" id="cite">
+  <div class="rq-head"><div class="rq-num">CITE</div><h2>Cite, download and reproduce</h2>
+  <p>The index, its components and every series behind the dashboards are free to reuse with attribution. The baseline is fixed at 2016–2025, so adding new quarters does not change earlier values; only months marked provisional can change.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Suggested citation</h3><div class="sub">Copy as text or BibTeX.</div>
+      <p class="cite" id="cite-text"></p>
+      <details><summary>BibTeX</summary><pre class="bib" id="cite-bib"></pre></details>
+    </div>
+    <div class="panel"><h3>Data and methods</h3><div class="sub">CSV, one row per month or quarter.</div>
+      <ul class="dl">
+        <li><a href="data/csv/shared/space_signals_index_india_quarterly.csv">India index, quarterly</a> · <a href="data/csv/shared/space_signals_index_india_monthly.csv">monthly</a></li>
+        <li><a href="data/csv/shared/space_signals_index_us_quarterly.csv">US index, quarterly</a> · <a href="data/csv/shared/space_signals_index_us_monthly.csv">monthly</a></li>
+        <li><a href="methods.html#index-method">How the index is built and tested</a></li>
+        <li><a href="methods.html">All sources, methods, limitations and 30+ further CSVs</a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on 5–6 Nov 2026</footer>
+<footer id="foot"></footer>
 </div>
-
-<script id="data" type="application/json">{"in_annual":[{"year":2016,"launches":7,"fails":0},{"year":2017,"launches":5,"fails":1},{"year":2018,"launches":7,"fails":0},{"year":2019,"launches":6,"fails":0},{"year":2020,"launches":2,"fails":0},{"year":2021,"launches":2,"fails":1},{"year":2022,"launches":5,"fails":1},{"year":2023,"launches":7,"fails":0},{"year":2024,"launches":5,"fails":0},{"year":2025,"launches":5,"fails":1},{"year":2026,"launches":4,"fails":1}],"us_annual":[{"year":2016,"launches":23,"fails":0},{"year":2017,"launches":29,"fails":0},{"year":2018,"launches":31,"fails":0},{"year":2019,"launches":21,"fails":0},{"year":2020,"launches":37,"fails":3},{"year":2021,"launches":45,"fails":2},{"year":2022,"launches":78,"fails":2},{"year":2023,"launches":107,"fails":4},{"year":2024,"launches":144,"fails":1},{"year":2025,"launches":181,"fails":3},{"year":2026,"launches":136,"fails":1}],"in_total":51,"us_total":696,"hn_in":286,"hn_us":17640,"in_r2":2,"ipo_c":"18.3","ipo_t":"−2.46"}</script>
+<script id="data" type="application/json">{"in_annual":[{"year":2016,"launches":7,"fails":0},{"year":2017,"launches":5,"fails":1},{"year":2018,"launches":7,"fails":0},{"year":2019,"launches":6,"fails":0},{"year":2020,"launches":2,"fails":0},{"year":2021,"launches":2,"fails":1},{"year":2022,"launches":5,"fails":1},{"year":2023,"launches":7,"fails":0},{"year":2024,"launches":5,"fails":0},{"year":2025,"launches":5,"fails":1},{"year":2026,"launches":4,"fails":1}],"us_annual":[{"year":2016,"launches":23,"fails":0},{"year":2017,"launches":29,"fails":0},{"year":2018,"launches":31,"fails":0},{"year":2019,"launches":21,"fails":0},{"year":2020,"launches":37,"fails":3},{"year":2021,"launches":45,"fails":2},{"year":2022,"launches":78,"fails":2},{"year":2023,"launches":107,"fails":4},{"year":2024,"launches":144,"fails":1},{"year":2025,"launches":181,"fails":3},{"year":2026,"launches":136,"fails":1}],"in_total":51,"us_total":696,"hn_in":286,"hn_us":17640,"in_r2":2,"ipo_c":"18.3","ipo_t":"−2.46","idx":{"india":{"month":["2016-12","2017-01","2017-02","2017-03","2017-04","2017-05","2017-06","2017-07","2017-08","2017-09","2017-10","2017-11","2017-12","2018-01","2018-02","2018-03","2018-04","2018-05","2018-06","2018-07","2018-08","2018-09","2018-10","2018-11","2018-12","2019-01","2019-02","2019-03","2019-04","2019-05","2019-06","2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08","2026-09","2026-10"],"attention":[87.47,86.88,89.73,90.3,90.01,89.69,89.35,89.41,89.71,89.25,90.37,90.93,90.83,91.64,89.53,88.79,88.98,87.87,86.73,85.79,85.94,86.07,85.79,85.82,86.6,86.45,86.24,87.93,88.85,90.17,91.09,95.04,98.2,103.96,106.28,108.19,109.7,111.31,114.01,113.22,112.14,112.02,112.61,110.95,109.02,104.14,102.85,101.33,100.42,99.49,97.78,98.62,99.16,98.87,94.28,92.41,91.89,92.96,94.18,92.67,91.44,92.23,91.69,90.62,92.53,93.4,95.76,97.57,99.75,99.44,100.14,106.66,108.56,107.94,107.92,108.24,108.55,108.49,107.63,111.03,116.24,120.83,122.53,116.86,115.9,116.34,117.66,117.94,116.45,117.76,118.28,113.08,107.95,104.36,102.76,103.27,103.98,105.43,103.95,103.29,103.13,102.18,102.03,102.41,102.31,100.85,99.23,100.52,100.96,100.05,99.98,100.18,101.12,101.77,101.8,108.27,108.96,111.62,112.66],"buildout":[100.99,98.59,100.99,98.59,95.83,98.59,100.99,100.99,103.09,98.59,98.59,98.59,95.83,98.59,95.83,98.59,100.99,98.59,92.57,92.57,88.57,92.57,92.57,98.59,106.96,106.96,106.96,104.56,104.56,106.96,106.96,109.07,109.07,106.96,106.96,104.56,98.59,95.83,95.83,95.83,92.57,88.57,88.57,83.42,83.42,83.42,83.42,83.42,83.42,83.42,88.57,88.57,88.57,88.57,88.57,88.57,92.57,92.57,92.57,88.57,83.42,83.42,83.42,83.42,89.39,89.39,94.54,94.54,94.54,94.54,98.54,109.7,109.7,109.7,109.7,112.46,112.93,115.04,114.85,118.85,116.96,118.85,116.96,106.96,106.96,109.07,109.07,106.96,108.06,105.3,101.8,94.54,98.54,94.54,94.54,94.54,101.8,111.27,108.0,109.33,108.0,111.27,111.27,114.03,115.67,115.67,115.67,118.43,115.67,111.27,111.27,109.7,109.7,108.0,108.0,108.0,108.0,111.27,114.03],"att_lo":[85.56,85.15,87.11,87.64,87.33,87.26,86.99,87.16,87.37,87.14,88.13,88.45,88.07,88.6,86.84,86.19,86.25,85.4,84.55,84.07,84.5,85.02,85.14,85.13,85.75,85.55,85.17,85.92,86.74,88.01,88.87,92.76,95.77,100.83,103.08,104.97,106.53,108.26,111.2,110.56,109.85,109.7,110.18,109.0,107.71,103.66,101.97,100.25,99.24,98.24,95.91,96.57,97.18,96.75,91.95,90.34,90.21,91.43,92.61,90.89,89.93,90.78,90.15,88.97,91.06,91.96,94.56,96.53,98.59,98.42,99.09,105.44,107.17,106.5,106.31,106.53,106.51,106.32,105.72,109.28,114.73,119.38,121.26,115.54,114.54,114.81,116.01,116.32,114.87,116.32,116.93,111.52,106.24,102.44,100.69,101.07,101.83,103.33,101.99,101.2,100.73,99.68,99.29,99.53,98.84,98.01,96.38,97.19,97.23,95.72,95.04,94.67,94.73,94.63,94.22,100.59,101.15,103.12,103.92],"att_hi":[90.45,89.69,92.56,93.02,92.5,91.91,91.45,91.52,91.88,91.33,92.64,93.29,93.18,94.12,91.67,90.8,91.03,89.72,88.4,87.3,87.14,87.32,87.45,87.76,88.59,88.74,88.58,90.81,91.81,93.1,94.16,98.38,101.68,107.51,109.99,111.94,113.55,114.6,117.29,116.41,115.21,115.08,115.46,113.36,110.34,104.87,103.63,102.42,101.65,101.02,99.59,100.62,101.26,101.13,96.83,94.22,93.69,94.83,96.16,94.72,93.64,94.39,93.73,92.7,94.57,95.34,97.61,99.39,101.42,101.05,101.62,108.46,110.61,109.91,110.04,110.4,110.75,110.68,109.55,112.7,117.61,122.39,124.05,117.79,116.85,117.44,118.73,118.71,117.24,118.79,119.37,115.16,110.45,106.19,104.8,105.37,106.0,107.63,106.43,105.9,105.89,104.92,104.77,105.18,105.21,103.8,102.28,103.72,104.27,103.54,103.54,103.91,104.82,105.7,105.95,112.76,113.65,116.51,117.64],"quarters":["2017Q1","2017Q2","2017Q3","2017Q4","2018Q1","2018Q2","2018Q3","2018Q4","2019Q1","2019Q2","2019Q3","2019Q4","2020Q1","2020Q2","2020Q3","2020Q4","2021Q1","2021Q2","2021Q3","2021Q4","2022Q1","2022Q2","2022Q3","2022Q4","2023Q1","2023Q2","2023Q3","2023Q4","2024Q1","2024Q2","2024Q3","2024Q4","2025Q1","2025Q2","2025Q3","2025Q4","2026Q1","2026Q2","2026Q3"],"q_att":[90.3,89.35,89.25,90.83,88.79,86.73,86.07,86.6,87.93,91.09,103.96,109.7,113.22,112.61,104.14,100.42,98.62,94.28,92.96,91.44,90.62,95.76,99.44,108.56,108.24,107.63,120.83,115.9,117.94,118.28,104.36,103.98,103.29,102.03,100.85,100.96,100.18,101.8,111.62],"q_bo":[98.59,100.99,98.59,95.83,98.59,92.57,92.57,106.96,104.56,106.96,106.96,98.59,95.83,88.57,83.42,83.42,88.57,88.57,92.57,83.42,83.42,94.54,94.54,109.7,112.46,114.85,118.85,106.96,106.96,101.8,94.54,101.8,109.33,111.27,115.67,115.67,109.7,108.0,111.27],"q_gap":[-8.29,-11.64,-9.35,-5.0,-9.8,-5.84,-6.5,-20.35,-16.64,-15.87,-3.0,11.11,17.39,24.04,20.73,17.01,10.05,5.7,0.4,8.02,7.2,1.21,4.89,-1.14,-4.22,-7.22,1.98,8.94,10.98,16.48,9.82,2.18,-6.04,-9.24,-14.81,-14.71,-9.51,-6.2,0.35],"latest":{"quarter":"2026Q3","attention":111.6,"buildout":111.3,"gap":0.4,"d_attention":9.8,"d_buildout":3.3,"d_gap":6.6,"prev_quarter":"2026Q2"},"last_month":"2026-10","episodes":[["2019Q4","2022Q3"],["2023Q3","2024Q4"],["2026Q3","2026Q3","open"]],"events":[["2019-09","Chandrayaan-2"],["2020-06","Space reforms"],["2023-08","Chandrayaan-3"],["2026-07","Vikram-1"]],"robustness":{"r_google":0.788,"r_wiki":0.512,"loo_max_abs_diff":8.7},"gap_min":{"q":"2018Q4","v":-20.4},"gap_max":{"q":"2020Q2","v":24.0},"last_negative":"2026Q2"},"us":{"month":["2016-12","2017-01","2017-02","2017-03","2017-04","2017-05","2017-06","2017-07","2017-08","2017-09","2017-10","2017-11","2017-12","2018-01","2018-02","2018-03","2018-04","2018-05","2018-06","2018-07","2018-08","2018-09","2018-10","2018-11","2018-12","2019-01","2019-02","2019-03","2019-04","2019-05","2019-06","2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08","2026-09","2026-10"],"attention":[76.17,75.94,77.81,79.77,79.41,80.55,81.49,82.73,85.17,84.24,84.56,84.91,87.0,88.76,90.32,89.89,90.72,90.98,91.88,92.35,91.93,92.48,94.32,96.43,97.05,94.82,92.93,93.89,93.86,92.69,91.67,92.47,92.18,92.21,91.78,90.26,86.43,87.45,89.04,89.26,88.05,94.62,100.01,101.1,103.78,105.33,107.04,109.15,110.99,111.95,113.83,115.87,116.92,113.17,109.56,109.99,108.84,108.7,108.38,108.37,108.23,107.34,106.39,105.65,105.63,104.78,104.83,104.33,106.43,108.29,108.16,110.04,109.16,108.55,107.1,106.23,107.11,106.78,106.6,106.29,104.93,103.37,102.83,101.02,101.37,102.57,103.34,104.63,103.87,104.1,105.02,104.53,103.98,104.08,105.93,106.9,107.12,108.04,108.85,110.33,109.81,109.21,108.88,109.58,109.99,109.89,108.65,107.86,107.96,108.64,109.76,109.6,117.3,121.58,125.46,126.88,127.51,127.92,128.84],"buildout":[83.91,84.77,88.07,87.92,88.06,88.06,88.26,89.39,89.95,89.87,91.21,91.36,91.21,91.86,90.12,90.13,90.46,91.18,90.4,88.82,88.34,88.34,86.68,87.56,88.71,87.88,87.35,86.69,87.24,88.23,88.33,88.05,88.41,87.75,87.46,88.5,88.0,89.92,91.37,92.34,92.41,92.11,93.5,93.97,94.9,96.1,97.81,98.52,98.9,99.51,99.82,100.7,101.46,102.51,102.92,102.45,102.07,102.21,101.03,100.74,101.31,101.55,101.94,101.77,102.08,102.26,102.17,104.14,105.37,105.85,107.01,107.29,107.4,107.93,108.08,108.65,108.54,108.79,109.27,109.14,109.03,109.57,109.75,110.23,110.51,110.47,110.53,110.7,111.42,111.62,111.85,111.65,112.04,111.65,111.76,112.35,112.56,112.91,113.28,113.15,113.44,113.96,114.42,114.88,115.11,115.79,116.21,116.24,116.58,116.53,116.7,117.12,117.19,116.91,116.79,116.79,116.71,116.32,116.09],"att_lo":[75.47,75.24,77.15,79.13,78.79,79.95,80.91,82.18,83.64,82.65,83.06,83.31,85.28,87.13,88.85,88.3,89.19,89.3,90.43,90.91,90.55,91.01,92.98,95.34,95.85,93.35,91.35,92.36,92.57,91.61,90.38,91.05,90.93,90.87,90.34,89.17,85.34,86.46,88.18,88.36,86.91,93.72,98.88,100.23,102.89,104.42,105.95,107.88,109.88,110.56,112.2,114.0,114.88,111.72,108.59,108.77,107.66,107.55,106.96,106.95,106.83,106.05,105.34,104.41,104.34,103.42,103.53,103.47,105.74,106.98,106.62,108.03,107.22,106.79,105.2,104.29,105.07,104.73,104.54,104.22,103.5,102.55,101.99,100.09,100.43,101.72,102.57,103.85,102.8,102.96,103.85,103.29,102.76,103.04,105.27,106.16,106.26,107.11,107.87,109.38,108.76,108.02,107.55,108.06,108.38,108.17,106.7,105.83,105.62,105.99,106.83,106.24,114.14,118.03,121.12,122.24,122.84,123.31,124.26],"att_hi":[77.55,77.2,78.87,80.67,80.29,81.47,82.48,83.55,86.02,85.28,85.49,85.71,87.95,89.92,91.71,91.18,92.15,92.3,93.25,93.8,93.07,93.8,95.54,97.51,98.11,96.52,94.52,95.59,95.57,94.09,93.26,94.18,94.01,94.05,93.64,92.06,89.44,90.08,91.34,91.19,90.46,96.37,101.22,102.69,105.23,106.57,108.1,110.35,112.4,113.41,115.39,117.58,118.61,114.54,110.7,111.29,110.55,110.72,110.6,110.64,110.38,109.16,107.9,106.94,106.73,105.92,105.95,105.21,106.96,109.2,108.97,111.16,110.37,109.85,108.27,107.29,108.26,108.02,107.94,107.51,105.97,104.31,103.9,102.19,102.52,103.56,104.35,105.69,104.96,105.2,106.35,105.85,105.22,105.27,107.02,107.92,108.15,108.87,109.62,111.07,110.72,110.27,109.94,110.48,111.02,110.92,110.28,110.0,110.34,111.41,112.75,113.19,120.98,125.18,128.5,129.69,130.33,130.88,131.77],"quarters":["2017Q1","2017Q2","2017Q3","2017Q4","2018Q1","2018Q2","2018Q3","2018Q4","2019Q1","2019Q2","2019Q3","2019Q4","2020Q1","2020Q2","2020Q3","2020Q4","2021Q1","2021Q2","2021Q3","2021Q4","2022Q1","2022Q2","2022Q3","2022Q4","2023Q1","2023Q2","2023Q3","2023Q4","2024Q1","2024Q2","2024Q3","2024Q4","2025Q1","2025Q2","2025Q3","2025Q4","2026Q1","2026Q2","2026Q3"],"q_att":[79.77,81.49,84.24,87.0,89.89,91.88,92.48,97.05,93.89,91.67,92.21,86.43,89.26,100.01,105.33,110.99,115.87,109.56,108.7,108.23,105.65,104.83,108.29,109.16,106.23,106.6,103.37,101.37,104.63,105.02,104.08,107.12,110.33,108.88,109.89,107.96,109.6,125.46,127.92],"q_bo":[87.92,88.26,89.87,91.21,90.13,90.4,88.34,88.71,86.69,88.33,87.75,88.0,92.34,93.5,96.1,98.9,100.7,102.92,102.21,101.31,101.77,102.17,105.85,107.4,108.65,109.27,109.57,110.51,110.7,111.85,111.65,112.56,113.15,114.42,115.79,116.58,117.12,116.79,116.32],"q_gap":[-8.14,-6.77,-5.63,-4.21,-0.24,1.47,4.14,8.34,7.19,3.34,4.46,-1.57,-3.08,6.51,9.23,12.09,15.17,6.65,6.49,6.92,3.88,2.65,2.44,1.76,-2.42,-2.67,-6.21,-9.13,-6.06,-6.83,-7.56,-5.45,-2.82,-5.54,-5.9,-8.62,-7.52,8.67,11.6],"latest":{"quarter":"2026Q3","attention":127.9,"buildout":116.3,"gap":11.6,"d_attention":2.5,"d_buildout":-0.5,"d_gap":2.9,"prev_quarter":"2026Q2"},"last_month":"2026-10","episodes":[["2018Q2","2019Q3"],["2020Q2","2022Q4"],["2026Q2","2026Q3","open"]],"events":[["2020-05","Crew Dragon Demo-2"],["2022-11","Artemis I"],["2026-04","Artemis II"],["2026-06","SpaceX IPO"]],"robustness":{"r_google":0.922,"r_wiki":0.692,"loo_max_abs_diff":4.7},"gap_min":{"q":"2023Q4","v":-9.1},"gap_max":{"q":"2021Q1","v":15.2},"last_negative":"2026Q1"}},"pulled":"5–6 Nov 2026"}</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="assets/charts.js"></script>
 <script>
@@ -112,6 +147,93 @@ document.getElementById('cmp-body').innerHTML=T.map(([q,a,b])=>`<tr><td>${q}</td
 function bars(id,rows){const c=C();mk(id,{type:'bar',data:{labels:rows.map(r=>String(r.year)),datasets:[{label:'Orbital launch attempts',data:rows.map(r=>r.launches),backgroundColor:c.s1,borderRadius:3}]},
   options:base(c,{scales:{y:{beginAtZero:true,title:SDS.axisTitle(c,'launches')}},plugins:{tooltip:{callbacks:{label:i=>{const r=rows[i.dataIndex];return `${r.launches} attempts, ${r.fails} failed${r.year===2026?' (to October)':''}`}}}}})})}
 onTheme(()=>{bars('c-in',O.in_annual);bars('c-us',O.us_annual)});
+
+/* ---------- Space Signals Index ---------- */
+const X=O.idx, NM={india:'India',us:'United States'};
+const qlab=q=>q.replace(/(\d{4})Q(\d)/,'$1 Q$2');
+const mlab=m=>new Date(m+'-01T00:00:00').toLocaleDateString('en-GB',{month:'short',year:'numeric'});
+const sg=(v,d=1)=>(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(d);
+const yrs=n=>{const y=n/4;return (Number.isInteger(y)?y:(Math.floor(y)+(y%1>=.5?'½':''))).toString()};
+const L={india:X.india.latest,us:X.us.latest};
+document.getElementById('meta').innerHTML=`<span>Latest quarter <b>${qlab(L.us.quarter)}</b></span><span>Monthly data to <b>${mlab(X.us.last_month)}</b></span><span>Data pulled <b>${O.pulled}</b></span><span>Reported <b>by quarter</b></span>`;
+// headline
+const both=c=>c.q_gap; const qs=X.us.quarters;
+let since=null;{const gi=X.india.q_gap,gu=X.us.q_gap;let k=qs.length-1;while(k>=0&&gi[k]>0&&gu[k]>0)k--;for(let j=k;j>=0;j--){if(gi[j]>0&&gu[j]>0){since=qs[j];break}}}
+const TH=5; // gap beyond ±5 points (half a standard deviation) counts as clearly ahead
+const ST=c=>{const g=L[c].gap;return g>TH?'ahead':g<-TH?'behind':'level'};
+const prevG=c=>X[c].q_gap[X[c].q_gap.length-2];
+const phrase=c=>{const st=ST(c),n=NM[c].replace('United States','the United States');
+ if(st==='ahead')return `has run well ahead of the build-out in ${n}`;
+ if(st==='behind')return `is lagging the build-out in ${n}`;
+ return prevG(c)<-TH?`has caught up with the build-out in ${n}`:`is level with the build-out in ${n}`};
+const boMax=c=>Math.max(...X[c].q_bo);
+const boMove=(c,unit='points')=>{const d=L[c].d_buildout;return Math.abs(d)<1?`was roughly flat (${sg(d)} ${unit})`:(d>0?'rose ':'eased ')+Math.abs(d).toFixed(1)+' '+unit};
+const order=ST('us')==='ahead'?['us','india']:['india','us'];
+document.getElementById('hl-eyebrow').textContent=`Space Signals Index · ${qlab(L.us.quarter)}`;
+document.getElementById('headline').textContent=`Attention to space ${phrase(order[0])}, and ${phrase(order[1]).replace(/^(has|is) /,'$1 ').replace(/ the build-out in /,' it in ')}.`;
+const usMax=Math.abs(Math.max(...X.us.q_att)-L.us.attention)<0.06;
+const widest=c=>{const g=X[c].q_gap,k=g.length-1;for(let j=k-1;j>=0;j--)if(g[j]>=g[k])return X[c].quarters[j].slice(0,4);return null};
+const wu=widest('us');
+document.getElementById('hl-sub').innerHTML=`In the US, attention ${usMax?'has reached its highest level of the decade':'has jumped'}, following Artemis II and the SpaceX listing, while build-out ${Math.abs(L.us.d_buildout)<1?'has held steady':(L.us.d_buildout>0?'has kept rising':'has eased')}${boMax('us')-L.us.buildout<2?', close to its own decade high':''}${wu?`; the gap of ${sg(L.us.gap)} points is the widest since ${wu}`:''}. In India, attention rose ${Math.abs(L.india.d_attention).toFixed(1)} points in the quarter of Skyroot’s Vikram-1, India’s first private orbital launch${negRun('india')?`, after ${negRun('india')[0]} quarters in which build-out was clearly ahead`:''}. <b>The index is a signal to watch, not a trading signal:</b> whether the gap predicts prices or investment is the next test.`;
+function posRun(c){const g=X[c].q_gap;let k=g.length-1,n=0;while(k>=0&&g[k]>TH){n++;k--}return n}
+// consecutive quarters, ending just before the latest one, in which build-out was clearly ahead (gap below −TH)
+function negRun(c){const g=X[c].q_gap;let k=g.length-2,n=0;const e=k;while(k>=0&&g[k]<-TH){n++;k--}return n?[n,X[c].quarters[k+1],X[c].quarters[e]]:null}
+document.getElementById('prov').textContent=`${qlab(L.us.quarter)} values are provisional: they use satellite launches to July 2026, the latest complete month in the catalogue.`;
+document.getElementById('idx-cards').innerHTML=['india','us'].map(c=>{const l=L[c],nr=negRun(c);
+ const cell=(lab,v,d,extra='')=>`<div><span class="lab">${lab}</span><span class="val">${typeof v==='number'?v.toFixed(1):v}</span><span class="chg">${d}${extra}</span></div>`;
+ const note=`Build-out ${boMove(c)} in the quarter.`;
+ return `<div class="idx"><div class="idx-top"><h3>${NM[c]}</h3><span class="tag ${{ahead:'t-mixed',level:'t-level',behind:'t-yes'}[ST(c)]}"><i></i>${{ahead:'Attention ahead',level:'In line',behind:'Build-out ahead'}[ST(c)]}</span></div>
+ <div class="idx-nums">${cell('Attention',l.attention,`${sg(l.d_attention)} vs ${qlab(l.prev_quarter)}`)}${cell('Build-out',l.buildout,`${sg(l.d_buildout)} vs ${qlab(l.prev_quarter)}`)}${cell('Gap',sg(l.gap),`${sg(l.d_gap)} vs ${qlab(l.prev_quarter)}`)}</div>
+ <p>${note}${posRun(c)>1?` Attention has been clearly ahead (by more than ${TH} points) for ${posRun(c)} quarters, since ${qlab(X[c].quarters[X[c].quarters.length-posRun(c)])}.`:''}${nr?` Before this, build-out had been clearly ahead (by more than ${TH} points) for ${nr[0]} quarter${nr[0]>1?'s':''} (${qlab(nr[1])}${nr[0]>1?` to ${qlab(nr[2])}`:''}).`:''}</p></div>`}).join('');
+// chart
+const evPlugin={id:'ev',afterDatasetsDraw(ch,_,o){const {ctx,chartArea:a,scales:{x}}=ch;const c=C();ctx.save();ctx.font="11px 'IBM Plex Mono', monospace";
+ (o.ev||[]).forEach(([m,t],i)=>{const k=ch.data.labels.indexOf(m);if(k<0)return;const px=x.getPixelForValue(k);ctx.strokeStyle=c.muted;ctx.setLineDash([3,3]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(px,a.top+14+(i%2)*14);ctx.lineTo(px,a.bottom);ctx.stroke();ctx.setLineDash([]);
+ ctx.fillStyle=c.ink2;const w=ctx.measureText(t).width;let tx=px-w/2;tx=Math.max(a.left,Math.min(a.right-w,tx));ctx.fillText(t,tx,a.top+10+(i%2)*14)});ctx.restore()}};
+const rgba=(h,a)=>{h=h.replace('#','');if(h.length===3)h=h.split('').map(x=>x+x).join('');const n=parseInt(h,16);return `rgba(${n>>16&255},${n>>8&255},${n&255},${a})`};
+let cur='india';
+function drawIdx(){const c=C(),d=X[cur];
+ mk('c-idx',{type:'line',plugins:[evPlugin],data:{labels:d.month,datasets:[
+  {label:'lo',data:d.att_lo,borderWidth:0,pointRadius:0,fill:false},
+  {label:'hi',data:d.att_hi,borderWidth:0,pointRadius:0,fill:'-1',backgroundColor:rgba(c.s2,.12)},
+  {label:'Attention',data:d.attention,borderColor:c.s2,borderWidth:2.2,pointRadius:0,fill:{target:3,above:rgba(c.s2,.22),below:rgba(c.s1,.18)}},
+  {label:'Build-out',data:d.buildout,borderColor:c.s1,borderWidth:2.2,pointRadius:0,fill:false}]},
+  options:base(c,{plugins:{ev:{ev:d.events},tooltip:{filter:i=>i.datasetIndex>1,callbacks:{title:t=>mlab(t[0].label),label:i=>`${i.dataset.label}: ${i.parsed.y.toFixed(1)}`,
+   afterBody:t=>{const k=t[0].dataIndex;return `Gap: ${sg(d.attention[k]-d.buildout[k])}`}}}},
+   scales:{x:{ticks:{callback:SDS.yearTick,autoSkip:false}},y:{title:SDS.axisTitle(c,'index (100 = 2016–25 average)')}}})});
+ const r=d.robustness;
+ document.getElementById('idx-stat').innerHTML=`<span>Latest month <b>${mlab(d.last_month)}</b></span><span>Attention vs Google-only version <b>r = ${r.r_google.toFixed(2)}</b></span><span>vs Wikipedia-only <b>r = ${r.r_wiki.toFixed(2)}</b></span><span>Dropping any one component moves attention by at most <b>${r.loo_max_abs_diff.toFixed(1)} points</b></span><span>Aug–Oct 2026 provisional: <b>satellites held at July value</b> (catalogue complete to July)</span>`}
+document.querySelectorAll('#idx-seg button').forEach(b=>b.addEventListener('click',()=>{cur=b.dataset.c;document.querySelectorAll('#idx-seg button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawIdx()}));
+onTheme(drawIdx);
+// audiences
+const AUD=[
+ ['For investors','Separate spectacle from substance.',[
+  `<b>Watch the gap.</b> US attention is ${Math.abs(L.us.gap).toFixed(1)} points ahead of build-out; in India the two are ${ST('india')==='level'?'level':sg(L.india.gap)+' points apart'}. The gap has swung both ways in both countries since 2016, so read it as a temperature check, not a forecast.`,
+  `<b>Markets price landmarks, not routine progress.</b> Indian listed suppliers beat the Nifty 50 by 7.1% in the two days after the Chandrayaan-3 landing (t = 3.8); launch failures produced no significant move.`,
+  `<b>Searches follow prices, not the reverse.</b> In the US, stock moves are followed by searches for the firms; no attention measure predicted returns.`,
+  `<b>Mind concentration.</b> SpaceX flew 94% of US launches in 2025, and India’s NewSpace firms are not listed.`]],
+ ['For policymakers','Read public interest and private capital directly.',[
+  `<b>Reform moves the conversation first.</b> After India’s 2020 reforms, NewSpace questions in the Lok Sabha rose from 6.9% to 26.4% of space questions, ahead of private launches.`,
+  `<b>More launches have not meant more attention.</b> The share of Wikipedia reading going to NASA fell 30% from 2016 to 2025 while US launches rose almost eightfold.`,
+  `<b>Private capital is not measured.</b> Published figures for India’s 2021 start-up funding differ 2.6-fold, and the US has no official US-only series. An official investment series would be the biggest single data gain.`,
+  `<b>A quarterly check.</b> The index shows whether public interest is keeping pace with programmes and reforms.`]],
+ ['For researchers','An open panel, built to be tested.',[
+  `<b>Open data:</b> monthly series for two countries, 2016–2026, in 30+ CSVs with code; an audit ties all 16,049 raw values to the tables.`,
+  `<b>A transparent index:</b> a fixed 2016–2025 baseline, so new data do not rewrite history; equal weights; and robustness to component choice reported on the chart.`,
+  `<b>Next test:</b> vector autoregression on these series, to ask whether attention leads build-out, prices or capital, or follows them.`,
+  `<b>Extendable:</b> the same pipeline can add further countries and signals.`]]];
+document.getElementById('aud').innerHTML=AUD.map(([h,s,li])=>`<div class="panel"><h3>${h}</h3><div class="sub">${s}</div><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
+// citation
+const acc=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+document.getElementById('cite-text').innerHTML=`Sathiaseelan, A. (2026). <i>Space Demand Signals: Space Signals Index for India and the United States</i> [Dashboard and dataset]. Space Economy Initiative, Cambridge Judge Business School, University of Cambridge. https://sarjuna.github.io/space-demand-signals/ (accessed ${acc}).`;
+document.getElementById('cite-bib').textContent=`@misc{sathiaseelan2026sds,
+  author       = {Sathiaseelan, Arjuna},
+  title        = {Space Demand Signals: Space Signals Index for India and the United States},
+  year         = {2026},
+  howpublished = {Dashboard and dataset, Space Economy Initiative, Cambridge Judge Business School, University of Cambridge},
+  url          = {https://sarjuna.github.io/space-demand-signals/},
+  note         = {Index to ${qlab(L.us.quarter)}}
+}`;
+document.getElementById('foot').textContent=`Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on ${O.pulled} · Index reported by quarter`;
 
 </script>
 </body>

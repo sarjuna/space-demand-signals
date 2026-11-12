@@ -1,0 +1,129 @@
+# Lok Sabha questions answered by the Ministry/Department of SPACE (minCode 28), LS16-LS18 (2014-2026).
+# Source: Digital Sansad API (sansad.in/api_ls/question/qetFilteredQuestionsAns, ministryCode=28; session totals from unfiltered totalRecordSize). Pulled 2026-11-05. 602 questions.
+# Topic = rule-based keyword classifier on question titles (first match wins, order as columns). Classifier rules in analysis notes.
+session|first_date|last_date|all_q|space_q|newspace|policy|sustain_security|international|exploration_hsf|launch_infra|applications|budget_workforce|general
+16/2|20140709|20140813|5877|16|1|0|0|2|3|4|3|1|2
+16/3|20141126|20141217|5496|17|2|0|0|2|7|2|1|2|1
+16/4|20150225|20150506|7725|27|1|0|0|2|4|5|7|4|4
+16/5|20150722|20150812|4452|30|1|3|2|5|7|7|3|1|1
+16/6|20151202|20151223|4498|23|2|1|0|2|2|5|6|2|3
+16/7|20160224|20160316|3499|21|4|1|0|2|1|5|5|1|2
+16/8|20160427|20160511|3250|22|3|1|0|3|3|6|1|2|3
+16/9|20160720|20160810|4999|13|2|0|0|2|2|3|2|2|0
+16/10|20161116|20161214|5500|26|0|0|0|3|6|10|2|2|3
+16/11|20170208|20170412|6999|27|2|0|0|1|5|7|3|1|8
+16/12|20170719|20170809|4735|17|0|0|0|0|3|4|2|0|8
+16/13|20171220|20180103|3494|11|0|0|0|1|2|4|3|0|1
+16/14|20180207|20180404|7247|19|0|0|1|0|4|6|3|3|2
+16/15|20180718|20180808|4496|16|1|0|1|1|2|4|4|2|1
+16/16|20181212|20190102|4891|20|0|1|0|2|3|8|3|0|3
+16/17|20190206|20190213|1991|12|2|0|0|1|4|1|3|0|1
+17/1|20190626|20190724|6198|18|3|1|0|1|5|0|4|1|3
+17/2|20191120|20191211|4749|15|1|0|0|0|7|2|3|2|0
+17/3|20200205|20200318|5237|13|0|0|1|0|2|2|2|1|5
+17/4|20200916|20200921|2301|4|1|0|0|0|0|2|0|0|1
+17/5|20210203|20210324|5497|20|5|1|0|1|3|2|0|1|7
+17/6|20210728|20210804|3999|6|0|0|1|0|1|1|2|0|1
+17/7|20211201|20211215|4248|8|2|0|2|2|1|0|0|1|0
+17/8|20220202|20220406|6249|21|5|1|3|0|3|4|1|0|4
+17/9|20220720|20220803|3991|7|3|0|0|0|0|1|1|0|2
+17/10|20221207|20221221|2998|13|2|0|0|1|2|3|2|1|2
+17/11|20230208|20230405|6000|17|7|0|0|0|3|2|2|1|2
+17/12|20230802|20230809|4250|7|2|1|0|0|0|4|0|0|0
+17/14|20231206|20231220|3333|18|5|0|0|1|4|4|0|3|1
+17/15|20240207|20240207|1499|4|0|0|0|0|3|0|1|0|0
+18/2|20240724|20240807|3499|12|3|0|0|1|2|1|1|0|4
+18/3|20241127|20241218|4749|16|6|0|1|1|6|0|0|0|2
+18/4|20250312|20250402|6250|15|6|1|0|2|3|0|1|1|1
+18/5|20250723|20250820|5248|15|1|0|0|2|3|2|3|1|3
+18/6|20251203|20251217|3499|12|2|0|0|0|2|1|4|2|1
+18/7|20260204|20260401|6975|27|6|0|1|0|6|3|8|1|2
+18/8|20260729|20260812|4500|17|5|1|2|0|3|0|5|1|0
+# Sessions with zero answered questions (16/1, 17/13, 18/1) omitted.
+# NEWSPACE-classified titles (date|title)
+20140806|SPACE PROGRAMMES FOR SOCIO ECONOMIC DEVELOPMENT
+20141126|COMMERCIAL EXPLOITATION OF SPACE TECHNOLOGY
+20141217|PRIVATE PARTNERSHIP IN ISRO
+20150506|LEASING OUT SPECTRUM
+20150805|Commercial Activities in Space Science
+20151209|Space Tourism
+20151216|Investments under Make in India
+20160224|Commercialisation of Satellite Manufacturing Technology
+20160302|FDI in Space Research
+20160309|Private Partnership in Space Industry
+20160309|Space Industry Park/Enclave
+20160504|Private Investment in Space Technology
+20160504|Privatising PSLV Operations
+20160511|Industry Participation in Space Programmes
+20160720|Privatisation of PSLV
+20160727|Satellite System Supplies
+20170208|Industry Built Spacecraft
+20170322|Private Sector Participation in Space Programmes
+20180808|Start-ups in Space Sector
+20190206|Outsourcing of Spacecraft Assembly Integration and Testing
+20190213|FDI in Space Sector
+20190703|Private Participation in Space Sector
+20190703|Space Tourism
+20190724|New Space India Limited
+20191211|Commercialising R&D of ISRO
+20200916|Private Sector Participation in Space
+20210210|Startups in ISRO
+20210310|Private Sector Participation in Space
+20210317|Private Startups
+20210324|Commercializing Satellite Production
+20210324|Private Satellite
+20211201|Indian Space Promotion and Authorization Centre (IN-SPACe)
+20211208|IN-SPACe
+20220202|Directorate of IN-SPACe
+20220209|Private Player in ISRO
+20220209|Private Players in Space
+20220330|Indian Space Association
+20220330|Promotion of Startups/Private Companies
+20220720|India's Share in Global Space Market
+20220720|Private Participation in Space
+20220803|Global Space Economy
+20221214|Private Players in Space Research
+20221214|Private Sector Participation in Space Sector
+20230208|Private Startups offering Satellite Services in Karnataka
+20230208|Startups in Space Technology based Business
+20230315|Private Sector in Space Industry
+20230315|Promoting Space related Industries
+20230315|Strengthening of IN-SPACE
+20230322|Revenue of Global Space Industry
+20230329|Share in Global Space Market
+20230809|Encouraging the Growth of Startups
+20230809|FDI in Space Sector
+20231206|INSPACe
+20231213|Indian Space Tech Startups
+20231213|Private Companies in Indian Space Sector
+20231220|FDI in Space Sector
+20231220|Private Players in Space
+20240724|Guidance to Private Players by IN-SPACe
+20240724|Private Players in Space Sector
+20240731|Support to Space Technology Start-Ups
+20241127|Space Sector Start-ups Fund
+20241204|Startups in Space Sector
+20241211|Homegrown Space Products
+20241211|Private Companies working with ISRO
+20241218|Promotion of Private Sector in Space Sector
+20241218|Regulating Ground Station as a Service Industry
+20250312|Foreign Direct Investment in the Space Sector
+20250319|Startups associated with ISRO
+20250326|Cooperation with Private Sector in Space Development
+20250326|Launches by NSIL
+20250402|Space Startups
+20250402|Venture Capital Fund for Space Sector
+20250820|Public-Private Partnerships in Space Technology Sector
+20251210|Private Participation in Space
+20251210|Technology Transferred Agreement
+20260204|Space Insurance Ecosystem in India
+20260204|Space Start-Ups
+20260211|Private Sector Participation Facilitated by IN-SPACe
+20260211|Space Start-ups in India
+20260318|Technology Adoption Fund
+20260401|Venture Capital Fund for the Space Sector
+20260729|Private Sector Participation in the Space Sector
+20260805|Space Venture Capital Fund
+20260812|Private Sector Participation in the Space Sector
+20260812|Public-Private Partnership (PPP) Model for Earth Observation Satellite Constellations
+20260812|Space Startups

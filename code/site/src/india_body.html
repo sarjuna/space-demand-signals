@@ -1,0 +1,110 @@
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Space Economy Initiative · Working dashboard · India</div>
+  <h1>India Space Demand Signals</h1>
+  <p class="lede">Does public, investor and parliamentary discourse about India's space sector track real build-out: launches, commercial satellites, authorisations and private capital? Every series here is pulled from a public source and can be traced to it below.</p>
+  <div class="meta">
+    <span>Data as of <b>5 Nov 2026</b></span>
+    <span>Window <b>Jan 2016 – Oct 2026</b> (monthly)</span>
+    <span>Discourse: <b>Google Trends (IN) · Wikipedia · Lok Sabha · NSE equities · GDELT</b></span>
+    <span>Capacity: <b>GCAT launch & satellite catalogue · IN-SPACe · Tracxn (as reported)</b></span>
+  </div>
+</header>
+
+<div class="findings" id="findings"></div>
+
+<!-- RQ1 -->
+<section class="rq" id="rq1">
+  <div class="rq-head"><div class="rq-num">RQ1</div><h2>Does public attention track launch cadence?</h2>
+  <p>Public Attention Index (PAI): mean z-score of log Google Trends (India) for ISRO, Chandrayaan and Gaganyaan, and English-Wikipedia views of ISRO, PSLV and Department of Space per million total views. NewSpace Attention Index (NAI): the same construction over Skyroot, AgniKul, IN-SPACe, "space startup", Pixxel and NSIL, from Sep 2020.</p></div>
+  <div class="panel">
+    <div class="controls"><div class="seg" role="group" aria-label="Index view">
+      <button id="v-idx" aria-pressed="true">Indices</button><button id="v-pai" aria-pressed="false">PAI components</button><button id="v-nai" aria-pressed="false">NAI components</button></div></div>
+    <div class="legend" id="lg1"></div>
+    <div class="chartbox tall"><canvas id="c-index" aria-label="Monthly attention indices with launch markers"></canvas></div>
+    <div class="statline" id="sl1"></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Launch cadence vs annual attention</h3><div class="sub">Orbital attempts from Indian soil per year (bars) and mean PAI (dots). Two charts share an x axis rather than one dual-axis plot.</div>
+      <div class="chartbox short"><canvas id="c-launch-yr"></canvas></div>
+      <div class="chartbox short"><canvas id="c-pai-yr"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read1"></div></div>
+  </div>
+</section>
+
+<!-- RQ2 -->
+<section class="rq" id="rq2">
+  <div class="rq-head"><div class="rq-num">RQ2</div><h2>Do investors react to space events, and does attention lead prices?</h2>
+  <p>Investor proxy: equal-weight basket of seven NSE-listed aerospace and defence suppliers (MTAR, Paras, Astra Microwave, Centum, Data Patterns, Apollo Micro, Azad Engineering), measured as return in excess of the Nifty 50. The first five have documented ISRO/space business; Apollo Micro and Azad are mainly defence and aerospace. Robustness: using only the five space-exposed firms, the Chandrayaan-3 result strengthens (+8.5%, t = 4.4) and the Space Policy 2023 result weakens to t = 1.9. Defence news is a confound throughout.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Abnormal return around the Chandrayaan-3 landing</h3><div class="sub">Basket minus Nifty, daily, cumulative from day −10. Landing at 18:04 IST on 23 Aug 2023, after market close.</div>
+      <div class="chartbox"><canvas id="c-c3"></canvas></div></div>
+    <div class="panel"><h3>Lead–lag: NewSpace attention vs basket</h3><div class="sub">Correlation of monthly ΔNAI at t with excess return at t+k. Positive k: attention leads prices. Filled bars: p &lt; 0.05 (uncorrected for 13 lags).</div>
+      <div class="chartbox"><canvas id="c-xc"></canvas></div></div>
+  </div>
+  <div class="tablewrap"><table id="t-events"><thead><tr><th>Event</th><th>Date (t0)</th><th class="num">CAR [0,+1]</th><th class="num">t</th><th class="num">CAR [0,+5]</th><th class="num">t</th><th class="num">Pre [−5,−1]</th></tr></thead><tbody></tbody></table></div>
+  <div class="panel read"><div id="read2"></div></div>
+</section>
+
+<!-- RQ3 -->
+<section class="rq" id="rq3">
+  <div class="rq-head"><div class="rq-num">RQ3</div><h2>Did policy discourse shift with the 2020 reforms?</h2>
+  <p>All 602 Lok Sabha questions answered by the Department of Space, 2014–2026, classified by title into topics. NewSpace = private sector, start-ups, IN-SPACe, NSIL, FDI, venture funds, markets.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>NewSpace share of space questions</h3><div class="sub">Per year, % of Department of Space questions. Dashed line: 24 Jun 2020 reform (IN-SPACe).</div>
+      <div class="chartbox"><canvas id="c-ns"></canvas></div></div>
+    <div class="panel"><h3>Space questions per 1,000 Lok Sabha questions</h3><div class="sub">Volume of parliamentary attention, normalised for session length.</div>
+      <div class="chartbox"><canvas id="c-vol"></canvas></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Topic mix by period</h3><div class="sub">Share of questions in each topic.</div><div class="legend" id="lg-topic"></div>
+      <div class="chartbox short"><canvas id="c-topic"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read3"></div>
+      <details><summary>All 86 NewSpace question titles</summary><div class="tablewrap" style="max-height:260px;overflow:auto;margin-top:8px"><table id="t-ns"><tbody></tbody></table></div></details></div>
+  </div>
+</section>
+
+<!-- RQ4 -->
+<section class="rq" id="rq4">
+  <div class="rq-head"><div class="rq-num">RQ4</div><h2>Can the hard indicators carry a correlation test?</h2>
+  <p>The capacity side of the test. Launches and satellites are well measured. Private capital is not: the same data vendor's figures for the same year change by more than 2× between publications.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Reported annual spacetech funding, by publication date</h3><div class="sub">USD million. Every point cites Tracxn. Each colour is one publication (vintage).</div><div class="legend" id="lg-fund"></div>
+      <div class="chartbox"><canvas id="c-fund"></canvas></div></div>
+    <div class="panel"><h3>Indian commercial satellites reaching orbit</h3><div class="sub">Payloads owned by Indian companies (GCAT satellite catalogue). Academic and government payloads excluded. 2026 catalogue incomplete.</div>
+      <div class="chartbox"><canvas id="c-comm"></canvas></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel read"><h3>Reading</h3><div id="read4"></div></div>
+    <div class="panel"><h3>Regulatory pipeline (IN-SPACe)</h3><div class="sub">Only cumulative figures given in Parliament replies are public; no dated series exists.</div>
+      <div class="tablewrap"><table id="t-reg"><thead><tr><th>As of</th><th>Measure</th><th class="num">Value</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+</section>
+
+<!-- Live -->
+<section class="rq" id="live">
+  <div class="rq-head"><div class="rq-num">LIVE</div><h2>News tone, last three months</h2>
+  <p>GDELT average document tone of global online news mentioning ISRO (positive = favourable language). The free API returns only a rolling three-month window, so this panel is a monitor, not part of the tests above.</p></div>
+  <div class="panel"><div class="chartbox short"><canvas id="c-tone"></canvas></div><div class="statline" id="sl-tone"></div></div>
+</section>
+
+<!-- Coverage -->
+<section class="rq" id="coverage">
+  <div class="rq-head"><div class="rq-num">DATA</div><h2>What could and could not be measured</h2>
+  <p>The brief listed X, Reddit, SEC filings and Google Trends. India-specific equivalents were substituted where the original sources were unavailable or not India-relevant.</p></div>
+  <div class="cov" id="cov"></div>
+  <div class="panel read"><h3>Method notes</h3>
+    <p><b>Indices.</b> Each component is log(1+x), z-scored over its own available months, then averaged; a month needs ≥4 PAI or ≥5 NAI components. Wikipedia views are divided by total English-Wikipedia user views to remove platform-wide trends. ISRO's article moved title in Jun 2023; both titles are summed.</p>
+    <p><b>Attention regression.</b> OLS of monthly PAI on orbital launches, failures and a flagship-mission dummy (Chandrayaan-2 Jul–Sep 2019; Chandrayaan-3, Aditya-L1 and Gaganyaan TV-D1 Jul–Oct 2023), HAC standard errors (3 lags).</p>
+    <p><b>Event study.</b> Market-adjusted abnormal returns (basket minus Nifty 50, log), t = CAR / (σ<sub>AR</sub>·√L) with σ from days −120 to −11. t0 is the first trading day on or after the event.</p>
+    <p><b>Lead–lag.</b> Granger F-tests (lags 1–3) on stationary series (ADF p &lt; 0.01), Sep 2020–Oct 2026 for NAI (73 months) and Feb 2016–Oct 2026 for PAI (128 months). A permutation test (2,000 shuffles) checks the one significant PAI lag.</p>
+    <p><b>Parliament topics.</b> Rule-based keyword classifier on question titles, first match wins in the order NewSpace → policy → sustainability/security → international → exploration → launch/infrastructure → applications → budget/workforce. Titles were read once to tune rules; a few remain borderline (for example "Space Programmes for Socio Economic Development" is counted as NewSpace).</p>
+  </div>
+</section>
+
+<section class="rq"><div class="rq-head"><div class="rq-num">SRC</div><h2>Sources</h2><p>Raw files, analysis code and checksums accompany this dashboard in the conversation.</p></div>
+<ol class="sources" id="src"></ol></section>
+
+<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School. Figures are reproducible from the cited public sources as pulled on 5 Nov 2026; Google Trends values are sampled indices and shift slightly between pulls.</footer>
+</div>
+

@@ -1,0 +1,89 @@
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Space Economy Initiative · Cambridge Judge Business School</div>
+  <h1>Space Demand Signals</h1>
+  <p class="lede">Is demand for the space economy real, or is it hype? Quarter by quarter, the <b>Space Signals Index</b> compares how much attention people pay to space with how much is actually being built, in India and the United States, using only public data that can be traced to its source.</p>
+  <div class="meta" id="meta"></div>
+</header>
+
+<section class="hero" aria-labelledby="headline">
+  <p class="eyebrow" id="hl-eyebrow"></p>
+  <h2 id="headline" class="headline"></h2>
+  <p class="hl-sub" id="hl-sub"></p>
+  <div class="idx-grid" id="idx-cards"></div>
+  <p class="note" id="prov"></p>
+  <p class="note">How to read the numbers: 100 is each country’s own 2016–2025 average, and every 10 points is one standard deviation (a clearly unusual year). A gap within ±5 points is treated as in line. Each value covers the 12 months to the end of the quarter. Each country is measured against its own history, so compare directions, not levels.</p>
+</section>
+
+<section class="rq" id="index">
+  <div class="rq-head"><div class="rq-num">INDEX</div><h2>Attention against build-out since 2016</h2>
+  <p>Orange shading marks periods when attention ran ahead of what was being built; blue shading marks build-out the public was not noticing. The pale band shows how far attention moves if any one of its components is dropped.</p></div>
+  <div class="panel">
+    <div class="controls"><div class="seg" role="group" aria-label="Country" id="idx-seg"><button type="button" data-c="india" aria-pressed="true">India</button><button type="button" data-c="us" aria-pressed="false">United States</button></div></div>
+    <div class="legend"><span><i class="sw" style="background:var(--s2)"></i>Attention: searches and Wikipedia reading (US: plus Hacker News stories)</span><span><i class="sw" style="background:var(--s1)"></i>Build-out: launches and commercial satellites</span><span><i class="sw" style="background:var(--muted);height:1px"></i>Key events</span></div>
+    <div class="chartbox tall"><canvas id="c-idx" role="img" aria-label="Attention and build-out sub-indices, monthly, 2016 to 2026"></canvas></div>
+    <div class="statline" id="idx-stat"></div>
+  </div>
+</section>
+
+<section class="rq" id="audiences">
+  <div class="rq-head"><div class="rq-num">USE</div><h2>What it means for you</h2>
+  <p>The same evidence read for three audiences. Figures come from the index above or from the country pages, where the test behind each is set out.</p></div>
+  <div class="aud" id="aud"></div>
+</section>
+
+<section class="rq" id="countries">
+  <div class="rq-head"><div class="rq-num">DEEP</div><h2>The evidence, country by country</h2>
+  <p>Each country page asks the same research questions of attention, sentiment, markets and policy, with the data and test behind every chart.</p></div>
+  <div class="cards">
+    <a class="card-link" href="india.html"><span class="flag">IN</span><h3>India</h3>
+      <p>A state-led programme opening to private firms after the June 2020 reforms. ISRO and NSIL flew every orbital launch until Skyroot's Vikram-1 in July 2026; NewSpace firms are unlisted.</p>
+      <dl class="kv" id="kv-in"></dl><span class="go">Open the India dashboard →</span></a>
+    <a class="card-link" href="us.html"><span class="flag">US</span><h3>United States</h3>
+      <p>A commercial launch market with listed NewSpace firms and, since June 2026, a listed SpaceX. Launch cadence rose almost eightfold in a decade, nearly all of it SpaceX.</p>
+      <dl class="kv" id="kv-us"></dl><span class="go">Open the US dashboard →</span></a>
+  </div>
+</section>
+
+<section class="rq" id="verdict">
+  <div class="rq-head"><div class="rq-num">TL;DR</div><h2>What the two countries say together</h2>
+  <p>The short version, with the evidence behind each line in the table below and on the country pages.</p></div>
+  <div class="panel read" id="verdict-text"></div>
+</section>
+
+<section class="rq" id="cmp">
+  <div class="rq-head"><div class="rq-num">CMP</div><h2>Side by side</h2>
+  <p>The same research questions, answered separately for each country. Green: the signal tracks build-out or reacts as expected; red: it does not; amber: mixed or not robust.</p></div>
+  <div class="tablewrap"><table class="cmp"><thead><tr><th>Question</th><th>India</th><th>United States</th></tr></thead><tbody id="cmp-body"></tbody></table></div>
+</section>
+
+<section class="rq" id="scale">
+  <div class="rq-head"><div class="rq-num">SCALE</div><h2>Two very different build-outs</h2>
+  <p>Orbital launch attempts per year from the GCAT catalogue. Each chart has its own scale: the US flew more launches in 2025 than India did in the whole decade. 2026 runs to October.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>India</h3><div class="sub">Orbital launch attempts from Indian sites or by Indian operators. Hover for failures.</div><div class="chartbox"><canvas id="c-in"></canvas></div></div>
+    <div class="panel"><h3>United States</h3><div class="sub">Orbital launch attempts by US-registered providers (Rocket Lab's New Zealand launches excluded). Hover for failures.</div><div class="chartbox"><canvas id="c-us"></canvas></div></div>
+  </div>
+</section>
+
+<section class="rq" id="cite">
+  <div class="rq-head"><div class="rq-num">CITE</div><h2>Cite, download and reproduce</h2>
+  <p>The index, its components and every series behind the dashboards are free to reuse with attribution. The baseline is fixed at 2016–2025, so adding new quarters does not change earlier values; only months marked provisional can change.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Suggested citation</h3><div class="sub">Copy as text or BibTeX.</div>
+      <p class="cite" id="cite-text"></p>
+      <details><summary>BibTeX</summary><pre class="bib" id="cite-bib"></pre></details>
+    </div>
+    <div class="panel"><h3>Data and methods</h3><div class="sub">CSV, one row per month or quarter.</div>
+      <ul class="dl">
+        <li><a href="data/csv/shared/space_signals_index_india_quarterly.csv">India index, quarterly</a> · <a href="data/csv/shared/space_signals_index_india_monthly.csv">monthly</a></li>
+        <li><a href="data/csv/shared/space_signals_index_us_quarterly.csv">US index, quarterly</a> · <a href="data/csv/shared/space_signals_index_us_monthly.csv">monthly</a></li>
+        <li><a href="methods.html#index-method">How the index is built and tested</a></li>
+        <li><a href="methods.html">All sources, methods, limitations and 30+ further CSVs</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+</div>

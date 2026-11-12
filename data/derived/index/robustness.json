@@ -1,0 +1,12 @@
+{
+ "india": {
+  "r_google": 0.788,
+  "r_wiki": 0.512,
+  "loo_max_abs_diff": 8.7
+ },
+ "us": {
+  "r_google": 0.922,
+  "r_wiki": 0.692,
+  "loo_max_abs_diff": 4.7
+ }
+}

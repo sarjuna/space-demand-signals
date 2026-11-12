@@ -1,0 +1,14 @@
+# FAA-licensed and permitted commercial space operations (launches and reentries), by US federal fiscal year (Oct–Sep).
+# Source: FAA Aerospace Forecast Fiscal Years 2025–2045, Commercial Space chapter (actuals table).
+# https://www.faa.gov/data_research/aviation/aerospace_forecasts/2025-commercial-space.pdf  (checked 2026-11-06; FY2025 actuals not in this edition)
+# fiscal_year|operations
+2015|14
+2016|17
+2017|22
+2018|35
+2019|32
+2020|33
+2021|64
+2022|74
+2023|113
+2024|148

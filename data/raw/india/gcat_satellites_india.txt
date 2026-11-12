@@ -1,0 +1,50 @@
+# GCAT satcat.tsv, updated 2026 Nov 2. Payloads (Type P*) with State=IN, launched 2015+, by owner class.
+# Annual counts: year|government(ISRO/NSIL/DRDO/IAF etc)|non-government (academic+commercial)
+2015|4|0
+2016|8|4
+2017|8|1
+2018|8|2
+2019|8|1
+2020|3|0
+2021|0|5
+2022|5|5
+2023|6|2
+2024|8|2
+2025|3|9
+2026|0|1
+# Non-ISRO/NSIL payload list: date|name|owner|launch_tag  (class: C=commercial, A=academic/edu, G=govt-other)
+2016 Jun 22|Sathyabamasat|SATHYA|2016-040|A
+2016 Jun 22|Swayam|COEP|2016-040|A
+2016 Sep 26|Pratham|IITB|2016-059|A
+2016 Sep 26|PISAT|PESU|2016-059|A
+2017 Jun 23|NIUSAT-Keralshree|NIUTN|2017-036|A
+2018 Jan 12|Microsat-TD|DRDO/ISRO|2018-004|G
+2018 Dec 3|Vusat-OSCAR-96|EXSEED|2018-099|C
+2018 Dec 19|GSAT-7A|INAF/ISRO|2018-105|G
+2019 Jan 24|Microsat-R|DRDO|2019-006|G
+2019 Jan 24|KalamSat|SKI|2019-006|A
+2021 Feb 28|Sindhu Netra|PESU/DRDO|2021-015|A
+2021 Feb 28|Sri Shakthi Sat|SIET|2021-015|A
+2021 Feb 28|GHRCEsat|GHRCE|2021-015|A
+2021 Feb 28|JITsat|JIT|2021-015|A
+2021 Feb 28|Satish Dhawan SAT|SKI|2021-015|A
+2022 Feb 14|InspireSat-1|IISTT|2022-013|A
+2022 Apr 1|Shakuntala|PIXX|2022-033|C
+2022 Nov 26|Thybolt 1|DHRUVA|2022-158|C
+2022 Nov 26|Thybolt 2|DHRUVA|2022-158|C
+2022 Nov 26|Anand|PIXX|2022-158|C
+2023 Feb 10|AzaadiSAT-2|SKI|2023-019|A
+2023 Jun 12|ABA First Runner|AZBST|2023-084|C
+2024 Apr 7|TSAT-1A|TASL|2024-066|C
+2024 Aug 16|SR-0 Demosat|SRICK/SKI|2024-147|A
+2025 Jan 14|SCOT-Digantara|DIGAN/ORBAS|2025-009|C
+2025 Jan 14|Firefly 1|PIXX|2025-009|C
+2025 Jan 14|Firefly 2|PIXX|2025-009|C
+2025 Jan 14|Firefly 3|PIXX|2025-009|C
+2025 Mar 15|NILA|HEX20|2025-052|C
+2025 Aug 26|Firefly 6|PIXX|2025-188|C
+2025 Aug 26|Firefly 4|PIXX|2025-188|C
+2025 Aug 26|LEAP-1|DHRUVA|2025-188|C
+2025 Aug 26|Firefly 5|PIXX|2025-188|C
+2026 May 3|Drishti|GALEYE|2026-100|C
+# NOTE: 2026 satcat entries appear incomplete (e.g. GSLV-F17/F18 and Vikram-1 F1 payloads not yet catalogued under State=IN at pull time). Treat 2026 as partial.

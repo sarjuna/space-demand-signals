@@ -1,0 +1,106 @@
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Space Economy Initiative · Working dashboard · Methods</div>
+  <h1>Methods &amp; data</h1>
+  <p class="lede">How each signal was collected, built and tested, for both countries, and what the data cannot say. Every number on the country pages is computed from the raw files in the repository by the scripts alongside them.</p>
+</header>
+
+<section class="rq">
+  <div class="rq-head"><div class="rq-num">01</div><h2>Design</h2>
+  <p>Four research questions are asked of each country, using the same window (January 2016 to October 2026, monthly) and, where possible, the same sources.</p></div>
+  <div class="panel read">
+    <p><b>Discourse signals</b> (what people, investors and governments say): search interest, encyclopaedia reading, online headlines and their sentiment, equity prices of listed space firms, parliamentary or congressional activity, and regulatory documents.</p>
+    <p><b>Hard indicators</b> (what is actually built and funded): orbital launch attempts, satellites launched by owner type, licensed operations, and private capital as reported or filed.</p>
+    <p>Each question tests whether a discourse signal moves with, ahead of, or independently of the hard indicators. A signal that only reacts to a few spectacular events is useful for sentiment but not as a proxy for demand.</p>
+  </div>
+</section>
+
+<section class="rq">
+  <div class="rq-head"><div class="rq-num">02</div><h2>Sources</h2>
+  <p>All public and free to access. "Both" means the same source and method were used for India and the US.</p></div>
+  <div class="tablewrap"><table class="cmp"><thead><tr><th>Signal</th><th>India</th><th>United States</th></tr></thead><tbody>
+    <tr><td>Launches and satellites</td><td colspan="2">Both: GCAT launch and satellite catalogues (J. McDowell, planet4589.org), updated 2 Nov 2026. Orbital attempts only; suborbital tests excluded. The satellite catalogue is complete only to July 2026.</td></tr>
+    <tr><td>Search interest</td><td>Google Trends, geo IN: ISRO, Chandrayaan, Gaganyaan (state); Skyroot, Agnikul, IN-SPACe, "space startup" (NewSpace)</td><td>Google Trends, geo US: NASA, Artemis, Space Force, SpaceX, Starlink, Blue Origin, Rocket Lab, "space stocks" ("Starship" collected, excluded as ambiguous)</td></tr>
+    <tr><td>Reading</td><td>English Wikipedia page views (Wikimedia API), redirects summed, per million total views</td><td>English Wikipedia page views (Wikimedia API), current article titles only, per million total views; months before an article reached 1,000 views treated as missing</td></tr>
+    <tr><td>Online headlines</td><td>Hacker News (Algolia API): 286 stories, too few for analysis</td><td>Hacker News (Algolia API): 17,640 story titles, title-only exact matching</td></tr>
+    <tr><td>News tone</td><td>GDELT DOC API, last three months only</td><td>Not used (same three-month limit)</td></tr>
+    <tr><td>Equity prices</td><td>Yahoo Finance: seven listed Indian aerospace and defence suppliers vs Nifty 50</td><td>Yahoo Finance: ten NewSpace firms vs S&amp;P 500; Procure Space ETF (UFO); SpaceX (SPCX) shown separately</td></tr>
+    <tr><td>Legislature</td><td>Lok Sabha questions (Digital Sansad), sessions 2014–2026, coded by title</td><td>Congress bills and resolutions under Library of Congress space subjects, via GovTrack, 113th–119th Congresses</td></tr>
+    <tr><td>Regulators</td><td>IN-SPACe authorisation counts as stated in Parliament and reported in news</td><td>Federal Register API (1,072 documents); FAA licensed operations (FAA 2025 Aerospace Forecast)</td></tr>
+    <tr><td>Capital</td><td>Tracxn and government figures as reported in news, by publication date</td><td>SEC EDGAR full-text search; Space Capital global totals (quoted, not analysed)</td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="rq">
+  <div class="rq-head"><div class="rq-num">03</div><h2>Methods</h2><p>Standard, transparent techniques chosen so that each result can be re-run from the files.</p></div>
+  <div class="grid2">
+    <div class="panel read"><h3>Attention indices</h3>
+      <p>Each component is log-transformed (log 1 + x), standardised to a z-score over its own history, and averaged across components available that month. India: Public Attention Index from Google Trends and Wikipedia for ISRO and state missions; NewSpace index from private-firm and IN-SPACe terms. US: Public Attention Index from NASA, Artemis and Space Force searches, Wikipedia reading of those three articles, and Hacker News stories; NewSpace Attention Index from five company and market searches, Wikipedia reading of five company articles, and Hacker News stories about them. Results without Wikipedia are reported as a robustness check.</p>
+      <h3>Regressions and lead–lag</h3>
+      <p>Monthly OLS of each index on launch attempts, failures and event dummies, with Newey–West (HAC, 3 lags) standard errors. Lead–lag uses Granger tests at lags 1–3 on stationary series (differenced attention, excess returns; ADF-checked) and cross-correlations at ±6 months. Annual relationships use Spearman rank correlation.</p></div>
+    <div class="panel read"><h3>Event studies</h3>
+      <p>Daily abnormal return = basket return minus benchmark return (market-adjusted model). Cumulative abnormal return over trading days [0,+1] and [0,+5]. The t-statistic divides by the standard deviation of daily abnormal returns over days −120 to −11, scaled by the square root of window length. Events that happen after the market close start on the next trading day. Basket members enter only after their listing date.</p>
+      <h3>Sentiment</h3>
+      <p>Headline sentiment is scored with VADER (Hutto &amp; Gilbert, 2014), a lexicon model returning a compound score from −1 to +1. Event shifts compare the mean in the 7 days from an event with days −60 to −8 (Welch t-test). Trend is an OLS of monthly mean on time.</p>
+      <h3>Policy coding</h3>
+      <p>Parliamentary questions and bill titles are coded by transparent keyword rules (published in the analysis code), not by hand. Era comparisons use Fisher's exact test.</p></div>
+  </div>
+</section>
+
+<section class="rq" id="index-method">
+  <div class="rq-head"><div class="rq-num">IDX</div><h2>The Space Signals Index</h2><p>A quarterly comparison of attention with build-out, built only from series already on the country pages.</p></div>
+  <div class="grid2">
+    <div class="panel read">
+      <h3>Construction</h3>
+      <p><b>Attention</b> combines the Google Trends and Wikipedia components of the country attention indices: for India, the public (ISRO, Chandrayaan, Gaganyaan, PSLV, Department of Space) and NewSpace (Skyroot, Agnikul, Pixxel, IN-SPACe, NSIL, "space startup") terms; for the US, the public (NASA, Artemis, Space Force) and NewSpace (SpaceX, Starlink, Blue Origin, Rocket Lab, Starship, "space stocks") terms, plus Hacker News story counts. Each component is log(1 + x), averaged over the trailing 12 months.</p>
+      <p><b>Build-out</b> combines orbital launch attempts and commercial satellites launched (GCAT), each as log(1 + trailing 12-month count).</p>
+      <p>Each component is standardised against its own January 2016 to December 2025 baseline. A sub-index is the mean of the components available that month, re-standardised against the same baseline and scaled so that 100 is the baseline average and 10 points is one standard deviation. <b>Gap = Attention − Build-out.</b> A quarter takes the value at its last month, and only complete quarters are reported.</p>
+      <p>Because the baseline is fixed, adding new months does not change earlier values (apart from provisional months, below). Values before 2026 are scaled with the full 2016–2025 averages, so for out-of-sample forecasting rebuild them with expanding-window standardisation from the component CSVs.</p><p>NewSpace terms are included from 2016; before the firms existed their search interest is near zero, which is itself part of the signal. India’s commercial satellite series is thin (17 satellites, January 2016 to July 2026), so India’s build-out moves in steps.</p>
+    </div>
+    <div class="panel read">
+      <h3>Robustness and limits</h3>
+      <p><b>Component choice.</b> Correlation of attention with a Google-only version: India <span class="mono">{{IN_G}}</span>, US <span class="mono">{{US_G}}</span>; with a Wikipedia-only version: India <span class="mono">{{IN_W}}</span>, US <span class="mono">{{US_W}}</span>. Dropping any single component moves attention by at most <span class="mono">{{IN_L}}</span> points (India) and <span class="mono">{{US_L}}</span> points (US). The dashboard chart shows this range as a band.</p>
+      <p><b>Provisional months.</b> The GCAT satellite catalogue is complete only to July 2026, so the satellite component is held at its July 2026 value for August to October 2026 and will be revised once the catalogue catches up. Launches are complete to October.</p>
+      <p><b>Interpretation.</b> Each country is measured against its own history, so the index compares directions, not levels, across countries. Equal weights are a transparent default, not an estimate. Gaps within ±5 points (half a standard deviation) are treated as "in line", and "clearly ahead" means a gap beyond ±5. The index describes; it has not yet been shown to predict prices, investment or launches. Testing that, with vector autoregression and Granger tests, is the next step.</p>
+      <p><b>Files.</b> <a href="data/csv/shared/space_signals_index_india_quarterly.csv">India quarterly</a>, <a href="data/csv/shared/space_signals_index_india_monthly.csv">India monthly</a>, <a href="data/csv/shared/space_signals_index_us_quarterly.csv">US quarterly</a>, <a href="data/csv/shared/space_signals_index_us_monthly.csv">US monthly</a>. Code: <span class="mono">code/index/build_index.py</span>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rq">
+  <div class="rq-head"><div class="rq-num">04</div><h2>Verification</h2><p>Steps taken to keep every figure tied to its source.</p></div>
+  <div class="panel read">
+    <p>Every series pulled through a browser was checksummed (sum and index-weighted sum) in the browser and again after transcription, and the two had to match. Federal Register and Congress totals were checked against the sources' own facet counts. De-SPAC and IPO dates for each US basket member were checked against company or exchange announcements. Event dates were checked against at least one primary or news source. Every number quoted in the text of the country pages is generated from the analysis output rather than typed by hand, and a script compares the page text with those outputs before publication.</p>
+  </div>
+</section>
+
+<section class="rq">
+  <div class="rq-head"><div class="rq-num">05</div><h2>Limitations</h2><p>What these results cannot support.</p></div>
+  <div class="grid2">
+    <div class="panel read"><h3>Both countries</h3>
+      <p><b>Not causal.</b> Lead–lag and event tests show timing, not cause. <b>Multiple testing:</b> each page runs dozens of tests; isolated results near p = 0.05 should be read as leads, not findings. <b>Google Trends</b> values are sampled and rescaled for each pull, so exact values shift slightly between downloads. <b>X (Twitter) and Reddit</b> were not collected: X's API is paid; Hacker News is used as a substitute, which skews towards an English-language tech audience. <b>VADER</b> misses domain language: it scores "rocket explodes" as neutral.</p></div>
+    <div class="panel read"><h3>Country-specific</h3>
+      <p><b>India:</b> NewSpace firms are unlisted, so the equity basket measures established aerospace and defence suppliers. Private-capital figures come from secondary reporting and disagree with one another. <b>US:</b> the NewSpace basket has survivorship bias (Astra, Virgin Orbit, Terran Orbital and Maxar are missing from the price source). The January 2025 Starship window overlaps the presidential inauguration. Wikipedia views are counted on current article titles only, so reading of a page under an earlier title is not included (Starship before November 2018, Artemis before May 2019). Congressional indexing of the 119th Congress is incomplete. FAA operation counts were taken from one FAA forecast document.</p></div>
+  </div>
+</section>
+
+<section class="rq">
+  <div class="rq-head"><div class="rq-num">06</div><h2>Download the data</h2><p>Analysis-ready CSVs: monthly panels with every series aligned by month, plus the event, policy and annual tables. Every value in the raw source files is in these tables. The data dictionary lists every column and notes for time-series work.</p></div>
+  <div class="panel read">
+    <p><b>Data dictionary:</b> <a href="data/csv/README.md">data/csv/README.md</a></p>
+    <p><b>United States:</b> <a href="data/csv/us/us_monthly.csv">monthly panel</a> · <a href="data/csv/us/us_index_components_z.csv">index components</a> · <a href="data/csv/us/us_events.csv">event study</a> · <a href="data/csv/us/us_event_windows_daily.csv">daily event windows</a> · <a href="data/csv/us/us_congress_space_bills.csv">Congress bills</a> · <a href="data/csv/us/us_federal_register_annual.csv">Federal Register by year</a> · <a href="data/csv/us/us_federal_register_selected.csv">Federal Register rules</a> · <a href="data/csv/us/us_annual.csv">annual</a> · <a href="data/csv/us/us_markets_monthly_2019_2026.csv">markets 2019–2026</a> · <a href="data/csv/us/us_congress_totals.csv">Congress totals</a> · <a href="data/csv/us/us_launch_failures.csv">launch failures</a> · <a href="data/csv/us/us_launches_monthly.csv">launches from 2015</a> · <a href="data/csv/us/us_satellites_monthly.csv">satellites from 2015</a> · <a href="data/csv/us/us_wikipedia_views.csv">Wikipedia raw views</a> · <a href="data/csv/us/us_faa_licensed_operations.csv">FAA operations</a></p>
+    <p><b>India:</b> <a href="data/csv/india/india_monthly.csv">monthly panel</a> · <a href="data/csv/india/india_index_components_z.csv">index components</a> · <a href="data/csv/india/india_events.csv">event study</a> · <a href="data/csv/india/india_launches.csv">launches</a> · <a href="data/csv/india/india_nongov_payloads.csv">non-government satellites</a> · <a href="data/csv/india/india_lok_sabha_sessions.csv">Lok Sabha sessions</a> · <a href="data/csv/india/india_lok_sabha_newspace_titles.csv">NewSpace question titles</a> · <a href="data/csv/india/india_funding_reports.csv">funding figures</a> · <a href="data/csv/india/india_gdelt_tone_daily.csv">GDELT tone</a> · <a href="data/csv/india/india_satellites_annual.csv">satellites by year</a> · <a href="data/csv/india/india_wikipedia_views.csv">Wikipedia raw views</a> · <a href="data/csv/india/india_markets_monthly.csv">market returns as pulled</a> · <a href="data/csv/india/india_events_robustness_5firm.csv">event robustness</a> · <a href="data/csv/india/india_event_window_chandrayaan3_daily.csv">Chandrayaan-3 daily window</a></p>
+    <p><b>Both countries:</b> <a href="data/csv/shared/hackernews_monthly.csv">Hacker News monthly</a> · <a href="data/csv/shared/hackernews_event_windows.csv">sentiment around events</a> · <a href="data/csv/shared/hackernews_top_stories.csv">top stories</a></p>
+  </div>
+</section>
+
+<section class="rq">
+  <div class="rq-head"><div class="rq-num">07</div><h2>Reproduce</h2><p>Repository layout.</p></div>
+  <div class="panel read">
+    <p><span class="mono">data/raw/</span> source files as pulled, one folder per country plus <span class="mono">shared/</span>; each file starts with a header giving its source, query and pull date · <span class="mono">data/derived/</span> analysis outputs (the data embedded in the pages) · <span class="mono">data/csv/</span> analysis-ready tables · <span class="mono">code/</span> the analysis for each country and the site builder.</p>
+    <p>Python 3 with pandas, numpy, scipy and statsmodels. <span class="mono">run_all.sh</span> re-runs every step, from raw files to pages, and finishes with a check of every hard-coded figure.</p>
+  </div>
+</section>
+
+<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on 5–6 Nov 2026</footer>
+</div>
