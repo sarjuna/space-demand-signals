@@ -240,8 +240,7 @@ const AUD=[
   `<b>Extendable:</b> the same pipeline can add further countries and signals.`]]];
 document.getElementById('aud').innerHTML=AUD.map(([h,s,li])=>`<div class="panel"><h3>${h}</h3><div class="sub">${s}</div><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
 // citation
-const acc=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
-document.getElementById('cite-text').innerHTML=`Sathiaseelan, A. (2026). <i>Space Demand Signals: Space Signals Index for India and the United States</i> [Dashboard and dataset]. Space Economy Initiative, Cambridge Judge Business School, University of Cambridge. https://sarjuna.github.io/space-demand-signals/ (accessed ${acc}).`;
+document.getElementById('cite-text').innerHTML=`Sathiaseelan, A. (2026). <i>Space Demand Signals: Space Signals Index for India and the United States</i> [Dashboard and dataset]. Space Economy Initiative, Cambridge Judge Business School, University of Cambridge. https://sarjuna.github.io/space-demand-signals/`;
 document.getElementById('cite-bib').textContent=`@misc{sathiaseelan2026sds,
   author       = {Sathiaseelan, Arjuna},
   title        = {Space Demand Signals: Space Signals Index for India and the United States},
