@@ -54,6 +54,7 @@ Every raw file starts with `#` header lines giving its source, query, pull date 
 | `derived/us/us_noWiki.json` | `code/us/analyse_us.py` (run with `NO_WIKI=1`) | US analysis without Wikipedia (robustness check) |
 | `derived/us/us.json` | `code/us/analyse_us.py` | Full US analysis |
 | `derived/us/us_page.json` | `code/us/make_page_data.py` | Everything embedded in `us.html` |
+| `derived/var/var_results.json` | `code/var/run_var.py` | VAR models: ADF, lag choice, Granger tests (five versions), impulse responses, FEVD, event-dummy effects |
 | `derived/index/index_page.json` | `code/index/build_index.py` | Space Signals Index data embedded in `index.html` |
 | `derived/index/*_space_signals_index_*.csv`, `robustness.json` | `code/index/build_index.py` | Index working files (published copies are in `csv/shared/`) |
 

@@ -2,7 +2,7 @@
 
 Open-data dashboards testing whether public attention, online sentiment, stock prices and policy activity track the real build-out of the space economy (launches, satellites, licensed operations and capital) in India and the United States.
 
-Headline output: the **Space Signals Index**, a quarterly comparison of public attention with the actual build-out (launches and commercial satellites) for each country, with a fixed 2016–2025 baseline.
+Headline output: the **Space Signals Index**, a quarterly comparison of public attention with the actual build-out (launches and commercial satellites) for each country, with a fixed 2016–2025 baseline, and vector-autoregression tests of whether attention leads share prices or launches.
 
 **Live site:** https://sarjuna.github.io/space-demand-signals/
 
@@ -24,6 +24,7 @@ code/
   india/                                        load.py, analyse.py, parl.py, make_dash.py
   us/                                           load_us.py, analyse_us.py, make_page_data.py
   index/                                        build_index.py (Space Signals Index)
+  var/                                          run_var.py (vector autoregressions and Granger tests)
   site/                                         build.py (pages), export_csv.py (CSVs), audit_csv.py (raw-to-CSV check),
                                                 verify.py (figure check), src/ (page sources)
 run_all.sh                                      re-runs everything from the raw files

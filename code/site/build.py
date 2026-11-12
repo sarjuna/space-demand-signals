@@ -73,6 +73,7 @@ O = dict(in_annual=in_annual, us_annual=us_annual,
          ipo_c=f'{math.floor(abs(ipo["b_c01"])*10+0.5)/10:.1f}', ipo_t=f'{ipo["b_t01"]:.2f}'.replace("-", "−"))
 O["idx"] = json.load(open(ROOT / "data/derived/index/index_page.json"))
 O["pulled"] = "5–6 Nov 2026"
+O["var"] = json.load(open(ROOT / "data/derived/var/var_results.json"))
 ov_scripts = f'{data_tag(O)}\n{CHART}\n<script src="assets/charts.js"></script>\n<script>\n{open(SITE_SRC / "overview_script.js").read()}\n</script>'
 
 RB = {c: O["idx"][c]["robustness"] for c in ("india", "us")}

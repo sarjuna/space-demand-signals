@@ -9,6 +9,10 @@ A={a['year']:a for a in U['annual']}
 mk=open(RAW_US / 'markets_us.txt').read()
 fund=I['funding']
 X=json.load(open(ROOT/'data/derived/index/index_page.json'))
+VR={o['id']:o for o in json.load(open(ROOT/'data/derived/var/var_results.json'))}
+import pandas as _pd
+from statsmodels.tsa.stattools import adfuller as _adf
+nsig=lambda o,k:sum(x[k]<0.05 for x in (o['aic'],o['bic'],o['fixed3'],o['robust']['no_dummies'],o['robust']['to_2026_05']))
 checks=[
  # India
  ('IN R2 launches only 0.02', round(IS['monthly_PAI_ols']['R2_launches_only'],2)==0.02),
@@ -65,6 +69,15 @@ checks=[
  ('US launches 2016->2025 almost eightfold', 7.5<A[2025]['launches']/A[2016]['launches']<8),
  ('IN Tracxn 2021 spread 2.6-fold', round(96/37.6,1)==2.6),
  ('IN Vikram-1 private, orbital, successful', __import__('pandas').read_csv(ROOT/'data/csv/india/india_launches.csv').query("lv=='Vikram-1'")[['orbital','success','private']].all(axis=None)),
+ # VAR (overview table/text is computed from var_results.json; these check the hard-coded copies in the comparison table and Methods)
+ ('VAR IN-1 prices->attention p .002, 3 of 5', VR['IN-1']['aic']['b_to_a']==0.002 and nsig(VR['IN-1'],'b_to_a')==3 and VR['IN-1']['aic']['b_to_a']<0.05/8),
+ ('VAR no attention-first lead robust (max 1 of 5)', max(nsig(o,'a_to_b') for o in VR.values())==1),
+ ('VAR US both directions not robust', nsig(VR['US-1'],'a_to_b')<5 and nsig(VR['US-1'],'b_to_a')<5),
+ ('VAR samples 73/62/129/129', [VR[k]['n'] for k in ('IN-1','US-1','IN-2','US-2')]==[73,62,129,129]),
+ ('VAR stable all, whiteness main >=0.16, ADF <0.01', all(o[t]['stable'] for o in VR.values() for t in ('aic','bic','fixed3')) and min(o['aic']['white_p'] for o in VR.values())>=0.16 and max(v for o in VR.values() for v in o['adf'].values())<0.01),
+ ('VAR US NAI level ADF p 0.62', round(_adf(_pd.read_csv(ROOT/'data/csv/us/us_monthly.csv').NAI.dropna(),autolag='AIC')[1],2)==0.62),
+ ('VAR attention->launch/launch->attention all p>=0.33', min(x[k] for i in ('IN-2','US-2') for x in (VR[i]['aic'],VR[i]['bic'],VR[i]['fixed3'],VR[i]['robust']['no_dummies'],VR[i]['robust']['to_2026_05']) for k in ('a_to_b','b_to_a'))>=0.33),
+ ('VAR lead-only IRFs: no attention->other band excludes zero', all(abs(m)<1.96*se+1e-9 for o in VR.values() for m,se in zip(o['irf_rev']['a_to_b'],o['irf_rev']['a_to_b_se']))),
  ('CSV audit 16,049 values', '16049' in __import__('subprocess').run([sys.executable,str(ROOT/'code/site/audit_csv.py')],capture_output=True,text=True).stdout.replace(',','')),
 ]
 bad=[n for n,ok in checks if not ok]

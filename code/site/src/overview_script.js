@@ -18,8 +18,8 @@ const T=[
   ['yes','Landmarks only','Chandrayaan-3 landing: +7.1% vs the Nifty over two days (t = 3.8). Space Policy 2023: +7.0% over six days, not robust. Launch failures: no reaction.'],
   ['yes','Yes, selectively','SpaceX IPO: peers −18.3% over two days (t = −2.5). Artemis II: UFO ETF +6.1% (t = 2.1). Starship tests, lunar landings and the 2025 executive order: no significant reaction.']],
  ['Does attention lead prices?',
-  ['mixed','No lead','NewSpace attention does not predict basket returns (p ≥ 0.43). The listed basket is mainly defence and aerospace suppliers.'],
-  ['no','Prices lead searches','Basket returns Granger-cause Google searches for space firms at lags 1–3 (p ≈ 0.02), but not Wikipedia reading or Hacker News volume. No attention measure predicts returns.']],
+  ['mixed','No lead; prices lead','NewSpace attention does not predict basket returns (p ≥ 0.43). In a VAR, share-price rises are followed by more NewSpace attention about three months later (p = 0.002; 3 of 5 versions). The listed basket is mainly defence and aerospace suppliers.'],
+  ['no','Prices lead searches','Basket returns Granger-cause Google searches for space firms at lags 1–3 (p ≈ 0.02), but not Wikipedia reading or Hacker News volume. No attention measure predicts returns, and in a VAR neither direction is robust.']],
  ['Does policy activity lead or follow build-out?',
   ['yes','Leads','NewSpace share of Lok Sabha space questions: 6.9% before the 2020 reforms, 26.4% after (p < 10⁻⁶), ahead of private launches.'],
   ['mixed','Led early','Commercial legislating peaked in 2015–16. Commercial share of space bills 6.1% → 11.0% (not significant). FCC space rulemaking tracks launch cadence (ρ = 0.88).']],
@@ -66,7 +66,7 @@ document.getElementById('headline').textContent=`Attention to space ${phrase(ord
 const usMax=Math.abs(Math.max(...X.us.q_att)-L.us.attention)<0.06;
 const widest=c=>{const g=X[c].q_gap,k=g.length-1;for(let j=k-1;j>=0;j--)if(g[j]>=g[k])return X[c].quarters[j].slice(0,4);return null};
 const wu=widest('us');
-document.getElementById('hl-sub').innerHTML=`In the US, attention ${usMax?'has reached its highest level of the decade':'has jumped'}, following Artemis II and the SpaceX listing, while build-out ${Math.abs(L.us.d_buildout)<1?'has held steady':(L.us.d_buildout>0?'has kept rising':'has eased')}${boMax('us')-L.us.buildout<2?', close to its own decade high':''}${wu?`; the gap of ${sg(L.us.gap)} points is the widest since ${wu}`:''}. In India, attention rose ${Math.abs(L.india.d_attention).toFixed(1)} points in the quarter of Skyroot’s Vikram-1, India’s first private orbital launch${negRun('india')?`, after ${negRun('india')[0]} quarters in which build-out was clearly ahead`:''}. <b>The index is a signal to watch, not a trading signal:</b> whether the gap predicts prices or investment is the next test.`;
+document.getElementById('hl-sub').innerHTML=`In the US, attention ${usMax?'has reached its highest level of the decade':'has jumped'}, following Artemis II and the SpaceX listing, while build-out ${Math.abs(L.us.d_buildout)<1?'has held steady':(L.us.d_buildout>0?'has kept rising':'has eased')}${boMax('us')-L.us.buildout<2?', close to its own decade high':''}${wu?`; the gap of ${sg(L.us.gap)} points is the widest since ${wu}`:''}. In India, attention rose ${Math.abs(L.india.d_attention).toFixed(1)} points in the quarter of Skyroot’s Vikram-1, India’s first private orbital launch${negRun('india')?`, after ${negRun('india')[0]} quarters in which build-out was clearly ahead`:''}. Time-series tests find no case in which attention reliably leads share prices or launches. <b>The index is a signal to watch, not a trading signal.</b>`;
 function posRun(c){const g=X[c].q_gap;let k=g.length-1,n=0;while(k>=0&&g[k]>TH){n++;k--}return n}
 // consecutive quarters, ending just before the latest one, in which build-out was clearly ahead (gap below −TH)
 function negRun(c){const g=X[c].q_gap;let k=g.length-2,n=0;const e=k;while(k>=0&&g[k]<-TH){n++;k--}return n?[n,X[c].quarters[k+1],X[c].quarters[e]]:null}
@@ -101,7 +101,7 @@ const AUD=[
  ['For investors','Separate spectacle from substance.',[
   `<b>Watch the gap.</b> US attention is ${Math.abs(L.us.gap).toFixed(1)} points ahead of build-out; in India the two are ${ST('india')==='level'?'level':sg(L.india.gap)+' points apart'}. The gap has swung both ways in both countries since 2016, so read it as a temperature check, not a forecast.`,
   `<b>Markets price landmarks, not routine progress.</b> Indian listed suppliers beat the Nifty 50 by 7.1% in the two days after the Chandrayaan-3 landing (t = 3.8); launch failures produced no significant move.`,
-  `<b>Searches follow prices, not the reverse.</b> In the US, stock moves are followed by searches for the firms; no attention measure predicted returns.`,
+  `<b>Attention follows prices, not the reverse.</b> Time-series (VAR) tests find no case in which attention reliably leads share prices; in India, price rises are followed by more attention about three months later.`,
   `<b>Mind concentration.</b> SpaceX flew 94% of US launches in 2025, and India’s NewSpace firms are not listed.`]],
  ['For policymakers','Read public interest and private capital directly.',[
   `<b>Reform moves the conversation first.</b> After India’s 2020 reforms, NewSpace questions in the Lok Sabha rose from 6.9% to 26.4% of space questions, ahead of private launches.`,
@@ -111,7 +111,7 @@ const AUD=[
  ['For researchers','An open panel, built to be tested.',[
   `<b>Open data:</b> monthly series for two countries, 2016–2026, in 30+ CSVs with code; an audit ties all 16,049 raw values to the tables.`,
   `<b>A transparent index:</b> a fixed 2016–2025 baseline, so new data do not rewrite history; equal weights; and robustness to component choice reported on the chart.`,
-  `<b>Next test:</b> vector autoregression on these series, to ask whether attention leads build-out, prices or capital, or follows them.`,
+  `<b>Time-series tests:</b> VARs with Granger tests and impulse responses for each pair, each checked five ways; results and code are included. Next: whether the index gap predicts returns or investment.`,
   `<b>Extendable:</b> the same pipeline can add further countries and signals.`]]];
 document.getElementById('aud').innerHTML=AUD.map(([h,s,li])=>`<div class="panel"><h3>${h}</h3><div class="sub">${s}</div><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
 // citation
@@ -126,3 +126,49 @@ document.getElementById('cite-bib').textContent=`@misc{sathiaseelan2026sds,
   note         = {Index to ${qlab(L.us.quarter)}}
 }`;
 document.getElementById('foot').textContent=`Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on ${O.pulled} · Index reported by quarter`;
+
+/* ---------- VAR lead-lag ---------- */
+const V=O.var, VM={}; V.forEach(v=>VM[v.id]=v);
+const SPECS=v=>[['AIC lags',v.aic],['BIC lags',v.bic],['3 lags',v.fixed3],['no event controls',v.robust.no_dummies],['to May 2026',v.robust.to_2026_05]];
+const nsig=(v,k)=>SPECS(v).filter(([,x])=>x[k]<0.05).length;
+const fp=x=>x<0.001?'< 0.001':x.toFixed(3);
+const verdict=(v,k)=>{const n=nsig(v,k);return n===5?['yes','Robust lead']:n>=3?['mixed','Some evidence']:n>=1?['mixed','Weak, not robust']:['no','No lead']};
+const VLAB={'IN-1':['India','NewSpace attention vs listed space suppliers (share prices vs Nifty 50)'],'US-1':['United States','NewSpace attention vs NewSpace stocks (vs S&P 500)'],
+ 'IN-2':['India','Public space attention vs orbital launches'],'US-2':['United States','NewSpace attention vs orbital launches']};
+const OTHER={'IN-1':'prices','US-1':'prices','IN-2':'launches','US-2':'launches'};
+const per=v=>`${mlab(v.start)} – ${mlab(v.end)}, ${v.n} months`;
+document.getElementById('var-body').innerHTML=['IN-1','US-1','IN-2','US-2'].map(id=>{const v=VM[id];
+ const cell=k=>{const [t,h]=verdict(v,k);return `<td><span class="tag ${lab[t]}"><i></i>${h}</span><div>p = ${fp(v.aic[k])} in the main model (${v.aic.p} lags); significant in ${nsig(v,k)} of 5 versions</div></td>`};
+ return `<tr><td>${VLAB[id][0]}<div class="dim" style="font-weight:400">${VLAB[id][1]}. ${per(v)}</div></td>${cell('a_to_b')}${cell('b_to_a')}</tr>`}).join('');
+// impulse responses
+let vm='IN-1',vd='b_to_a';
+const segV=document.getElementById('irf-seg');
+segV.innerHTML=['IN-1','US-1','IN-2','US-2'].map(id=>`<button type="button" data-m="${id}" aria-pressed="${id===vm}">${id.startsWith('IN')?'India':'US'}: ${OTHER[id]}</button>`).join('');
+const unitOf=(v,d)=>d==='b_to_a'?'attention (index units)':(v.q==='attention_prices'?'cumulative excess return, %':(v.id==='US-2'?'launches, log change':'launches'));
+function drawIrf(){const c=C(),v=VM[vm],src=vd==='a_to_b'?v.irf_rev:v.irf,m=src[vd],se=src[vd+'_se'],H=m.map((_,h)=>String(h));
+ const lo=m.map((x,h)=>x-1.96*se[h]),hi=m.map((x,h)=>x+1.96*se[h]);
+ const shock=vd==='b_to_a'?(v.q==='attention_prices'?'share-price':'launch'):'attention';
+ document.getElementById('irf-sub').textContent=`Cumulative response over 12 months to a one-standard-deviation surprise in ${shock}s (${VLAB[vm][0]}). Where the band includes zero, the effect cannot be told apart from none. The surprise is not allowed to move the other series in its own month, so the chart shows leads only.`;
+ mk('c-irf',{type:'line',data:{labels:H,datasets:[
+  {label:'lo',data:lo,borderWidth:0,pointRadius:0,fill:false},
+  {label:'hi',data:hi,borderWidth:0,pointRadius:0,fill:'-1',backgroundColor:rgba(c.s7,.18)},
+  {label:'Cumulative response',data:m,borderColor:c.s7,borderWidth:2.2,pointRadius:2,fill:false},
+  {label:'zero',data:m.map(()=>0),borderColor:c.axis,borderWidth:1,pointRadius:0,fill:false}]},
+  options:base(c,{plugins:{tooltip:{filter:i=>i.datasetIndex===2,callbacks:{title:t=>`Month ${t[0].label}`,label:i=>{const h=i.dataIndex;return `${i.parsed.y.toFixed(2)} (95%: ${lo[h].toFixed(2)} to ${hi[h].toFixed(2)})`}}}},
+   scales:{x:{title:SDS.axisTitle(c,'months after the surprise')},y:{title:SDS.axisTitle(c,unitOf(v,vd))}}})});
+ document.getElementById('irf-stat').innerHTML=`<span>Granger p (main) <b>${fp(v.aic[vd])}</b></span><span>Lags <b>${v.aic.p}</b> (AIC)</span><span>Stable <b>${v.aic.stable?'yes':'no'}</b></span><span>Residual autocorrelation p <b>${v.aic.white_p.toFixed(2)}</b></span>`}
+segV.querySelectorAll('button[data-m]').forEach(b=>b.addEventListener('click',()=>{vm=b.dataset.m;segV.querySelectorAll('button[data-m]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawIrf()}));
+document.querySelectorAll('#irf-dir button').forEach(b=>b.addEventListener('click',()=>{vd=b.dataset.d;document.querySelectorAll('#irf-dir button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawIrf()}));
+onTheme(drawIrf);
+// reading
+const aMax=Math.max(...V.map(v=>nsig(v,'a_to_b')));
+const lMin=Math.min(...['IN-2','US-2'].flatMap(id=>SPECS(VM[id]).flatMap(([,x])=>[x.a_to_b,x.b_to_a])));
+const I1=VM['IN-1'],U1=VM['US-1'],nTests=V.length*2;
+const ex=(id,e)=>VM[id].exog_effects[e];
+document.getElementById('var-read').innerHTML=`<h3>What the tests say</h3>
+<p><b>Attention does not lead.</b> In none of the four pairs does a change in attention reliably come before a move in share prices or launches: the attention-first test is significant in at most ${aMax} of 5 versions${aMax?` (US prices, sample ending before the SpaceX listing: p = ${fp(U1.robust.to_2026_05.a_to_b)})`:''}.</p>
+<p><b>In India, prices lead attention.</b> A rise in listed space suppliers’ shares is followed about three months later by a rise in NewSpace attention (p = ${fp(I1.aic.b_to_a)}, significant in ${nsig(I1,'b_to_a')} of 5 versions). It passes a correction for the ${nTests} main tests (0.05 ÷ ${nTests} = ${(0.05/nTests).toFixed(4)}), but weakens if the sample ends before Vikram-1 (p = ${fp(I1.robust.to_2026_05.b_to_a)}).</p>
+<p><b>In the US the same direction is weak</b> (p = ${fp(U1.aic.b_to_a)} in the main model, ${nsig(U1,'b_to_a')} of 5 versions), in line with the country page, where the effect runs through Google searches only.</p>
+<p><b>Attention and launches move independently</b> month to month in both countries (every p ≥ ${lMin.toFixed(2)}).</p>
+<p><b>Events move attention.</b> Flagship-mission months raise public attention in India (t = ${ex('IN-2','d_flagship_month').t_a.toFixed(1)}) and NewSpace attention in the US (t = ${ex('US-1','d_flagship_month').t_a.toFixed(1)}), as do Starship flight months (t = ${ex('US-1','d_starship_flight_month').t_a.toFixed(1)}). Price reactions to events are measured more precisely with the daily event studies on the country pages.</p>
+<p class="note">Granger tests show timing, not cause. Samples are short (${U1.n} months for US prices), so modest effects can be missed. Details on the <a href="methods.html#var-method">Methods</a> page.</p>`;

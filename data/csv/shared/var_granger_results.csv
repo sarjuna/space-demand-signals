@@ -1,0 +1,13 @@
+model,country,question,attention_series,other_series,sample,n_months,exogenous,lag_rule,lags,p_attention_leads,p_other_leads,F_attention_leads,F_other_leads,stable,whiteness_p_12
+US-1,us,attention_prices,NewSpace attention (change),NewSpace stocks vs S&P 500 (monthly excess return),2021-09..2026-10,62,d_flagship_month;d_starship_flight_month;d_spacex_ipo_month,aic,4,0.105,0.031,1.98,2.78,True,0.383
+US-1,us,attention_prices,NewSpace attention (change),NewSpace stocks vs S&P 500 (monthly excess return),2021-09..2026-10,62,d_flagship_month;d_starship_flight_month;d_spacex_ipo_month,bic,1,0.804,0.113,0.06,2.55,True,0.159
+US-1,us,attention_prices,NewSpace attention (change),NewSpace stocks vs S&P 500 (monthly excess return),2021-09..2026-10,62,d_flagship_month;d_starship_flight_month;d_spacex_ipo_month,fixed3,3,0.295,0.251,1.25,1.39,True,0.534
+IN-1,india,attention_prices,NewSpace attention (change),Listed space suppliers vs Nifty 50 (monthly excess return),2020-10..2026-10,73,d_flagship_month,aic,3,0.468,0.002,0.85,5.44,True,0.822
+IN-1,india,attention_prices,NewSpace attention (change),Listed space suppliers vs Nifty 50 (monthly excess return),2020-10..2026-10,73,d_flagship_month,bic,1,0.402,0.244,0.71,1.37,True,0.085
+IN-1,india,attention_prices,NewSpace attention (change),Listed space suppliers vs Nifty 50 (monthly excess return),2020-10..2026-10,73,d_flagship_month,fixed3,3,0.468,0.002,0.85,5.44,True,0.822
+US-2,us,attention_buildout,NewSpace attention (change),"Orbital launches (monthly change, log)",2016-02..2026-10,129,d_flagship_month,aic,4,0.529,0.878,0.8,0.3,True,0.532
+US-2,us,attention_buildout,NewSpace attention (change),"Orbital launches (monthly change, log)",2016-02..2026-10,129,d_flagship_month,bic,2,0.688,0.836,0.37,0.18,True,0.362
+US-2,us,attention_buildout,NewSpace attention (change),"Orbital launches (monthly change, log)",2016-02..2026-10,129,d_flagship_month,fixed3,3,0.332,0.944,1.14,0.13,True,0.45
+IN-2,india,attention_buildout,Public space attention (change),Orbital launches per month,2016-02..2026-10,129,d_flagship_month,aic,4,0.597,0.869,0.69,0.31,True,0.161
+IN-2,india,attention_buildout,Public space attention (change),Orbital launches per month,2016-02..2026-10,129,d_flagship_month,bic,1,0.772,0.64,0.08,0.22,True,0.221
+IN-2,india,attention_buildout,Public space attention (change),Orbital launches per month,2016-02..2026-10,129,d_flagship_month,fixed3,3,0.734,0.78,0.43,0.36,True,0.317

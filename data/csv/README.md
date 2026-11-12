@@ -81,6 +81,13 @@ Every value in every raw file in `data/raw/` appears in these tables. `code/site
 | `space_signals_index_india_quarterly.csv`, `space_signals_index_us_quarterly.csv` | 39 each | Space Signals Index by complete quarter: attention, build-out, gap, robustness variants (Google-only, Wikipedia-only, leave-one-out min/max) and component counts |
 | `space_signals_index_india_monthly.csv`, `space_signals_index_us_monthly.csv` | 119 each | Same, monthly from 2016-12 (each value covers the trailing 12 months) |
 
+| `var_granger_results.csv` | 12 | VAR Granger F-tests in both directions for the four models, with lags by AIC, BIC and fixed at 3: lags, p-values, F statistics, stability and residual whiteness |
+| `var_impulse_responses.csv` | 52 | Cumulative orthogonalised impulse responses (0–12 months) for each model, lead-only ordering, with standard errors |
+
+### Time-series tests (VAR)
+
+`code/var/run_var.py` fits four two-variable VARs (attention change with excess returns, and with launches, for each country) and writes the tables above. The no-dummies and pre-June-2026 robustness versions, plus event-dummy coefficients and FEVD, are in `data/derived/var/var_results.json`. See the Methods page.
+
 ### Space Signals Index
 
 `code/index/build_index.py` builds it from `*_index_components_z.csv` (attention) and `*_monthly.csv` (launches and commercial satellites). Values are scaled so that 100 = the January 2016 to December 2025 average and 10 points = one standard deviation; gap = attention − build-out. The baseline is fixed, so new months never revise earlier values. August to October 2026 are provisional: the satellite component is held at its July 2026 value because the GCAT satellite catalogue is complete only to July. See the Methods page for details and robustness.

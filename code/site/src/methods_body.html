@@ -67,6 +67,27 @@
   </div>
 </section>
 
+<section class="rq" id="var-method">
+  <div class="rq-head"><div class="rq-num">VAR</div><h2>Time-series tests (vector autoregression)</h2><p>Do attention, prices and launches lead one another? Four two-variable VARs, each tested five ways.</p></div>
+  <div class="grid2">
+    <div class="panel read">
+      <h3>Models</h3>
+      <p><b>Attention and share prices.</b> India: monthly change in NewSpace attention (CAI) with the listed suppliers’ excess return over the Nifty 50, October 2020 to October 2026 (73 months). US: change in NewSpace attention (NAI) with the NewSpace basket’s excess return over the S&amp;P 500, September 2021 (when the basket reaches six firms) to October 2026 (62 months).</p>
+      <p><b>Attention and launches.</b> India: change in public attention (PAI) with orbital launches per month; US: change in NAI with the monthly change in log(1 + launches). Both February 2016 to October 2026 (129 months).</p>
+      <p><b>Stationarity.</b> Attention levels trend (US NAI: ADF p = 0.62), so attention enters as monthly changes; every series in every model passes an ADF test (p &lt; 0.01). Returns are log excess returns in per cent.</p>
+      <p><b>Event controls.</b> Event months enter as exogenous dummies: flagship-mission months in all models, plus Starship flight months and the SpaceX listing month in the US price model. Dummies with no event in a sample are dropped.</p>
+      <p><b>Estimation.</b> Lag length chosen by AIC (maximum 6 months). Every model is stable, and the main (AIC) models show no residual autocorrelation up to 12 lags (Portmanteau p ≥ 0.16).</p>
+    </div>
+    <div class="panel read">
+      <h3>Tests and robustness</h3>
+      <p><b>Granger F-tests</b> in both directions. A lead is called robust only if p &lt; 0.05 in all five versions: lags by AIC, lags by BIC, a fixed three lags, no event dummies, and a sample ending May 2026 (before the SpaceX listing and Vikram-1). Eight main tests are run, so a Bonferroni threshold is 0.05 ÷ 8 = 0.0063.</p>
+      <p><b>Impulse responses</b> are orthogonalised and cumulative over 12 months, for a one-standard-deviation surprise, with 95% asymptotic bands. The surprised series is ordered second, so it cannot move the other series in the same month and the response shows leads only.</p>
+      <p><b>Limits.</b> Granger causality is about timing, not cause. Samples are short, so modest effects can be missed. Monthly data cannot capture reactions within days, which the event studies on the country pages measure. The two-variable models leave out other drivers, such as overall market sentiment beyond the benchmark.</p>
+      <p><b>Files.</b> <a href="data/csv/shared/var_granger_results.csv">Granger results, all versions</a>, <a href="data/csv/shared/var_impulse_responses.csv">impulse responses</a>. Code: <span class="mono">code/var/run_var.py</span>.</p>
+    </div>
+  </div>
+</section>
+
 <section class="rq">
   <div class="rq-head"><div class="rq-num">04</div><h2>Verification</h2><p>Steps taken to keep every figure tied to its source.</p></div>
   <div class="panel read">

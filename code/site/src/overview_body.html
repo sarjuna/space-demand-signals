@@ -26,6 +26,23 @@
   </div>
 </section>
 
+<section class="rq" id="lead">
+  <div class="rq-head"><div class="rq-num">LEAD</div><h2>Who leads whom? Time-series tests</h2>
+  <p>A vector autoregression (VAR) models two monthly series together, so each can be forecast from the recent past of both. A Granger test then asks whether one series’ past improves forecasts of the other. Each pair is tested five ways; a lead counts as robust only if it holds in all five.</p></div>
+  <div class="tablewrap"><table class="cmp"><thead><tr><th>Pair</th><th>Does attention lead?</th><th>Does it lead attention?</th></tr></thead><tbody id="var-body"></tbody></table></div>
+  <div class="grid2">
+    <div class="panel">
+      <h3>What happens after a jump</h3>
+      <div class="sub" id="irf-sub"></div>
+      <div class="controls"><div class="seg" role="group" aria-label="Pair" id="irf-seg"></div><div class="seg" role="group" aria-label="Direction" id="irf-dir"><button type="button" data-d="b_to_a" aria-pressed="true">… leads attention?</button><button type="button" data-d="a_to_b" aria-pressed="false">Attention leads …?</button></div></div>
+      <div class="legend"><span><i class="sw" style="background:var(--s7)"></i>Cumulative response</span><span><i class="sw" style="background:var(--s7);opacity:.25;height:9px"></i>95% band</span></div>
+      <div class="chartbox short"><canvas id="c-irf" role="img" aria-label="Cumulative impulse response with 95% band"></canvas></div>
+      <div class="statline" id="irf-stat"></div>
+    </div>
+    <div class="panel read" id="var-read"></div>
+  </div>
+</section>
+
 <section class="rq" id="audiences">
   <div class="rq-head"><div class="rq-num">USE</div><h2>What it means for you</h2>
   <p>The same evidence read for three audiences. Figures come from the index above or from the country pages, where the test behind each is set out.</p></div>
