@@ -1,10 +1,10 @@
 // Re-pull of data/raw/global/itu_leo_filings.txt. Run in a browser tab on
 // https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer (the public ITU Space Explorer).
-// Uses the same API calls the page makes. Written 13 Nov 2026. Returns the aggregate text and the SHA-256 of the per-notice extract.
+// Uses the same API calls the page makes. Written 13 Nov 2026; revised the same day to select on perigee <= 2,000 km (all 3,718 NGSO notices pulled). Returns the aggregate text and the SHA-256 of the per-notice extract.
 async function pullLeoFilings() {
   const API = '/itu-r/space/apps/ep/spaceexplorer/v1';
   const body = {"general":{"network":"active","adm":[],"networkOrgCode":[],"satelliteName":[],"serviceType":"all"},
-    "satNetworkTypes":{"geo":false,"geoFrom":null,"geoTo":null,"nonGeo":true,"apogeeFrom":null,"apogeeTo":2000,"perigeeFrom":null,"perigeeTo":null,
+    "satNetworkTypes":{"geo":false,"geoFrom":null,"geoTo":null,"nonGeo":true,"apogeeFrom":null,"apogeeTo":null,"perigeeFrom":null,"perigeeTo":null,
       "minAltitudeFrom":null,"minAltitudeTo":null,"referenceBody":null,"constelattion":false,"shortDurationMission":false},
     "frequencies":[],
     "regProcess":{"SuppressionStatus":"All","masterReg":false,"nonPlanBand":false,"bssPlanBand":false,"fssPlanBand":false,"esimPlanBand":false,
@@ -28,7 +28,7 @@ async function pullLeoFilings() {
   const tsv = L.map(n => [n.ntc_id, n.adm, n.ntwk_org || '', n.sat_name, n.ntf_rsn, n.prov, n.d_rcv, ...OI[n.ntc_id].map(v => v == null ? '' : v)].join('|')).join('\n');
   const sha = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(tsv)))).map(b => b.toString(16).padStart(2, '0')).join('');
   // Exclusions and aggregation as documented in the raw file header
-  const keep = L.filter(n => { const o = OI[n.ntc_id]; return o[7] === 'T' && o[1] != null && o[1] >= 100; });
+  const keep = L.filter(n => { const o = OI[n.ntc_id]; return o[7] === 'T' && o[1] != null && o[1] >= 100 && o[0] != null && o[0] <= 2000; });   // at least one orbit reaching LEO; multi-orbit if o[1] > 2000
   const nsat = n => { const o = OI[n.ntc_id]; return o[2] ?? o[5] ?? o[3] ?? 0; };
   return { notices: L.length, kept: keep.length, sha, tsv, keep, nsat };   // aggregate as in the raw file (per adm, per year, per network max satellites)
 }

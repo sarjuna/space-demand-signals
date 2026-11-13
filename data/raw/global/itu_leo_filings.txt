@@ -1,12 +1,14 @@
 # ITU Space Explorer (Space Networks System database), public API used by the Networks Explorer page:
 #   POST https://www.itu.int/itu-r/space/apps/ep/spaceexplorer/v1/queries  (body: code/global/pull_itu_leo_filings.js)
 #   GET  .../v1/dashboard/space-stations/nonGeo/orbitalInfo/non-plans/{name}/{ntc_id}/orbitalInfo  (satellite numbers, perigee/apogee)
-# Database up to BR IFIC No 3084 (10.11.2026). Pulled in-browser 13 Nov 2026.
-# Selection: active non-geostationary space station notices whose orbits include an apogee <= 2,000 km (server filter apogeeTo=2000): 3,026 notices.
-# Excluded afterwards (3): reference body not Earth (MRO, Mars) and apogee 0 (SOHO at L1, KIRUNA ROCKET suborbital). Kept: 3,023 notices.
-# 12 kept notices are multi-orbit systems whose highest orbit exceeds 2,000 km but which include LEO shells (e.g. O3B-F, AST-NG-C-QVA).
-# SHA-256 of the full 3,026-row per-notice extract (ntc_id|adm|org|name|notice type|provision|receipt date|perigee|apogee|nbr_sat|nbr_sat_notified|config_min|config_max|constellation|ref body):
-#   5cfa7daad24df0560abca41abcaebbc9af5159a2062474d5f189534ca6fcd00e
+# Database up to BR IFIC No 3084 (10.11.2026). Pulled in-browser 13 Nov 2026 (revised the same evening).
+# Selection (revised): all 3,718 active non-geostationary space station notices were pulled with their orbital summary.
+#   Kept: reference body Earth, apogee >= 100 km and perigee <= 2,000 km, i.e. at least one orbit reaching low Earth orbit altitudes: 3,124 notices.
+#   Of these, 3,011 have all orbits at or below 2,000 km (LEO only) and 113 are multi-orbit or elliptical (highest apogee above 2,000 km),
+#   e.g. CTC-1/CTC-2 (China), FMS-LEO (France), Molniya-type orbits (Russia). The first version (3,023 notices) used the server's apogee filter,
+#   which omitted 101 multi-orbit notices including CTC-1 and CTC-2.
+# SHA-256 of the full 3,718-row per-notice extract (ntc_id|adm|org|name|notice type|provision|receipt date|perigee|apogee|nbr_sat|nbr_sat_notified|config_min|config_max|constellation|ref body):
+#   6876a694694c830e5ee5a4005398a3a9826c10dd0371e433ef009a8727dbcaf1
 # Definitions:
 #   filing = one notice (ntc_id). Notice types: A = advance publication information (RR 9.1A / 9.1), C = coordination request (RR 9.6),
 #   N = notification for recording in the Master Register (RR 11.2 or older RR1488), other = Resolution 49 / other.
@@ -14,173 +16,194 @@
 #   network = distinct (adm, satellite network name); one network can have several notices (A, C, N).
 #   satellites = for each network, the largest satellite number in any of its notices (nbr_sat, else configured maximum, else notified), summed per adm.
 #     This is an upper bound on planned satellites: the same satellites can appear under several network names and many filings are never fully deployed.
+#     For multi-orbit networks the number covers all orbits, not only the LEO part.
 #   receipt bands use the notice's date of receipt (d_rcv).
-#ADM adm|name|filings|A|C|N|other|org_filings|rcv<=2015|2016-19|2020-22|2023-26|networks|satellites|networks>=100|networks>=1000
-CHN|China (People's Republic of)|734|458|171|105|0|0|14|128|177|415|514|161193|87|37
-USA|United States of America|569|398|81|90|0|0|51|83|134|301|481|236061|57|43
-D|Germany (Federal Republic of)|209|136|34|39|0|6|2|14|63|130|162|349608|43|27
-J|Japan|172|120|11|41|0|0|17|21|37|97|145|3076|8|0
-F|France|170|71|35|64|0|34|15|24|39|92|129|325868|31|24
-KOR|Korea (Republic of)|146|84|13|49|0|0|5|12|30|99|92|8580|4|1
-IND|India (Republic of)|77|53|0|24|0|0|4|11|17|45|67|1997|2|1
-G|United Kingdom of Great Britain and Northern Ireland|73|40|15|18|0|0|2|6|17|48|53|50360|20|10
-I|Italy|72|61|6|5|0|0|2|3|17|50|65|487|1|0
-E|Spain|60|33|14|13|0|0|1|8|18|33|47|94291|14|8
-CAN|Canada|48|24|9|15|0|0|5|6|11|26|38|3858|9|1
-RUS|Russian Federation|43|16|6|20|1|0|7|7|8|21|29|2427|4|1
-UAE|United Arab Emirates|39|18|6|15|0|0|0|8|12|19|23|1763|3|1
-NOR|Norway|32|21|6|5|0|0|1|2|11|18|27|17420|4|4
-POL|Poland (Republic of)|30|23|1|6|0|0|1|2|11|16|24|111|0|0
-TUR|Republic of Türkiye|30|24|4|2|0|0|0|0|6|24|25|46126|3|2
-RRW|Rwanda (Republic of)|25|17|6|2|0|0|0|0|20|5|22|1119997|19|17
-B|Brazil (Federative Republic of)|23|16|2|5|0|0|3|2|4|14|20|255|1|0
-FIN|Finland|20|13|1|6|0|0|0|4|4|12|15|5720|3|2
-AUS|Australia|19|11|4|4|0|0|0|2|7|10|12|526|2|0
-HOL|Netherlands (Kingdom of the)|18|8|5|5|0|0|3|0|7|8|15|329|1|0
-ARG|Argentine Republic|18|15|1|2|0|0|0|0|4|14|18|152|0|0
-THA|Thailand|17|12|2|3|0|0|1|4|7|5|13|13|0|0
-GRC|Greece|17|12|1|4|0|0|0|0|0|17|12|42|0|0
-LUX|Luxembourg|16|9|3|4|0|0|0|2|7|7|10|4696|3|1
-ISR|Israel (State of)|15|8|4|3|0|0|1|2|8|4|13|2181|4|0
-S|Sweden|15|9|0|6|0|0|1|0|3|11|10|256|1|0
-CZE|Czech Republic|15|10|0|5|0|0|0|0|6|9|10|19|0|0
-EGY|Egypt (Arab Republic of)|13|7|0|6|0|0|1|1|5|6|9|31|0|0
-VTN|Viet Nam (Socialist Republic of)|13|10|1|2|0|0|1|3|1|8|12|2484|1|1
-DNK|Denmark|13|7|2|4|0|0|0|3|3|7|7|129|1|0
-BEL|Belgium|13|10|2|1|0|0|0|1|1|11|11|19224|2|2
-SNG|Singapore (Republic of)|13|8|0|5|0|0|0|0|3|10|9|190|1|0
-INS|Indonesia (Republic of)|11|5|3|3|0|0|3|0|0|8|10|13658|2|1
-SUI|Switzerland (Confederation of)|11|5|2|4|0|0|2|3|4|2|6|244|2|0
-PHL|Philippines (Republic of the)|11|6|0|5|0|0|0|2|6|3|7|13|0|0
-PAK|Pakistan (Islamic Republic of)|11|5|1|5|0|0|0|2|3|6|7|14|0|0
-POR|Portugal|11|6|2|3|0|0|0|0|1|10|7|54|0|0
-HNG|Hungary|11|9|0|2|0|0|0|0|1|10|9|39|0|0
-BUL|Bulgaria (Republic of)|10|7|1|2|0|0|0|0|0|10|8|274|2|0
-LTU|Lithuania (Republic of)|9|5|0|4|0|0|0|3|4|2|7|89|0|0
-IRN|Iran (Islamic Republic of)|9|8|0|1|0|0|0|2|2|5|8|8|0|0
-SLM|Solomon Islands|9|3|4|2|0|0|0|0|5|4|7|16013|6|2
-ARS|Saudi Arabia (Kingdom of)|8|2|1|5|0|0|2|0|2|4|7|446|2|0
-KAZ|Kazakhstan (Republic of)|7|3|0|4|0|0|2|2|1|2|7|11|0|0
-MLA|Malaysia|7|4|1|2|0|0|0|0|1|6|4|503|1|0
-MEX|Mexico|6|3|2|1|0|0|0|3|0|3|5|6139|1|1
-EST|Estonia (Republic of)|6|4|0|2|0|0|0|2|2|2|4|4|0|0
-PNG|Papua New Guinea|6|3|1|2|0|0|0|0|2|4|3|705|2|0
-ALG|Algeria (People's Democratic Republic of)|5|2|0|3|0|0|1|0|2|2|4|8|0|0
-BLR|Belarus (Republic of)|5|4|0|1|0|0|1|0|2|2|5|5|0|0
-AUT|Austria|5|5|0|0|0|0|0|1|1|3|5|5|0|0
-LIE|Liechtenstein (Principality of)|5|1|2|2|0|0|0|0|3|2|2|1152|2|0
-UKR|Ukraine|4|3|0|1|0|0|1|1|1|1|4|44|0|0
-CHL|Chile|4|3|0|1|0|0|1|0|3|0|4|4|0|0
-SVN|Slovenia (Republic of)|4|1|0|3|0|0|0|2|1|1|3|3|0|0
-NZL|New Zealand|4|4|0|0|0|0|0|1|2|1|4|7|0|0
-DJI|Djibouti (Republic of)|4|2|0|2|0|0|0|0|0|4|2|2|0|0
-ROU|Romania|4|4|0|0|0|0|0|0|0|4|4|4|0|0
-MRC|Morocco (Kingdom of)|3|1|0|2|0|0|1|0|1|1|2|4|0|0
-AFS|South Africa (Republic of)|3|2|0|1|0|0|0|0|3|0|2|10|0|0
-MNG|Mongolia|3|2|1|0|0|0|0|0|0|3|2|12|0|0
-VEN|Venezuela (Bolivarian Republic of)|2|0|0|2|0|0|1|1|0|0|2|2|0|0
-BRM|Myanmar (Union of)|2|2|0|0|0|0|0|0|1|1|2|8|0|0
-EQA|Ecuador|2|2|0|0|0|0|0|0|1|1|2|2|0|0
-CLM|Colombia (Republic of)|2|1|0|1|0|0|0|0|2|0|1|1|0|0
-ARM|Armenia (Republic of)|2|2|0|0|0|0|0|0|1|1|2|2|0|0
-HRV|Croatia (Republic of)|2|1|0|1|0|0|0|0|0|2|1|1|0|0
-OMA|Oman (Sultanate of)|2|2|0|0|0|0|0|0|0|2|2|115|1|0
-TZA|Tanzania (United Republic of)|2|1|0|1|0|0|0|0|0|2|1|1|0|0
-SVK|Slovak Republic|2|1|0|1|0|0|0|0|0|2|1|1|0|0
-LVA|Latvia (Republic of)|1|0|0|1|0|0|0|1|0|0|1|1|0|0
-SDN|Sudan (Republic of the)|1|1|0|0|0|0|0|1|0|0|1|1|0|0
-ETH|Ethiopia (Federal Democratic Republic of)|1|1|0|0|0|0|0|1|0|0|1|1|0|0
-MDA|Moldova (Republic of)|1|1|0|0|0|0|0|1|0|0|1|1|0|0
-PRU|Peru|1|0|0|1|0|0|0|1|0|0|1|1|0|0
-UGA|Uganda (Republic of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0
-BTN|Bhutan (Kingdom of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0
-BFA|Burkina Faso|1|1|0|0|0|0|0|0|1|0|1|1|0|0
-MCO|Monaco (Principality of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0
-KWT|Kuwait (State of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0
-KEN|Kenya (Republic of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0
-NIG|Nigeria (Federal Republic of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0
-SEN|Senegal (Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0
-TON|Tonga (Kingdom of)|1|1|0|0|0|0|0|0|0|1|1|29988|1|1
-BOT|Botswana (Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0
-BHR|Bahrain (Kingdom of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0
-NPL|Nepal (Federal Democratic Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0
-AZE|Azerbaijan (Republic of)|1|1|0|0|0|0|0|0|0|1|1|6|0|0
-HND|Honduras (Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0
-PRG|Paraguay (Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0
-MNE|Montenegro|1|1|0|0|0|0|0|0|0|1|1|1|0|0
-TUN|Tunisia|1|1|0|0|0|0|0|0|0|1|1|1|0|0
+#ADM adm|name|filings|A|C|N|other|org_filings|rcv<=2015|2016-19|2020-22|2023-26|networks|satellites|networks>=100|networks>=1000|multiorbit_filings|satellites_in_multiorbit_networks
+CHN|China (People's Republic of)|743|464|173|106|0|0|14|128|178|423|520|354652|89|39|10|193462
+USA|United States of America|600|415|83|102|0|0|61|87|137|315|506|241624|58|44|32|11484
+D|Germany (Federal Republic of)|216|142|34|40|0|7|2|14|63|137|168|389055|45|29|8|42342
+F|France|176|73|36|67|0|38|15|26|41|94|133|344578|33|25|9|43116
+J|Japan|174|121|11|42|0|0|17|22|37|98|146|3077|8|0|2|1
+KOR|Korea (Republic of)|149|86|13|50|0|0|5|12|30|102|94|8583|4|1|3|3
+G|United Kingdom of Great Britain and Northern Ireland|77|41|18|18|0|0|2|7|20|48|57|52374|24|10|7|2222
+IND|India (Republic of)|77|53|0|24|0|0|4|11|17|45|67|1997|2|1|0|0
+I|Italy|74|63|6|5|0|0|2|3|17|52|67|24263|3|2|2|23776
+E|Spain|62|33|16|13|0|0|1|8|19|34|49|104701|16|10|4|88170
+RUS|Russian Federation|57|20|10|26|1|0|10|13|9|25|37|2469|4|1|14|42
+CAN|Canada|48|24|9|15|0|0|5|6|11|26|38|3858|9|1|0|0
+UAE|United Arab Emirates|40|19|6|15|0|0|0|8|12|20|24|5003|4|2|1|3240
+NOR|Norway|32|21|6|5|0|0|1|2|11|18|27|17420|4|4|0|0
+POL|Poland (Republic of)|30|23|1|6|0|0|1|2|11|16|24|111|0|0|0|0
+TUR|Republic of Türkiye|30|24|4|2|0|0|0|0|6|24|25|46126|3|2|0|0
+LUX|Luxembourg|27|13|9|5|0|0|0|2|15|10|20|27138|12|7|11|22442
+RRW|Rwanda (Republic of)|25|17|6|2|0|0|0|0|20|5|22|1119997|19|17|0|0
+B|Brazil (Federative Republic of)|23|16|2|5|0|0|3|2|4|14|20|255|1|0|0|0
+FIN|Finland|20|13|1|6|0|0|0|4|4|12|15|5720|3|2|0|0
+ARG|Argentine Republic|19|16|1|2|0|0|0|0|4|15|19|153|0|0|1|1
+AUS|Australia|19|11|4|4|0|0|0|2|7|10|12|526|2|0|0|0
+HOL|Netherlands (Kingdom of the)|18|8|5|5|0|0|3|0|7|8|15|329|1|0|0|0
+GRC|Greece|17|12|1|4|0|0|0|0|0|17|12|42|0|0|0|0
+THA|Thailand|17|12|2|3|0|0|1|4|7|5|13|13|0|0|0|0
+CZE|Czech Republic|15|10|0|5|0|0|0|0|6|9|10|19|0|0|0|0
+ISR|Israel (State of)|15|8|4|3|0|0|1|2|8|4|13|2181|4|0|0|0
+S|Sweden|15|9|0|6|0|0|1|0|3|11|10|256|1|0|0|0
+BEL|Belgium|13|10|2|1|0|0|0|1|1|11|11|19224|2|2|0|0
+DNK|Denmark|13|7|2|4|0|0|0|3|3|7|7|129|1|0|0|0
+EGY|Egypt (Arab Republic of)|13|7|0|6|0|0|1|1|5|6|9|31|0|0|0|0
+SNG|Singapore (Republic of)|13|8|0|5|0|0|0|0|3|10|9|190|1|0|0|0
+VTN|Viet Nam (Socialist Republic of)|13|10|1|2|0|0|1|3|1|8|12|2484|1|1|0|0
+PNG|Papua New Guinea|12|5|3|4|0|0|0|0|6|6|7|2181|6|0|6|1476
+HNG|Hungary|11|9|0|2|0|0|0|0|1|10|9|39|0|0|0|0
+INS|Indonesia (Republic of)|11|5|3|3|0|0|3|0|0|8|10|13658|2|1|0|0
+PAK|Pakistan (Islamic Republic of)|11|5|1|5|0|0|0|2|3|6|7|14|0|0|0|0
+PHL|Philippines (Republic of the)|11|6|0|5|0|0|0|2|6|3|7|13|0|0|0|0
+POR|Portugal|11|6|2|3|0|0|0|0|1|10|7|54|0|0|0|0
+SUI|Switzerland (Confederation of)|11|5|2|4|0|0|2|3|4|2|6|244|2|0|0|0
+BUL|Bulgaria (Republic of)|10|7|1|2|0|0|0|0|0|10|8|274|2|0|0|0
+SLM|Solomon Islands|10|3|4|3|0|0|0|0|5|5|7|16302|6|2|2|742
+ARS|Saudi Arabia (Kingdom of)|9|3|1|5|0|0|2|0|2|5|8|447|2|0|1|1
+IRN|Iran (Islamic Republic of)|9|8|0|1|0|0|0|2|2|5|8|8|0|0|0|0
+LTU|Lithuania (Republic of)|9|5|0|4|0|0|0|3|4|2|7|89|0|0|0|0
+KAZ|Kazakhstan (Republic of)|7|3|0|4|0|0|2|2|1|2|7|11|0|0|0|0
+MLA|Malaysia|7|4|1|2|0|0|0|0|1|6|4|503|1|0|0|0
+EST|Estonia (Republic of)|6|4|0|2|0|0|0|2|2|2|4|4|0|0|0|0
+MEX|Mexico|6|3|2|1|0|0|0|3|0|3|5|6139|1|1|0|0
+ALG|Algeria (People's Democratic Republic of)|5|2|0|3|0|0|1|0|2|2|4|8|0|0|0|0
+AUT|Austria|5|5|0|0|0|0|0|1|1|3|5|5|0|0|0|0
+BLR|Belarus (Republic of)|5|4|0|1|0|0|1|0|2|2|5|5|0|0|0|0
+LIE|Liechtenstein (Principality of)|5|1|2|2|0|0|0|0|3|2|2|1152|2|0|0|0
+CHL|Chile|4|3|0|1|0|0|1|0|3|0|4|4|0|0|0|0
+DJI|Djibouti (Republic of)|4|2|0|2|0|0|0|0|0|4|2|2|0|0|0|0
+NZL|New Zealand|4|4|0|0|0|0|0|1|2|1|4|7|0|0|0|0
+ROU|Romania|4|4|0|0|0|0|0|0|0|4|4|4|0|0|0|0
+SVN|Slovenia (Republic of)|4|1|0|3|0|0|0|2|1|1|3|3|0|0|0|0
+UKR|Ukraine|4|3|0|1|0|0|1|1|1|1|4|44|0|0|0|0
+AFS|South Africa (Republic of)|3|2|0|1|0|0|0|0|3|0|2|10|0|0|0|0
+MNG|Mongolia|3|2|1|0|0|0|0|0|0|3|2|12|0|0|0|0
+MRC|Morocco (Kingdom of)|3|1|0|2|0|0|1|0|1|1|2|4|0|0|0|0
+ARM|Armenia (Republic of)|2|2|0|0|0|0|0|0|1|1|2|2|0|0|0|0
+BRM|Myanmar (Union of)|2|2|0|0|0|0|0|0|1|1|2|8|0|0|0|0
+CLM|Colombia (Republic of)|2|1|0|1|0|0|0|0|2|0|1|1|0|0|0|0
+EQA|Ecuador|2|2|0|0|0|0|0|0|1|1|2|2|0|0|0|0
+HRV|Croatia (Republic of)|2|1|0|1|0|0|0|0|0|2|1|1|0|0|0|0
+OMA|Oman (Sultanate of)|2|2|0|0|0|0|0|0|0|2|2|115|1|0|0|0
+SVK|Slovak Republic|2|1|0|1|0|0|0|0|0|2|1|1|0|0|0|0
+TZA|Tanzania (United Republic of)|2|1|0|1|0|0|0|0|0|2|1|1|0|0|0|0
+VEN|Venezuela (Bolivarian Republic of)|2|0|0|2|0|0|1|1|0|0|2|2|0|0|0|0
+AZE|Azerbaijan (Republic of)|1|1|0|0|0|0|0|0|0|1|1|6|0|0|0|0
+BFA|Burkina Faso|1|1|0|0|0|0|0|0|1|0|1|1|0|0|0|0
+BHR|Bahrain (Kingdom of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0|0|0
+BOT|Botswana (Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0|0|0
+BTN|Bhutan (Kingdom of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0|0|0
+ETH|Ethiopia (Federal Democratic Republic of)|1|1|0|0|0|0|0|1|0|0|1|1|0|0|0|0
+HND|Honduras (Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0|0|0
+KEN|Kenya (Republic of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0|0|0
+KWT|Kuwait (State of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0|0|0
+LVA|Latvia (Republic of)|1|0|0|1|0|0|0|1|0|0|1|1|0|0|0|0
+MCO|Monaco (Principality of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0|0|0
+MDA|Moldova (Republic of)|1|1|0|0|0|0|0|1|0|0|1|1|0|0|0|0
+MNE|Montenegro|1|1|0|0|0|0|0|0|0|1|1|1|0|0|0|0
+NIG|Nigeria (Federal Republic of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0|0|0
+NPL|Nepal (Federal Democratic Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0|0|0
+PRG|Paraguay (Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0|0|0
+PRU|Peru|1|0|0|1|0|0|0|1|0|0|1|1|0|0|0|0
+SDN|Sudan (Republic of the)|1|1|0|0|0|0|0|1|0|0|1|1|0|0|0|0
+SEN|Senegal (Republic of)|1|1|0|0|0|0|0|0|0|1|1|1|0|0|0|0
+TON|Tonga (Kingdom of)|1|1|0|0|0|0|0|0|0|1|1|29988|1|1|0|0
+TUN|Tunisia|1|1|0|0|0|0|0|0|0|1|1|1|0|0|0|0
+UGA|Uganda (Republic of)|1|1|0|0|0|0|0|0|1|0|1|1|0|0|0|0
 #YEAR year|A|C|N|other
+1981|0|0|1|0
+1983|0|0|1|0
+1990|0|0|1|0
 1994|0|0|1|0
 1999|0|0|1|0
 2001|0|0|2|0
 2004|0|0|1|0
-2005|0|0|14|0
-2006|0|0|27|0
+2005|0|0|15|0
+2006|0|0|32|0
 2007|0|0|6|1
-2008|0|0|8|0
+2008|0|0|10|0
 2009|0|0|9|0
 2010|0|0|11|0
 2011|0|0|17|0
 2012|1|0|11|0
 2013|0|0|10|0
 2014|1|1|11|0
-2015|5|3|12|0
-2016|5|2|17|0
+2015|6|4|12|0
+2016|6|3|18|0
 2017|6|7|20|0
-2018|78|25|27|0
-2019|110|58|34|0
-2020|169|49|34|0
-2021|156|47|39|0
-2022|176|42|51|0
-2023|296|76|57|0
-2024|309|74|62|0
-2025|334|72|105|0
-2026|260|11|62|0
-#TOP adm|network|org|stages|max_satellites|first_receipt
-F|SEMAPHORE-C||A|116640|2023-06-23
-D|AETHER-C||A|114852|2021-12-15
-RRW|INGAGI-1||A|78120|2021-10-22
-RRW|IMBOGO-2||A|78120|2021-10-22
-RRW|UMUSAMBI-3||A|78120|2021-10-22
-RRW|AGACA-4||A|78120|2021-10-22
-RRW|INTARE-5||A|78120|2021-10-22
-RRW|INGWE-6||A|78120|2021-10-22
-RRW|INZOVU-7||A|78120|2021-10-22
-E|SECOMSAT-LEO-1||AN|77760|2021-06-16
-F|SEMAPHORE||AC|75600|2024-08-05
-RRW|CINNAMON-937||A|69360|2021-09-21
-RRW|UMUTEKANO-2||AC|68400|2022-09-23
-RRW|UMUTEKANO||C|68400|2023-03-08
-D|MARS-E1||AN|67744|2021-09-22
-RRW|UMUTEKANO-3||C|64800|2023-12-16
-RRW|GUHUZA-1A||A|63690|2025-07-10
-RRW|UMUTEKANO API-1||A|55680|2022-09-23
-RRW|CINNAMON-217||A|52080|2021-09-21
-RRW|ANTON-1N0||C|43440|2021-08-20
-RRW|GUHUZA-1||A|43440|2022-02-09
-RRW|GUHUZA-2||C|43440|2022-02-13
-D|MARS-JD||A|34396|2023-12-19
-D|MARS-VLS||C|29988|2022-08-23
-D|MARS-ULS||A|29988|2022-08-23
-USA|USASAT-NGSO-3X||ACN|29988|2023-04-03
-TON|ESIAFI II||A|29988|2023-10-11
-USA|USASAT-NGSO-MVLS||C|29988|2023-12-07
-USA|USASAT-NGSO-MULS||A|29988|2023-12-07
-USA|USASAT-NGSO-3Y-1||C|29988|2024-11-30
-TUR|TURKSAT-LEO-1||A|22848|2024-12-27
-TUR|TURKSAT-LEO-2||A|22848|2026-07-04
-CHN|SPECSTAR-1||AC|16036|2023-02-01
-F|FMS-LEO|UE|A|15760|2020-10-13
-F|MP-SAT-N||C|15760|2024-01-29
-F|AST-NG-C-5||C|15521|2025-04-16
-USA|USASAT-NGSO-3-SX1||A|14947|2025-08-12
-D|MARS-44||A|14947|2025-12-11
-CHN|SAILSPACE-2-M||AC|13904|2023-12-16
-USA|USASAT-NGSO-14||A|13620|2023-04-17
-#RWANDA_OTHER Rwanda LEO networks not in the 40 largest, from a re-query of the same database on 13 Nov 2026 (adm=RRW): network|max_satellites
+2018|80|26|28|0
+2019|114|60|35|0
+2020|172|51|35|0
+2021|162|54|40|0
+2022|177|43|52|0
+2023|300|78|59|0
+2024|315|76|65|0
+2025|346|75|110|0
+2026|270|11|64|0
+#TOP adm|network|org|stages|max_satellites|first_receipt|multiorbit
+F|SEMAPHORE-C||A|116640|2023-06-23|no
+D|AETHER-C||A|114852|2021-12-15|no
+CHN|CTC-1||AC|96714|2025-12-29|yes
+CHN|CTC-2||A|96714|2025-12-29|yes
+RRW|AGACA-4||A|78120|2021-10-22|no
+RRW|IMBOGO-2||A|78120|2021-10-22|no
+RRW|INGAGI-1||A|78120|2021-10-22|no
+RRW|INGWE-6||A|78120|2021-10-22|no
+RRW|INTARE-5||A|78120|2021-10-22|no
+RRW|INZOVU-7||A|78120|2021-10-22|no
+RRW|UMUSAMBI-3||A|78120|2021-10-22|no
+E|SECOMSAT-LEO-1||AN|77760|2021-06-16|yes
+F|SEMAPHORE||AC|75600|2024-08-05|no
+RRW|CINNAMON-937||A|69360|2021-09-21|no
+RRW|UMUTEKANO||C|68400|2023-03-08|no
+RRW|UMUTEKANO-2||AC|68400|2022-09-23|no
+D|MARS-E1||AN|67744|2021-09-22|no
+RRW|UMUTEKANO-3||C|64800|2023-12-16|no
+RRW|GUHUZA-1A||A|63690|2025-07-10|no
+RRW|UMUTEKANO API-1||A|55680|2022-09-23|no
+RRW|CINNAMON-217||A|52080|2021-09-21|no
+RRW|ANTON-1N0||C|43440|2021-08-20|no
+RRW|GUHUZA-1||A|43440|2022-02-09|no
+RRW|GUHUZA-2||C|43440|2022-02-13|no
+D|MARS-JD||A|34396|2023-12-19|no
+TON|ESIAFI II||A|29988|2023-10-11|no
+D|MARS-ULS||A|29988|2022-08-23|no
+D|MARS-VLS||C|29988|2022-08-23|no
+USA|USASAT-NGSO-3X||ACN|29988|2023-04-03|no
+USA|USASAT-NGSO-3Y-1||C|29988|2024-11-30|no
+USA|USASAT-NGSO-MULS||A|29988|2023-12-07|no
+USA|USASAT-NGSO-MVLS||C|29988|2023-12-07|no
+TUR|TURKSAT-LEO-1||A|22848|2024-12-27|no
+TUR|TURKSAT-LEO-2||A|22848|2026-07-04|no
+D|DEUMULTIORBIT|UE|A|19708|2024-01-13|yes
+F|FMS-LEO|UE|AN|19708|2020-10-13|yes
+D|GENESIS MULTIORBIT||AN|19708|2024-01-13|yes
+I|ITA-LEO||A|19708|2023-09-27|yes
+CHN|SPECSTAR-1||AC|16036|2023-02-01|no
+F|MP-SAT-N||C|15760|2024-01-29|no
+#RWANDA all Rwanda networks in the selection: network|max_satellites
+SKY-G3|209
 SKY-G1|1
 SKY-G2|209
-SKY-G3|209
 MARVEL-X TTC|4
+ANTON-1N0|43440
+CINNAMON-937|69360
+CINNAMON-217|52080
 MARVEL-X|4
-#TOTALS filings 3023 networks 2324 satellites 2529091 adms 93
+INGAGI-1|78120
+IMBOGO-2|78120
+UMUSAMBI-3|78120
+AGACA-4|78120
+INTARE-5|78120
+INGWE-6|78120
+INZOVU-7|78120
+GUHUZA-1|43440
+GUHUZA-2|43440
+UMUTEKANO-2|68400
+UMUTEKANO API-1|55680
+UMUTEKANO|68400
+UMUTEKANO-3|64800
+GUHUZA-1A|63690
+#TOTALS filings 3124 multiorbit 113 networks 2401 satellites 2849965 adms 93 notices_all 3718
