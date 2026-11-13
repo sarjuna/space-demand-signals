@@ -1,0 +1,24 @@
+# USAspending.gov (api.usaspending.gov /api/v2/search/spending_over_time/), pulled 2026-11-13 in-browser. Same rules as data/raw/us/usaspending_contracts_us.txt:
+# federal contract obligations (award types A-D), federal fiscal year (Oct-Sep), US$ millions to 2 decimals. Excludes grants, other transaction agreements
+# (e.g. DARPA Quantum Benchmarking Initiative), cooperative agreements and classified awards. FY2026 incomplete for DoD (90-day publication delay).
+# Recipient search text: IonQ='IONQ, INC'|'IONQ INC' (plain 'IONQ' also matched DecisionQ, so not used); Rigetti='RIGETTI'; D-Wave='D-WAVE'; QCI='QUANTUM COMPUTING INC';
+# Quantinuum='QUANTINUUM'; PsiQuantum='PSIQUANTUM'; Atom Computing='ATOM COMPUTING'; Infleqtion='INFLEQTION'|'COLDQUANTA'; QuEra='QUERA COMPUTING'. Recipient names returned were checked.
+# firm|agency|FY2016|FY2017|FY2018|FY2019|FY2020|FY2021|FY2022|FY2023|FY2024|FY2025|FY2026
+IonQ|DoD|0|0|0|0|0|0|11.83|1.58|0|0|0
+IonQ|All|0|0|0|0|0|0|11.83|1.58|0|0|0
+Rigetti|DoD|0|0|0|0|0.17|1.73|0.18|0.43|0.44|1.58|0
+Rigetti|All|0|0|0|0|0.17|1.73|0.18|0.43|0.44|1.58|0
+D-Wave|DoD|0.04|0|0|0|0|0|0|0|0|0|0
+D-Wave|All|0.04|0|0|0|0|0|0|0|0|0|0
+QCI|DoD|0|0|0|0|0|0|0|0|0|0|0
+QCI|All|0|0|0|0|0|0|0|0|0|0.1|0
+Quantinuum|DoD|0|0|0|0|0|0|0|0|0|0|0
+Quantinuum|All|0|0|0|0|0|0|0|0|0|0|0
+PsiQuantum|DoD|0|0|0|0|0|0|22.46|0|0|10.84|0
+PsiQuantum|All|0|0|0|0|0|0|22.46|0|0|10.84|0
+Atom Computing|DoD|0|0|0|0|0|0|0|0|0|0|0
+Atom Computing|All|0|0|0|0|0|0|0|0|0|0|0
+Infleqtion|DoD|2.54|3.18|0.73|1.59|3.77|7.58|2.02|4.31|11.42|4.14|1
+Infleqtion|All|2.55|3.18|0.85|3.27|5.58|9.29|1.99|4.46|12.66|23.17|21.51
+QuEra|DoD|0|0|0|0|0.3|0|0|0|0.2|0|0
+QuEra|All|0|0|0|0|0.3|0|0.91|0.52|0.28|0|0

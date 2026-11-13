@@ -54,6 +54,12 @@ Every value in every raw file in `data/raw/` appears in these tables. `code/site
 | `us_federal_register_selected.csv` | 99 | Rules, proposed rules and presidential documents with dates and titles |
 | `us_faa_licensed_operations.csv` | 10 | FAA licensed launches and re-entries, FY2015–FY2024 |
 | `us_federal_contracts.csv` | 825 | Federal contract obligations (US$m) to 25 commercial space firms by agency (NASA, DoD, all) and fiscal year FY2016–FY2026, from USAspending.gov |
+| `quantum/quantum_monthly.csv` | 130 | Quantum comparison: Google Trends (5 terms), Wikipedia views (5 articles), Hacker News stories, Field and Firm Attention Indices, Jan 2016–Oct 2026 |
+| `quantum/quantum_markets_monthly.csv` | 61 | Quantum basket (IonQ, Rigetti, D-Wave), basket incl. QCI, S&P 500 and QTUM monthly log returns, Oct 2021–Oct 2026 |
+| `quantum/quantum_events.csv` | 6 | Quantum event studies (Willow, Nvidia CEO remark, Majorana 1, each with an alternative day 0) |
+| `quantum/quantum_revenue_quarterly.csv` | 84 | Quarterly revenue of IonQ, Rigetti, D-Wave and Quantum Computing Inc from SEC XBRL (Q4 derived where marked) |
+| `quantum/quantum_sec_edgar.csv` | 11 | EDGAR full-text hits for "quantum computing", 10-K and all forms, 2016–2026 |
+| `quantum/quantum_federal_contracts.csv` | 198 | Federal contract obligations (US$m) to nine quantum firms, DoD and all agencies, FY2016–FY2026 |
 | `us_annual.csv` | 11 | Annual launches, satellites, mean indices, FAA licensed operations (fiscal year) and SEC full-text hits, 2016–2026 |
 
 ### India (`india/`)

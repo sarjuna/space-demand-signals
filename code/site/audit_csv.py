@@ -36,6 +36,7 @@ problems, checked = [], 0
 RULES = {   # file: (field separator, number of leading key fields to skip, whether to split comma series)
     "wikipedia_pageviews_india.txt": ("|", 2, True), "wikipedia_pageviews_us.txt": ("|", 2, True),
     "google_trends_india.txt": ("|", 2, True), "google_trends_us.txt": ("|", 2, True),
+    "google_trends_quantum.txt": ("|", 2, True), "wikipedia_pageviews_quantum.txt": ("|", 2, True), "hackernews_quantum.txt": ("|", 1, True),
 }
 for path in sorted(glob.glob(str(ROOT / "data/raw/*/*.txt"))):
     name = Path(path).name

@@ -1,0 +1,83 @@
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Space Economy Initiative · Centre for India and Global Business · Working dashboard · Comparison case</div>
+  <h1>Quantum computing</h1>
+  <p class="lede">Is the space pattern specific to space? The same tests, run on a second emerging technology: does public attention to quantum computing track its commercial build-out, does one firm dominate, and do investors react to events? The terms, firms, events and tests were fixed in a dated plan before any quantum data were pulled.</p>
+  <div class="meta">
+    <span>Data as of <b>13 Nov 2026</b></span>
+    <span>Window <b>Jan 2016 – Oct 2026</b> (monthly)</span>
+    <span>Attention: <b>Google Trends (US) · Wikipedia · Hacker News</b></span>
+    <span>Build-out: <b>SEC filings (revenue, full text) · USAspending</b></span>
+    <span>Prices: <b>IonQ · Rigetti · D-Wave · QTUM ETF</b></span>
+  </div>
+</header>
+
+<div class="findings" id="findings"></div>
+
+<section class="rq" id="q1">
+  <div class="rq-head"><div class="rq-num">Q1</div><h2>Does attention follow events?</h2>
+  <p>Field Attention Index: mean z-score of log Google Trends (US) for "quantum computing" and "quantum computer", English-Wikipedia reading of the Quantum computing and Quantum supremacy articles (per million total views), and monthly Hacker News stories with "quantum comput" or "qubit" in the title. Firm Attention Index: Google Trends and Wikipedia for the three listed pure-plays, IonQ, Rigetti and D-Wave. Same construction as the space indices.</p></div>
+  <div class="panel">
+    <div class="legend" id="lg-q1"></div>
+    <div class="chartbox tall"><canvas id="c-q1" aria-label="Monthly quantum attention indices"></canvas></div>
+    <div class="statline" id="sl-q1"></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>The eight highest-attention months</h3><div class="sub">Field Attention Index, z units. Pre-specified event months in bold.</div><div id="t-top"></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read1"></div></div>
+  </div>
+</section>
+
+<section class="rq" id="q2">
+  <div class="rq-head"><div class="rq-num">Q2</div><h2>Does attention track the build-out?</h2>
+  <p>Quantum computing has no equivalent of the launch catalogue, and qubit counts have no consistent public series. The build-out measures are therefore commercial: quarterly revenue of the four listed firms (SEC filings), federal contract obligations to quantum firms (USAspending), and how often annual reports mention quantum computing.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Quarterly revenue of the listed firms vs field attention</h3><div class="sub">Bars: revenue, US$ millions (IonQ, Rigetti, D-Wave, Quantum Computing Inc). Line: quarterly mean of the Field Attention Index. Quarters in which all four firms reported, 2022 Q1 – 2026 Q2.</div><div class="legend" id="lg-rev"></div>
+      <div class="chartbox"><canvas id="c-rev"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read2"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>"Quantum computing" in SEC filings</h3><div class="sub">EDGAR full-text hits by filing year: annual reports (10-K, bars) and all form types (line, right axis). 2026 to 5 November.</div>
+      <div class="chartbox"><canvas id="c-sec"></canvas></div></div>
+    <div class="panel"><h3>Federal contracts to quantum firms</h3><div class="sub">Total obligations FY2016–FY2026*, US$ millions, all agencies. Standard contracts only.</div><div id="t-fed"></div>
+      <p class="note">Most federal quantum money flows through grants, national laboratories and other transaction agreements (such as DARPA's Quantum Benchmarking Initiative), which are not in these figures. *FY2026 incomplete for the Defense Department.</p></div>
+  </div>
+</section>
+
+<section class="rq" id="q3">
+  <div class="rq-head"><div class="rq-num">Q3</div><h2>Does one firm dominate?</h2>
+  <p>In space, one firm (SpaceX) carries most launches, satellites, contracts and attention. The quantum equivalents: shares of listed-firm revenue, of federal contracts, and of Wikipedia reading of the three listed pure-plays.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Share of listed-firm revenue and reading, by year</h3><div class="sub">Revenue: IonQ, Rigetti, D-Wave, Quantum Computing Inc (fiscal years). Reading: English-Wikipedia views of the IonQ, Rigetti Computing and D-Wave Systems articles. 2026 reading to October.</div><div id="t-share"></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read3"></div></div>
+  </div>
+</section>
+
+<section class="rq" id="q4">
+  <div class="rq-head"><div class="rq-num">Q4</div><h2>Do investors react to events, and do prices lead attention?</h2>
+  <p>Equal-weight basket of IonQ (from October 2021), Rigetti (March 2022) and D-Wave (August 2022), against the S&amp;P 500. Abnormal returns use a market model estimated over the 110 trading days ending 11 days before each event; cumulative abnormal returns (CAR) are in log-return percentage points. The three events and their trading days were fixed in the plan.</p></div>
+  <div class="tablewrap"><table id="t-ev"><thead><tr><th>Event</th><th>Day 0</th><th class="num">CAR [0,+1]</th><th class="num">t</th><th class="num">BH p</th><th class="num">CAR [0,+5]</th><th class="num">t</th><th class="num">Pre [−5,−1]</th><th class="num">QTUM [0,+1]</th></tr></thead><tbody></tbody></table></div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="panel"><h3>Basket vs S&amp;P 500, cumulative monthly log return</h3><div class="sub">October 2021 – October 2026. Basket members enter the day after their first trading day as listed operating companies.</div><div class="legend" id="lg-mk"></div>
+      <div class="chartbox"><canvas id="c-mk"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read4"></div></div>
+  </div>
+</section>
+
+<section class="rq" id="cmp">
+  <div class="rq-head"><div class="rq-num">VS</div><h2>Space and quantum side by side</h2>
+  <p>The same questions, answered for US space (from the United States page) and for quantum computing.</p></div>
+  <div class="tablewrap"><table id="t-cmp"><thead><tr><th>Question</th><th>US space</th><th>Quantum computing</th><th>Same pattern?</th></tr></thead><tbody></tbody></table></div>
+  <div class="panel read" style="margin-top:16px"><h3>What the comparison shows</h3><div id="read5"></div></div>
+</section>
+
+<section class="rq" id="limits">
+  <div class="rq-head"><div class="rq-num">DATA</div><h2>Limits of the comparison</h2><p>Analysis plan: code/quantum/PLAN.md, written on 13 November 2026 before any quantum data were pulled. Raw files are in data/raw/quantum; analysis code is in code/quantum.</p></div>
+  <div class="panel read"><div id="lim"></div></div>
+</section>
+
+<section class="rq"><div class="rq-head"><div class="rq-num">SRC</div><h2>Sources</h2></div>
+<ol class="sources" id="src"></ol></section>
+
+<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School · Data pulled on 13 Nov 2026</footer>
+</div>

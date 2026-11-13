@@ -1,0 +1,14 @@
+# SEC EDGAR full-text search (efts.sec.gov/LATEST/search-index), hits.total by filing-date year, retrieved 2026-11-13. All values had relation "eq".
+# A hit is one matching document in EDGAR's full-text index (a filing's main document or exhibit). 2026 covers 1 Jan - 5 Nov 2026 (same cut-off as the space series).
+# year|quantumcomputing_10K|quantumcomputing_allforms
+2016|5|21
+2017|8|28
+2018|8|62
+2019|29|208
+2020|19|244
+2021|34|754
+2022|71|1051
+2023|93|1276
+2024|133|1656
+2025|177|6060
+2026|280|8251

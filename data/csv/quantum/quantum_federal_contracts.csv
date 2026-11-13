@@ -1,0 +1,199 @@
+firm,agency,fiscal_year,obligations_usd_m
+IonQ,DoD,2016,0
+IonQ,All,2016,0
+Rigetti,DoD,2016,0
+Rigetti,All,2016,0
+D-Wave,DoD,2016,0.04
+D-Wave,All,2016,0.04
+QCI,DoD,2016,0
+QCI,All,2016,0
+Quantinuum,DoD,2016,0
+Quantinuum,All,2016,0
+PsiQuantum,DoD,2016,0
+PsiQuantum,All,2016,0
+Atom Computing,DoD,2016,0
+Atom Computing,All,2016,0
+Infleqtion,DoD,2016,2.54
+Infleqtion,All,2016,2.55
+QuEra,DoD,2016,0
+QuEra,All,2016,0
+IonQ,DoD,2017,0
+IonQ,All,2017,0
+Rigetti,DoD,2017,0
+Rigetti,All,2017,0
+D-Wave,DoD,2017,0
+D-Wave,All,2017,0
+QCI,DoD,2017,0
+QCI,All,2017,0
+Quantinuum,DoD,2017,0
+Quantinuum,All,2017,0
+PsiQuantum,DoD,2017,0
+PsiQuantum,All,2017,0
+Atom Computing,DoD,2017,0
+Atom Computing,All,2017,0
+Infleqtion,DoD,2017,3.18
+Infleqtion,All,2017,3.18
+QuEra,DoD,2017,0
+QuEra,All,2017,0
+IonQ,DoD,2018,0
+IonQ,All,2018,0
+Rigetti,DoD,2018,0
+Rigetti,All,2018,0
+D-Wave,DoD,2018,0
+D-Wave,All,2018,0
+QCI,DoD,2018,0
+QCI,All,2018,0
+Quantinuum,DoD,2018,0
+Quantinuum,All,2018,0
+PsiQuantum,DoD,2018,0
+PsiQuantum,All,2018,0
+Atom Computing,DoD,2018,0
+Atom Computing,All,2018,0
+Infleqtion,DoD,2018,0.73
+Infleqtion,All,2018,0.85
+QuEra,DoD,2018,0
+QuEra,All,2018,0
+IonQ,DoD,2019,0
+IonQ,All,2019,0
+Rigetti,DoD,2019,0
+Rigetti,All,2019,0
+D-Wave,DoD,2019,0
+D-Wave,All,2019,0
+QCI,DoD,2019,0
+QCI,All,2019,0
+Quantinuum,DoD,2019,0
+Quantinuum,All,2019,0
+PsiQuantum,DoD,2019,0
+PsiQuantum,All,2019,0
+Atom Computing,DoD,2019,0
+Atom Computing,All,2019,0
+Infleqtion,DoD,2019,1.59
+Infleqtion,All,2019,3.27
+QuEra,DoD,2019,0
+QuEra,All,2019,0
+IonQ,DoD,2020,0
+IonQ,All,2020,0
+Rigetti,DoD,2020,0.17
+Rigetti,All,2020,0.17
+D-Wave,DoD,2020,0
+D-Wave,All,2020,0
+QCI,DoD,2020,0
+QCI,All,2020,0
+Quantinuum,DoD,2020,0
+Quantinuum,All,2020,0
+PsiQuantum,DoD,2020,0
+PsiQuantum,All,2020,0
+Atom Computing,DoD,2020,0
+Atom Computing,All,2020,0
+Infleqtion,DoD,2020,3.77
+Infleqtion,All,2020,5.58
+QuEra,DoD,2020,0.3
+QuEra,All,2020,0.3
+IonQ,DoD,2021,0
+IonQ,All,2021,0
+Rigetti,DoD,2021,1.73
+Rigetti,All,2021,1.73
+D-Wave,DoD,2021,0
+D-Wave,All,2021,0
+QCI,DoD,2021,0
+QCI,All,2021,0
+Quantinuum,DoD,2021,0
+Quantinuum,All,2021,0
+PsiQuantum,DoD,2021,0
+PsiQuantum,All,2021,0
+Atom Computing,DoD,2021,0
+Atom Computing,All,2021,0
+Infleqtion,DoD,2021,7.58
+Infleqtion,All,2021,9.29
+QuEra,DoD,2021,0
+QuEra,All,2021,0
+IonQ,DoD,2022,11.83
+IonQ,All,2022,11.83
+Rigetti,DoD,2022,0.18
+Rigetti,All,2022,0.18
+D-Wave,DoD,2022,0
+D-Wave,All,2022,0
+QCI,DoD,2022,0
+QCI,All,2022,0
+Quantinuum,DoD,2022,0
+Quantinuum,All,2022,0
+PsiQuantum,DoD,2022,22.46
+PsiQuantum,All,2022,22.46
+Atom Computing,DoD,2022,0
+Atom Computing,All,2022,0
+Infleqtion,DoD,2022,2.02
+Infleqtion,All,2022,1.99
+QuEra,DoD,2022,0
+QuEra,All,2022,0.91
+IonQ,DoD,2023,1.58
+IonQ,All,2023,1.58
+Rigetti,DoD,2023,0.43
+Rigetti,All,2023,0.43
+D-Wave,DoD,2023,0
+D-Wave,All,2023,0
+QCI,DoD,2023,0
+QCI,All,2023,0
+Quantinuum,DoD,2023,0
+Quantinuum,All,2023,0
+PsiQuantum,DoD,2023,0
+PsiQuantum,All,2023,0
+Atom Computing,DoD,2023,0
+Atom Computing,All,2023,0
+Infleqtion,DoD,2023,4.31
+Infleqtion,All,2023,4.46
+QuEra,DoD,2023,0
+QuEra,All,2023,0.52
+IonQ,DoD,2024,0
+IonQ,All,2024,0
+Rigetti,DoD,2024,0.44
+Rigetti,All,2024,0.44
+D-Wave,DoD,2024,0
+D-Wave,All,2024,0
+QCI,DoD,2024,0
+QCI,All,2024,0
+Quantinuum,DoD,2024,0
+Quantinuum,All,2024,0
+PsiQuantum,DoD,2024,0
+PsiQuantum,All,2024,0
+Atom Computing,DoD,2024,0
+Atom Computing,All,2024,0
+Infleqtion,DoD,2024,11.42
+Infleqtion,All,2024,12.66
+QuEra,DoD,2024,0.2
+QuEra,All,2024,0.28
+IonQ,DoD,2025,0
+IonQ,All,2025,0
+Rigetti,DoD,2025,1.58
+Rigetti,All,2025,1.58
+D-Wave,DoD,2025,0
+D-Wave,All,2025,0
+QCI,DoD,2025,0
+QCI,All,2025,0.1
+Quantinuum,DoD,2025,0
+Quantinuum,All,2025,0
+PsiQuantum,DoD,2025,10.84
+PsiQuantum,All,2025,10.84
+Atom Computing,DoD,2025,0
+Atom Computing,All,2025,0
+Infleqtion,DoD,2025,4.14
+Infleqtion,All,2025,23.17
+QuEra,DoD,2025,0
+QuEra,All,2025,0
+IonQ,DoD,2026,0
+IonQ,All,2026,0
+Rigetti,DoD,2026,0
+Rigetti,All,2026,0
+D-Wave,DoD,2026,0
+D-Wave,All,2026,0
+QCI,DoD,2026,0
+QCI,All,2026,0
+Quantinuum,DoD,2026,0
+Quantinuum,All,2026,0
+PsiQuantum,DoD,2026,0
+PsiQuantum,All,2026,0
+Atom Computing,DoD,2026,0
+Atom Computing,All,2026,0
+Infleqtion,DoD,2026,1
+Infleqtion,All,2026,21.51
+QuEra,DoD,2026,0
+QuEra,All,2026,0

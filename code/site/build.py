@@ -13,7 +13,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">')
 LOGO = ('<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.2" fill="var(--accent)"/>'
         '<ellipse cx="10" cy="10" rx="8.6" ry="3.6" fill="none" stroke="var(--ink-2)" stroke-width="1.3" transform="rotate(-28 10 10)"/></svg>')
-PAGES = [("index.html", "Overview"), ("india.html", "India"), ("us.html", "United States"), ("methods.html", "Methods &amp; data")]
+PAGES = [("index.html", "Overview"), ("india.html", "India"), ("us.html", "United States"), ("quantum.html", "Quantum (comparison)"), ("methods.html", "Methods &amp; data")]
 
 
 def nav(cur):
@@ -51,7 +51,7 @@ us_scripts = f'{data_tag(U)}\n{CHART}\n<script src="assets/charts.js"></script>\
 IN = json.load(open(DER_IN / "dash.json"))
 in_body = open(SITE_SRC / "india_body.html").read()
 in_body = in_body.replace("<h1>India Space Demand Signals</h1>", "<h1>India</h1>")
-in_body = re.sub(r"<footer>.*?</footer>", "<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on 5 Nov 2026</footer>", in_body, flags=re.S)
+in_body = re.sub(r"<footer>.*?</footer>", "<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School · Data pulled on 5 Nov 2026</footer>", in_body, flags=re.S)
 in_js = open(SITE_SRC / "india_script.js").read()
 in_js = in_js.replace(".concat([['Millennium Post: Financing India\\'s space future','https://www.millenniumpost.in/opinion/financing-indias-space-future-674267']])", "")
 assert "millenniumpost" not in in_js
@@ -76,6 +76,15 @@ O["pulled"] = "5–6 Nov 2026"
 O["var"] = json.load(open(ROOT / "data/derived/var/var_results.json"))
 ov_scripts = f'{data_tag(O)}\n{CHART}\n<script src="assets/charts.js"></script>\n<script>\n{open(SITE_SRC / "overview_script.js").read()}\n</script>'
 
+# ---------- Quantum comparison ----------
+Qd = json.load(open(ROOT / "data/derived/quantum/quantum.json"))
+_ct = U["contracts"]; _sh = [round(100 * s / t) for s, t in zip(_ct["spacex"][:-1], _ct["total"][:-1])]   # complete fiscal years only
+_a25 = next(a for a in U["annual"] if a["year"] == 2025)
+Qd["space"] = dict(flag=U["stats"]["ols_PAI"]["flagship"], nai_trend=U["stats"]["ols_NAI_trend"]["launches"], granger=U["stats"]["granger_ret_to_NAI"],
+                   spacex_2025=_a25["spacex"], launches_2025=_a25["launches"], ct_share_min=min(_sh), ct_share_max=max(_sh),
+                   ct_spacex_total=next(v for f, v in _ct["top"] if f == "SpaceX"), ipo_c=ipo["b_c01"], ipo_t=ipo["b_t01"])
+q_scripts = f'{data_tag(Qd)}\n{CHART}\n<script src="assets/charts.js"></script>\n<script>\n{open(SITE_SRC / "quantum_script.js").read()}\n</script>'
+
 RB = {c: O["idx"][c]["robustness"] for c in ("india", "us")}
 methods_body = open(SITE_SRC / "methods_body.html").read()
 for k, v in {"IN_G": f'r = {RB["india"]["r_google"]:.2f}', "US_G": f'r = {RB["us"]["r_google"]:.2f}', "IN_W": f'r = {RB["india"]["r_wiki"]:.2f}',
@@ -87,6 +96,8 @@ DEF = {
                    open(SITE_SRC / "overview_body.html").read(), ov_scripts),
     "india.html": ("India · Space Demand Signals", "India: does public, investor and parliamentary discourse track launches, commercial satellites and private capital?", in_body, in_scripts),
     "us.html": ("United States · Space Demand Signals", "United States: do attention, sentiment, NewSpace stock prices and federal policy track launches, satellites and licensed operations?", us_body, us_scripts),
+    "quantum.html": ("Quantum computing · Space Demand Signals", "Comparison case: does public attention to quantum computing track its commercial build-out, and do the space-sector patterns recur?",
+                     open(SITE_SRC / "quantum_body.html").read(), q_scripts),
     "methods.html": ("Methods · Space Demand Signals", "Sources, methods, verification and limitations for the India and US space demand-signal dashboards.",
                      methods_body, ""),
 }

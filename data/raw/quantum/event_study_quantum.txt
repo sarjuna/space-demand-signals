@@ -1,0 +1,10 @@
+# Event studies, computed in-browser 2026-11-13 from the Yahoo payload in markets_quantum.txt (same method as the space dashboard:
+# market model vs S&P 500 estimated on days [-120,-11]; CAR in log-return percentage points; t = CAR/(sd*sqrt(L)); mm = market model, ma = market-adjusted).
+# Day 0 per the plan (code/quantum/PLAN.md): Willow 9 Dec 2024 (announced ~11:00 ET); Nvidia CEO remark: Q&A Tue 7 Jan 2025, stocks fell Wed 8 Jan -> 8 Jan; Majorana 1: 19 Feb 2025 (time unverified).
+# label|t0|members|beta|pre_mm|pre_t|car01_mm|t01|car05_mm|t05|car01_ma|t01_ma|day0_mm|t_day0|qtum_car01|qtum_t01|qtum_car05|qtum_t05|loo_car01_IONQ|loo_RGTI|loo_QBTS|firm_IONQ_car01|t|firm_RGTI_car01|t|firm_QBTS_car01|t|QUBT_car01|t
+Willow chip|2024-12-09|3|3.33|25.14|2.24|7.93|1.12|35.11|2.85|6.71|0.88|-3.99|-0.79|1.99|1.76|10.02|5.12|18.54|-9.39|14.65|-13.28|-1.58|42.59|5.23|-5.5|-0.66|-5.33|-0.32
+Willow chip (alt day 0)|2024-12-10|3|3.39|29.11|2.49|5.04|0.68|54.62|4.27|7.57|0.95|11.75|2.25|2.19|1.89|15.64|7.79|16.4|-16.31|15.03|-17.68|-2.11|47.74|5.73|-14.93|-1.53|-20.47|-1.22
+Nvidia CEO remark|2025-01-08|3|3.24|-0.22|-0.01|-53.56|-5.2|-49.28|-2.76|-53.74|-5.04|-53.57|-7.36|-4.81|-2.22|-5.22|-1.39|-60.09|-45.13|-55.47|-40.51|-4.2|-70.42|-4.74|-49.75|-3.67|-71.77|-3.39
+Nvidia CEO remark (alt day 0)|2025-01-07|3|3.22|2.27|0.14|-56.39|-5.5|-53.6|-3.02|-55.81|-5.26|-2.94|-0.4|-4.72|-2.2|-5.46|-1.47|-58.83|-51.61|-58.72|-51.49|-5.41|-65.94|-4.49|-51.72|-3.8|-65.13|-3.08
+Majorana 1|2025-02-19|3|3.46|-22.29|-0.97|6.83|0.47|-7.69|-0.31|9.62|0.65|1.97|0.19|0.53|0.23|-1.36|-0.34|11.54|7.74|1.2|-2.6|-0.2|5.01|0.25|18.08|1.06|4.82|0.2
+Majorana 1 (alt day 0)|2025-02-20|3|3.42|-8.88|-0.39|4.25|0.29|-20.22|-0.8|2.3|0.16|4.84|0.47|0.81|0.35|-2.74|-0.69|7.54|5.88|-0.68|-2.33|-0.18|0.98|0.05|14.09|0.82|-7.42|-0.31
