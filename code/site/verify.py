@@ -21,6 +21,7 @@ checks=[
  ('IN granger att->ret min 0.43', min(IS['granger_attention_to_returns_p'].values())==0.43),
  ('IN parl 6.9/26.4', [round(e['ns_share']*100,1) for e in I['parl']['eras']][:2]==[6.9,26.4]),
  ('G totals 3023 filings 2324 nets 2529091 sats 93 adm', (lambda g: (g['filings'],g['networks'],g['satellites'],g['countries'])==(3023,2324,2529091,93))(json.load(open(ROOT/'data/derived/global/global.json'))['stats'])),
+    ('G Rwanda upper 1119997 cautious 748503', (lambda r: r['upper']==1119997 and r['cautious']==748503)(json.load(open(ROOT/'data/derived/global/global.json'))['stats']['rwanda'])),
     ('G top2 43.1 top5 61.3 India rank 7', (lambda g: g['top2_filings_share']==43.1 and g['top5_filings_share']==61.3 and g['rank_filings']['IND']==7)(json.load(open(ROOT/'data/derived/global/global.json'))['stats'])),
     ('Q event coef 1.663 t 3.53', (lambda q: q['q1_event']['coef']==1.663 and q['q1_event']['t']==3.53)(json.load(open(ROOT/'data/derived/quantum/quantum.json'))['stats'])),
     ('Q revenue rho level .678 change .429', (lambda q: q['q2_revenue']['level']['rho']==0.678 and q['q2_revenue']['change']['rho']==0.429)(json.load(open(ROOT/'data/derived/quantum/quantum.json'))['stats'])),
@@ -86,7 +87,7 @@ checks=[
  ('VAR US NAI level ADF p 0.62', round(_adf(_pd.read_csv(ROOT/'data/csv/us/us_monthly.csv').NAI.dropna(),autolag='AIC')[1],2)==0.62),
  ('VAR attention->launch/launch->attention all p>=0.33', min(x[k] for i in ('IN-2','US-2') for x in (VR[i]['aic'],VR[i]['bic'],VR[i]['fixed3'],VR[i]['robust']['no_dummies'],VR[i]['robust']['to_2026_05']) for k in ('a_to_b','b_to_a'))>=0.33),
  ('VAR lead-only IRFs: no attention->other band excludes zero', all(abs(m)<1.96*se+1e-9 for o in VR.values() for m,se in zip(o['irf_rev']['a_to_b'],o['irf_rev']['a_to_b_se']))),
- ('CSV audit 21,206 values', '21206' in __import__('subprocess').run([sys.executable,str(ROOT/'code/site/audit_csv.py')],capture_output=True,text=True).stdout.replace(',','')),
+ ('CSV audit 21,216 values', '21216' in __import__('subprocess').run([sys.executable,str(ROOT/'code/site/audit_csv.py')],capture_output=True,text=True).stdout.replace(',','')),
 ]
 bad=[n for n,ok in checks if not ok]
 for n,ok in checks: print('OK ' if ok else 'BAD', n)

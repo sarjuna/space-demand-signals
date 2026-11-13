@@ -13,12 +13,13 @@ ISO = json.load(open(ROOT / "code/global/itu_iso.json"))
 SHORT = {"KOR": "South Korea", "IRN": "Iran", "RUS": "Russia", "VNM": "Vietnam", "TZA": "Tanzania", "MDA": "Moldova", "VEN": "Venezuela",
          "GBR": "United Kingdom", "CZE": "Czechia", "TUR": "Türkiye", "USA": "United States", "NLD": "Netherlands"}
 
-sect, rows = None, {"ADM": [], "YEAR": [], "TOP": []}
+sect, rows = None, {"ADM": [], "YEAR": [], "TOP": [], "RWANDA_OTHER": []}
 for l in open(RAW, encoding="utf-8"):
     l = l.rstrip("\n")
     if l.startswith("#ADM"): sect = "ADM"; continue
     if l.startswith("#YEAR"): sect = "YEAR"; continue
     if l.startswith("#TOP"): sect = "TOP"; continue
+    if l.startswith("#RWANDA_OTHER"): sect = "RWANDA_OTHER"; continue
     if l.startswith("#TOTALS"): totals = l; continue
     if l.startswith("#") or not l.strip(): continue
     rows[sect].append(l.split("|"))
@@ -45,6 +46,18 @@ S = dict(filings=tot_f, networks=tot_n, satellites=tot_s, countries=len(A),
          one_filing=int((A.filings == 1).sum()), ten_plus=int((A.filings >= 10).sum()),
          nets_ge1000=int(A.nets_ge1000.sum()), nets_ge100=int(A.nets_ge100.sum()),
          y2017=int(Y[Y.year == 2017][["A", "C", "N", "other"]].sum(axis=1).iloc[0]), y2025=int(Y[Y.year == 2025][["A", "C", "N", "other"]].sum(axis=1).iloc[0]))
+# Rwanda: cautious count. Networks that look like versions of the same constellation (same name stem, or the same satellite
+# number and similar orbits) are counted once at their largest filing; the seven numbered shells INGAGI-1 ... INZOVU-7
+# (apogees rising from 563 to 641 km) are treated as layers of one system and added. This grouping is a judgement, not ITU data.
+rw = {r[1]: int(r[4]) for r in rows["TOP"] if r[0] == "RRW"}; rw.update({r[0]: int(r[1]) for r in rows["RWANDA_OTHER"]})
+assert sum(rw.values()) == int(A.loc[A.adm == "RRW", "satellites"].iloc[0]) and len(rw) == int(A.loc[A.adm == "RRW", "networks"].iloc[0])
+FAM = {"CINNAMON": ["CINNAMON-937", "CINNAMON-217"], "GUHUZA/ANTON": ["GUHUZA-1", "GUHUZA-2", "GUHUZA-1A", "ANTON-1N0"],
+       "UMUTEKANO": ["UMUTEKANO", "UMUTEKANO-2", "UMUTEKANO-3", "UMUTEKANO API-1"], "SKY-G": ["SKY-G1", "SKY-G2", "SKY-G3"], "MARVEL-X": ["MARVEL-X", "MARVEL-X TTC"]}
+SHELLS = ["INGAGI-1", "IMBOGO-2", "UMUSAMBI-3", "AGACA-4", "INTARE-5", "INGWE-6", "INZOVU-7"]
+assert sorted(sum(FAM.values(), []) + SHELLS) == sorted(rw)
+fam = {k: max(rw[n] for n in v) for k, v in FAM.items()}; fam["Seven shells"] = sum(rw[n] for n in SHELLS)
+S["rwanda"] = dict(upper=sum(rw.values()), cautious=sum(fam.values()), families=fam, networks=len(rw))
+
 # countries with the largest satellite totals relative to their filings ("paper" constellations)
 A["sats_per_network"] = (A.satellites / A.networks).round(1)
 S["rank_filings"] = {r.iso3: i + 1 for i, r in enumerate(As.itertuples())}
@@ -58,4 +71,6 @@ A[["adm", "itu_name", "iso3", "country", "filings", "A", "C", "N", "other", "org
     .to_csv(OUT / "global_leo_filings_by_country.csv", index=False)
 Y.rename(columns={"A": "api", "C": "coordination", "N": "notification"}).to_csv(OUT / "global_leo_filings_by_year.csv", index=False)
 T.to_csv(OUT / "global_largest_leo_filings.csv", index=False)
+fam_of = {n: k for k, v in FAM.items() for n in v}; fam_of.update({n: "Seven shells" for n in SHELLS})
+pd.DataFrame([dict(network=n, satellites=v, family_for_cautious_count=fam_of[n]) for n, v in sorted(rw.items(), key=lambda x: -x[1])]).to_csv(OUT / "global_rwanda_networks.csv", index=False)
 print(json.dumps(S, indent=1)[:2500])

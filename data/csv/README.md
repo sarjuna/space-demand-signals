@@ -57,6 +57,7 @@ Every value in every raw file in `data/raw/` appears in these tables. `code/site
 | `global/global_leo_filings_by_country.csv` | 93 | Active ITU LEO filings by notifying administration: filings by notice type, receipt period, networks, satellites in filings (ITU Space Explorer, BR IFIC 3084) |
 | `global/global_leo_filings_by_year.csv` | 26 | Active ITU LEO filings by year of receipt and notice type |
 | `global/global_largest_leo_filings.csv` | 40 | The 40 largest LEO networks by satellites in filings |
+| `global/global_rwanda_networks.csv` | 22 | Rwanda's LEO networks with satellites in filings and the family used for the cautious count |
 | `quantum/quantum_monthly.csv` | 130 | Quantum comparison: Google Trends (5 terms), Wikipedia views (5 articles), Hacker News stories, Field and Firm Attention Indices, Jan 2016–Oct 2026 |
 | `quantum/quantum_markets_monthly.csv` | 61 | Quantum basket (IonQ, Rigetti, D-Wave), basket incl. QCI, S&P 500 and QTUM monthly log returns, Oct 2021–Oct 2026 |
 | `quantum/quantum_events.csv` | 6 | Quantum event studies (Willow, Nvidia CEO remark, Majorana 1, each with an alternative day 0) |

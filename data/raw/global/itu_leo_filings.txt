@@ -177,4 +177,10 @@ USA|USASAT-NGSO-3-SX1||A|14947|2025-08-12
 D|MARS-44||A|14947|2025-12-11
 CHN|SAILSPACE-2-M||AC|13904|2023-12-16
 USA|USASAT-NGSO-14||A|13620|2023-04-17
+#RWANDA_OTHER Rwanda LEO networks not in the 40 largest, from a re-query of the same database on 13 Nov 2026 (adm=RRW): network|max_satellites
+SKY-G1|1
+SKY-G2|209
+SKY-G3|209
+MARVEL-X TTC|4
+MARVEL-X|4
 #TOTALS filings 3023 networks 2324 satellites 2529091 adms 93
