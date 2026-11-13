@@ -87,7 +87,7 @@ q_scripts = f'{data_tag(Qd)}\n{CHART}\n<script src="assets/charts.js"></script>\
 
 # ---------- Global ITU LEO filings ----------
 G = json.load(open(ROOT / "data/derived/global/global.json"))
-D3 = '<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>\n<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson-client/3.1.0/topojson-client.min.js"></script>'
+D3 = '<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>\n<script>\n' + open(ROOT / "assets/vendor/topojson-client-3.1.0.min.js").read() + '\n</script>'
 g_scripts = f'{data_tag(G)}\n{CHART}\n{D3}\n<script src="assets/charts.js"></script>\n<script>\n{open(SITE_SRC / "global_script.js").read()}\n</script>'
 
 RB = {c: O["idx"][c]["robustness"] for c in ("india", "us")}

@@ -95,4 +95,4 @@ const src=[
 ];
 document.getElementById('src').innerHTML=src.map(([t,u])=>`<li><a href="${u}"${u.startsWith('http')?' target="_blank" rel="noopener"':''}>${t}</a></li>`).join('');
 
-onTheme(()=>{drawMap();drawRank();drawYears()});
+onTheme(()=>{for(const fn of [drawMap,drawRank,drawYears]){try{fn()}catch(e){console.error(fn.name,e);if(fn===drawMap)document.getElementById('maplegend').innerHTML='<p class="note">The map could not be drawn in this browser; the table below lists every country.</p>'}}});
