@@ -1,0 +1,8 @@
+// Run in a browser tab on https://api.usaspending.gov/
+const F={SpaceX:['SPACE EXPLORATION TECHNOLOGIES'],'Rocket Lab':['ROCKET LAB'],'Blue Origin':['BLUE ORIGIN'],'Firefly':['FIREFLY AEROSPACE','FIREFLY SPACE TRANSPORT'],'Relativity':['RELATIVITY SPACE'],'ABL':['ABL SPACE'],'Virgin Orbit':['VIRGIN ORBIT'],'Intuitive Machines':['INTUITIVE MACHINES'],'Astrobotic':['ASTROBOTIC'],'Axiom':['AXIOM SPACE'],'Sierra Space':['SIERRA SPACE'],'Planet':['PLANET LABS'],'Maxar':['MAXAR','DIGITALGLOBE'],'BlackSky':['BLACKSKY'],'Spire':['SPIRE GLOBAL'],'Capella':['CAPELLA SPACE'],'Umbra':['UMBRA LAB'],'HawkEye 360':['HAWKEYE 360'],'AST SpaceMobile':['AST & SCIENCE','AST SPACEMOBILE'],'Terran Orbital':['TERRAN ORBITAL','TYVAK'],'York Space':['YORK SPACE SYSTEMS'],'Redwire':['REDWIRE'],'Momentus':['MOMENTUS'],'Impulse Space':['IMPULSE SPACE'],'True Anomaly':['TRUE ANOMALY']};
+const AG={NASA:[{type:'awarding',tier:'toptier',name:'National Aeronautics and Space Administration'}],DoD:[{type:'awarding',tier:'toptier',name:'Department of Defense'}],All:null};
+const q=async(names,ag)=>{const f={time_period:[{start_date:'2015-10-01',end_date:'2026-09-30'}],award_type_codes:['A','B','C','D'],recipient_search_text:names};if(ag)f.agencies=ag;
+ const j=await (await fetch('/api/v2/search/spending_over_time/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({group:'fiscal_year',filters:f})})).json();
+ const o={};for(const x of j.results||[])o[x.time_period.fiscal_year]=x.aggregated_amount;return o};
+const OUT={};for(const [k,n] of Object.entries(F)){OUT[k]={};for(const [a,ag] of Object.entries(AG))OUT[k][a]=await q(n,ag);}
+OUT;

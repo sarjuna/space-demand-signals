@@ -53,6 +53,7 @@ Every value in every raw file in `data/raw/` appears in these tables. `code/site
 | `us_federal_register_annual.csv` | 13 | Space-related Federal Register documents per year, by type and agency |
 | `us_federal_register_selected.csv` | 99 | Rules, proposed rules and presidential documents with dates and titles |
 | `us_faa_licensed_operations.csv` | 10 | FAA licensed launches and re-entries, FY2015–FY2024 |
+| `us_federal_contracts.csv` | 825 | Federal contract obligations (US$m) to 25 commercial space firms by agency (NASA, DoD, all) and fiscal year FY2016–FY2026, from USAspending.gov |
 | `us_annual.csv` | 11 | Annual launches, satellites, mean indices, FAA licensed operations (fiscal year) and SEC full-text hits, 2016–2026 |
 
 ### India (`india/`)
@@ -93,4 +94,4 @@ Every value in every raw file in `data/raw/` appears in these tables. `code/site
 `code/index/build_index.py` builds it from `*_index_components_z.csv` (attention) and `*_monthly.csv` (launches and commercial satellites). Values are scaled so that 100 = the January 2016 to December 2025 average and 10 points = one standard deviation; gap = attention − build-out. The baseline is fixed, so new months never revise earlier values. August to October 2026 are provisional: the satellite component is held at its July 2026 value because the GCAT satellite catalogue is complete only to July. See the Methods page for details and robustness.
 | `hackernews_top_stories.csv` | 17 | Most-upvoted stories in each event window, US and India |
 
-Author: Dr Arjuna Sathiaseelan, Space Economy Initiative, Cambridge Judge Business School.
+Author: Dr Arjuna Sathiaseelan, Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School.

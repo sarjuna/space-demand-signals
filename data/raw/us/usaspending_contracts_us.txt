@@ -1,0 +1,81 @@
+# USAspending.gov (api.usaspending.gov /api/v2/search/spending_over_time/), pulled 2026-11-13 in-browser.
+# Federal contract obligations (award types A-D: BPA calls, purchase orders, delivery orders, definitive contracts), by federal fiscal year (Oct-Sep), US$ millions, rounded.
+# Recipient matched by USAspending recipient-name search (which also returns entities USAspending links to the firm, e.g. Maxar's successors Lanteris and Vantor); subsidiaries registered separately (e.g. Rocket Lab's Geost and SolAero) are not included. SpaceX='SPACE EXPLORATION TECHNOLOGIES'; Firefly='FIREFLY AEROSPACE' or 'FIREFLY SPACE TRANSPORT'; Maxar='MAXAR' or 'DIGITALGLOBE'; AST SpaceMobile='AST & SCIENCE' or 'AST SPACEMOBILE'; Terran Orbital='TERRAN ORBITAL' or 'TYVAK'; others by firm name (see code/us/pull_usaspending.js).
+# agency: NASA = NASA awarding; DoD = Department of Defense awarding (incl. Air Force/Space Force, SDA, NGA, MDA); All = any federal agency.
+# Excludes grants, other transaction agreements, Space Act Agreements and classified awards (e.g. NRO). Negative values are de-obligations. FY2026 is INCOMPLETE: DoD contract data are published with a 90-day delay, and at pull time (USAspending last updated 13 Nov 2026) DoD obligations for Aug-Sep 2026 were essentially absent. NASA data were present to Oct 2026.
+# firm|agency|FY2016|FY2017|FY2018|FY2019|FY2020|FY2021|FY2022|FY2023|FY2024|FY2025|FY2026
+SpaceX|NASA|152|80|120|170|169|887|1357|1569|1589|1349|716
+SpaceX|DoD|84|106|268|374|287|564|759|856|1811|1653|2231
+SpaceX|All|236|186|388|544|456|1450|2118|2427|3401|3010|2958
+Rocket Lab|NASA|4|0|0|0|10|2|0|15|6|14|20
+Rocket Lab|DoD|0|0|7|0|0|0|0|0|15|5|112
+Rocket Lab|All|4|0|7|0|10|2|0|15|21|19|132
+Blue Origin|NASA|1|1|1|5|232|281|14|441|509|835|1314
+Blue Origin|DoD|0|0|0|1|1|0|0|0|11|101|287
+Blue Origin|All|1|1|1|6|233|281|14|441|520|936|1601
+Firefly|NASA|0|0|0|0|0|59|38|95|42|111|174
+Firefly|DoD|0|0|0|0|0|0|18|1|3|20|0
+Firefly|All|0|0|0|0|0|59|56|96|45|131|174
+Relativity|NASA|0|0|0|0|0|2|0|-3|0|0|0
+Relativity|DoD|0|0|0|0|0|0|0|1|9|0|0
+Relativity|All|0|0|0|0|0|2|0|-2|9|0|0
+ABL|NASA|0|0|0|0|0|0|0|0|0|0|0
+ABL|DoD|0|0|0|0|0|0|0|0|0|0|0
+ABL|All|0|0|0|0|0|0|0|0|0|0|0
+Virgin Orbit|NASA|0|0|0|0|0|0|3|0|0|0|0
+Virgin Orbit|DoD|0|0|0|1|35|2|0|0|0|0|0
+Virgin Orbit|All|0|0|0|1|35|2|3|0|0|0|0
+Intuitive Machines|NASA|0|0|0|23|44|82|95|49|104|19|104
+Intuitive Machines|DoD|0|0|0|0|0|0|0|9|0|8|0
+Intuitive Machines|All|0|0|0|23|44|82|95|59|104|28|104
+Astrobotic|NASA|1|0|1|42|116|100|117|75|8|25|72
+Astrobotic|DoD|0|0|0|0|0|2|0|2|1|7|0
+Astrobotic|All|1|0|1|42|116|102|118|76|9|32|72
+Axiom|NASA|0|0|0|1|0|2|48|75|134|131|213
+Axiom|DoD|0|0|0|0|0|0|0|0|0|0|0
+Axiom|All|0|0|0|1|0|2|48|75|134|131|213
+Sierra Space|NASA|0|0|0|0|0|0|0|1|7|11|11
+Sierra Space|DoD|0|0|0|0|0|0|0|23|17|0|0
+Sierra Space|All|0|0|0|0|0|0|0|23|24|11|11
+Planet|NASA|0|0|0|7|13|9|25|25|0|33|10
+Planet|DoD|2|0|0|0|0|0|0|0|7|16|8
+Planet|All|2|0|0|7|14|10|26|25|7|50|17
+Maxar|NASA|2|29|24|81|80|81|57|13|23|0|1
+Maxar|DoD|30|19|38|74|63|54|94|63|23|18|12
+Maxar|All|35|49|65|161|149|140|158|85|52|19|12
+BlackSky|NASA|0|2|0|0|0|0|2|0|0|0|0
+BlackSky|DoD|2|4|4|3|5|3|2|2|5|5|6
+BlackSky|All|2|6|4|3|5|3|3|2|5|5|6
+Spire|NASA|0|0|0|3|7|6|6|8|11|1|0
+Spire|DoD|0|0|0|0|0|0|0|0|14|0|1
+Spire|All|0|0|1|3|7|8|30|11|34|16|24
+Capella|NASA|0|0|0|0|0|0|0|2|0|1|1
+Capella|DoD|0|0|0|0|1|5|0|0|10|0|0
+Capella|All|0|0|0|0|1|5|0|2|10|1|1
+Umbra|NASA|0|0|0|0|0|0|0|0|3|1|2
+Umbra|DoD|0|0|0|0|0|2|-2|1|0|5|1
+Umbra|All|0|0|0|0|0|2|-2|1|3|6|2
+HawkEye 360|NASA|0|0|0|0|0|0|0|0|0|0|0
+HawkEye 360|DoD|0|0|0|0|0|0|6|12|10|6|23
+HawkEye 360|All|0|0|0|0|1|0|6|12|10|6|23
+AST SpaceMobile|NASA|0|0|0|0|0|0|0|0|0|0|0
+AST SpaceMobile|DoD|0|0|0|0|0|0|0|0|0|0|0
+AST SpaceMobile|All|0|0|0|0|0|0|0|0|0|0|0
+Terran Orbital|NASA|1|6|3|0|1|1|0|2|0|13|1
+Terran Orbital|DoD|1|0|2|2|3|2|0|-1|0|0|0
+Terran Orbital|All|2|6|5|2|4|2|0|0|0|13|1
+York Space|NASA|0|0|0|0|0|0|0|0|0|0|0
+York Space|DoD|0|0|0|0|17|33|59|6|3|6|3
+York Space|All|0|0|0|0|17|33|59|6|3|6|3
+Redwire|NASA|4|20|22|37|37|42|26|13|6|7|2
+Redwire|DoD|3|5|3|7|26|2|8|6|3|2|35
+Redwire|All|7|25|26|44|63|44|34|19|9|9|37
+Momentus|NASA|0|0|0|0|0|0|0|0|0|8|2
+Momentus|DoD|0|0|0|0|0|0|0|0|0|2|0
+Momentus|All|0|0|0|0|0|0|0|0|0|10|2
+Impulse Space|NASA|0|0|0|0|0|0|0|0|0|0|14
+Impulse Space|DoD|0|0|0|0|0|0|0|0|3|37|9
+Impulse Space|All|0|0|0|0|0|0|0|0|3|37|23
+True Anomaly|NASA|0|0|0|0|0|0|0|0|0|0|0
+True Anomaly|DoD|0|0|0|0|0|0|0|3|2|0|0
+True Anomaly|All|0|0|0|0|0|0|0|3|2|0|0

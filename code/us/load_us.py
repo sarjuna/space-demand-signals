@@ -120,3 +120,10 @@ def wiki():
         first = x[x >= 1000].index.min(); x = x[x.index >= first]
         W[a] = x / tot.reindex(x.index) * 1e6
     return pd.DataFrame(W).reindex(IDX), tot
+
+def contracts():
+    """Federal contract obligations to 25 commercial space firms, US$m by fiscal year (USAspending)."""
+    rows = [l.rstrip("\n").split("|") for l in open(D + "usaspending_contracts_us.txt") if not l.startswith("#") and "|" in l]
+    df = pd.DataFrame(rows, columns=["firm", "agency"] + [f"FY{y}" for y in range(2016, 2027)])
+    for c in df.columns[2:]: df[c] = df[c].astype(int)
+    return df

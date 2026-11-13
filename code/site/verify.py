@@ -20,7 +20,8 @@ checks=[
  ('IN annual rho -0.04', round(IS['annual_PAI_vs_launches']['rho'],2)==-0.04),
  ('IN granger att->ret min 0.43', min(IS['granger_attention_to_returns_p'].values())==0.43),
  ('IN parl 6.9/26.4', [round(e['ns_share']*100,1) for e in I['parl']['eras']][:2]==[6.9,26.4]),
- ('IN C3 +7.1 t3.8', any(abs(e['car01']-7.12)<.01 and round(e['t01'],1)==3.8 for e in I['events'])),
+ ('US contracts total FY16 290 FY25 4476', U['contracts']['total'][0]==290 and U['contracts']['total'][-2]==4476),
+    ('IN C3 corrected t0 24 Aug, +2.9 t1.5', any(e['t0']=='2023-08-24' and abs(e['car01']-2.88)<.01 and round(e['t01'],1)==1.5 for e in I['events'])),
  ('IN SP2023 +7.0 6-day', any(abs(e['car05']-6.95)<.01 for e in I['events'])),
  ('IN Tracxn 2021 96/37.6/43', sorted({f['usd'] for f in fund if f['year']=='2021'})==[37.6,43.0,96.0]),
  ('IN HN 286', S['hn_in_total']==286),
@@ -78,7 +79,7 @@ checks=[
  ('VAR US NAI level ADF p 0.62', round(_adf(_pd.read_csv(ROOT/'data/csv/us/us_monthly.csv').NAI.dropna(),autolag='AIC')[1],2)==0.62),
  ('VAR attention->launch/launch->attention all p>=0.33', min(x[k] for i in ('IN-2','US-2') for x in (VR[i]['aic'],VR[i]['bic'],VR[i]['fixed3'],VR[i]['robust']['no_dummies'],VR[i]['robust']['to_2026_05']) for k in ('a_to_b','b_to_a'))>=0.33),
  ('VAR lead-only IRFs: no attention->other band excludes zero', all(abs(m)<1.96*se+1e-9 for o in VR.values() for m,se in zip(o['irf_rev']['a_to_b'],o['irf_rev']['a_to_b_se']))),
- ('CSV audit 16,049 values', '16049' in __import__('subprocess').run([sys.executable,str(ROOT/'code/site/audit_csv.py')],capture_output=True,text=True).stdout.replace(',','')),
+ ('CSV audit 17,024 values', '17024' in __import__('subprocess').run([sys.executable,str(ROOT/'code/site/audit_csv.py')],capture_output=True,text=True).stdout.replace(',','')),
 ]
 bad=[n for n,ok in checks if not ok]
 for n,ok in checks: print('OK ' if ok else 'BAD', n)

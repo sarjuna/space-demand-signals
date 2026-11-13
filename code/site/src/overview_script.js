@@ -6,7 +6,7 @@ kv('kv-us',[['Orbital launches 2016–25',O.us_total],['Listed NewSpace firms','
 
 document.getElementById('verdict-text').innerHTML=`
 <p><b>Attention is a poor proxy for build-out in both countries.</b> In India launch counts explain ${O.in_r2}% of monthly public attention; in the US attention rises with launches across the decade but does not move with them month to month. Wikipedia reading of the national space agency (ISRO, NASA) has declined in both countries, whether launches stalled (India) or soared (US). In both, attention spikes on a handful of spectacles (Chandrayaan-3; Crew Dragon, Artemis and the SpaceX listing).</p>
-<p><b>Markets carry real information, but about different things.</b> Indian listed suppliers priced the Chandrayaan-3 landing (+7.1%, t = 3.8) and nothing NewSpace, because India's NewSpace firms are not listed. In the US the market's sharpest move was a reallocation: other NewSpace stocks fell ${O.ipo_c}% against the S&amp;P 500 on SpaceX's first trading days (t = ${O.ipo_t}). US price moves are followed by searches for the companies, not the other way round.</p>
+<p><b>Markets react to few events.</b> Indian listed suppliers show no clear reaction to the Chandrayaan-3 landing once it is timed correctly (+2.9% over two days, t = 1.5; the landing came after the market closed), and India's NewSpace firms are not listed. In the US the sharpest move came when SpaceX itself listed: other NewSpace stocks fell ${O.ipo_c}% against the S&amp;P 500 on SpaceX's first trading days (t = ${O.ipo_t}). US price moves are followed by searches for the companies, not the other way round.</p>
 <p><b>Policy discourse moves first.</b> India's parliamentary questions turned towards NewSpace right after the 2020 reforms (7% → 26% of space questions). US law turned commercial a decade earlier, in 2015, before the launch boom; US regulators have scaled with it since.</p>
 <p><b>Capital is the weakest link.</b> India has no reliable private-investment series: tracker figures for the same year differ 2.6-fold. The US has market prices and SEC filings, but no official US-only series either; the most-cited tracker reports global totals.</p>`;
 
@@ -15,14 +15,14 @@ const T=[
   ['no','No','Launches explain 2% of monthly attention (R² 0.02); 66% once three flagship missions are added. Annual ρ = −0.04.'],
   ['mixed','Trend only','Annual ρ = 0.82 for NewSpace attention, but launches add nothing month to month once the shared trend is removed (t = −1.42). Flagship months add +2.1 SD to public attention. NASA\'s share of Wikipedia reading fell 30% as launches rose eightfold.']],
  ['Do investors price space events?',
-  ['yes','Landmarks only','Chandrayaan-3 landing: +7.1% vs the Nifty over two days (t = 3.8). Space Policy 2023: +7.0% over six days, not robust. Launch failures: no reaction.'],
-  ['yes','Yes, selectively','SpaceX IPO: peers −18.3% over two days (t = −2.5). Artemis II: UFO ETF +6.1% (t = 2.1). Starship tests, lunar landings and the 2025 executive order: no significant reaction.']],
+  ['no','No clear reaction','Chandrayaan-3 landing: +2.9% vs the Nifty over two days from the first session after the landing (t = 1.5). Space Policy 2023: +7.0% over six days, not robust. Launch failures: no reaction.'],
+  ['yes','Yes, selectively','SpaceX IPO: peers −18.3% over two days (t = −2.5). Artemis II: UFO ETF +6.1% (t = 2.1), borderline. Starship tests, lunar landings and the 2025 executive order: no significant reaction.']],
  ['Does attention lead prices?',
   ['mixed','No lead; prices lead','NewSpace attention does not predict basket returns (p ≥ 0.43). In a VAR, share-price rises are followed by more NewSpace attention about three months later (p = 0.002; 3 of 5 versions). The listed basket is mainly defence and aerospace suppliers.'],
   ['no','Prices lead searches','Basket returns Granger-cause Google searches for space firms at lags 1–3 (p ≈ 0.02), but not Wikipedia reading or Hacker News volume. No attention measure predicts returns, and in a VAR neither direction is robust.']],
  ['Does policy activity lead or follow build-out?',
   ['yes','Leads','NewSpace share of Lok Sabha space questions: 6.9% before the 2020 reforms, 26.4% after (p < 10⁻⁶), ahead of private launches.'],
-  ['mixed','Led early','Commercial legislating peaked in 2015–16. Commercial share of space bills 6.1% → 11.0% (not significant). FCC space rulemaking tracks launch cadence (ρ = 0.88).']],
+  ['mixed','Led early','Commercial legislating came early, in 2015–16. Commercial share of space bills 6.1% → 11.0% (not significant). FCC space rulemaking tracks launch cadence (ρ = 0.88).']],
  ['What does sentiment say?',
   ['no','Too thin to measure','Only 286 Hacker News stories in a decade; GDELT news tone available for three months only.'],
   ['mixed','Cooling','17,640 Hacker News titles. Tone drifted down from 2016–19 to 2023–26. Starship\'s January 2025 loss: sharpest negative shift (p = 0.002); Artemis II: positive (p = 0.015).']],
@@ -99,9 +99,9 @@ onTheme(drawIdx);
 // audiences
 const AUD=[
  ['For investors','Separate spectacle from substance.',[
-  `<b>Watch the gap.</b> US attention is ${Math.abs(L.us.gap).toFixed(1)} points ahead of build-out; in India the two are ${ST('india')==='level'?'level':sg(L.india.gap)+' points apart'}. The gap has swung both ways in both countries since 2016, so read it as a temperature check, not a forecast.`,
-  `<b>Markets price landmarks, not routine progress.</b> Indian listed suppliers beat the Nifty 50 by 7.1% in the two days after the Chandrayaan-3 landing (t = 3.8); launch failures produced no significant move.`,
-  `<b>Attention follows prices, not the reverse.</b> Time-series (VAR) tests find no case in which attention reliably leads share prices; in India, price rises are followed by more attention about three months later.`,
+  `<b>Watch the gap.</b> US attention is ${Math.abs(L.us.gap).toFixed(1)} points ahead of build-out; in India the two are ${ST('india')==='level'?'level':sg(L.india.gap)+' points apart'}. The gap has swung both ways in both countries since 2016, so read it as a temperature check, not a forecast. India's gap is small, and its label changes under reasonable alternative ways of building the index, so treat it as uncertain.`,
+  `<b>Markets rarely price single events.</b> Timed from the first session after the landing, the Chandrayaan-3 result for Indian listed suppliers is +2.9% over two days (t = 1.5, not significant), and launch failures produced no significant move. The one large US reaction came when SpaceX itself listed.`,
+  `<b>Attention does not lead prices.</b> Time-series (VAR) tests find no case in which attention reliably leads share prices. There is some evidence of the reverse (in India, price rises are followed by more attention about three months later), but it holds in only some model versions.`,
   `<b>Mind concentration.</b> SpaceX flew 94% of US launches in 2025, and India’s NewSpace firms are not listed.`]],
  ['For policymakers','Read public interest and private capital directly.',[
   `<b>Reform moves the conversation first.</b> After India’s 2020 reforms, NewSpace questions in the Lok Sabha rose from 6.9% to 26.4% of space questions, ahead of private launches.`,
@@ -109,23 +109,22 @@ const AUD=[
   `<b>Private capital is not measured.</b> Published figures for India’s 2021 start-up funding differ 2.6-fold, and the US has no official US-only series. An official investment series would be the biggest single data gain.`,
   `<b>A quarterly check.</b> The index shows whether public interest is keeping pace with programmes and reforms.`]],
  ['For researchers','An open panel, built to be tested.',[
-  `<b>Open data:</b> monthly series for two countries, 2016–2026, in 30+ CSVs with code; an audit ties all 16,049 raw values to the tables.`,
+  `<b>Open data:</b> monthly series for two countries, 2016–2026, in 30+ CSVs with code; an audit ties all 17,024 raw values to the tables.`,
   `<b>A transparent index:</b> a fixed 2016–2025 baseline, so new data do not rewrite history; equal weights; and robustness to component choice reported on the chart.`,
   `<b>Time-series tests:</b> VARs with Granger tests and impulse responses for each pair, each checked five ways; results and code are included. Next: whether the index gap predicts returns or investment.`,
   `<b>Extendable:</b> the same pipeline can add further countries and signals.`]]];
 document.getElementById('aud').innerHTML=AUD.map(([h,s,li])=>`<div class="panel"><h3>${h}</h3><div class="sub">${s}</div><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
 // citation
-const acc=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
-document.getElementById('cite-text').innerHTML=`Sathiaseelan, A. (2026). <i>Space Demand Signals: Space Signals Index for India and the United States</i> [Dashboard and dataset]. Space Economy Initiative, Cambridge Judge Business School, University of Cambridge. https://sarjuna.github.io/space-demand-signals/ (accessed ${acc}).`;
+document.getElementById('cite-text').innerHTML=`Sathiaseelan, A. (2026). <i>Space Demand Signals: Space Signals Index for India and the United States</i> [Dashboard and dataset]. Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School, University of Cambridge. https://sarjuna.github.io/space-demand-signals/`;
 document.getElementById('cite-bib').textContent=`@misc{sathiaseelan2026sds,
   author       = {Sathiaseelan, Arjuna},
   title        = {Space Demand Signals: Space Signals Index for India and the United States},
   year         = {2026},
-  howpublished = {Dashboard and dataset, Space Economy Initiative, Cambridge Judge Business School, University of Cambridge},
+  howpublished = {Dashboard and dataset, Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School, University of Cambridge},
   url          = {https://sarjuna.github.io/space-demand-signals/},
   note         = {Index to ${qlab(L.us.quarter)}}
 }`;
-document.getElementById('foot').textContent=`Dr Arjuna Sathiaseelan · Space Economy Initiative, Cambridge Judge Business School · Data pulled on ${O.pulled} · Index reported by quarter`;
+document.getElementById('foot').textContent=`Dr Arjuna Sathiaseelan · Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School · Data pulled on ${O.pulled} · Index reported by quarter`;
 
 /* ---------- VAR lead-lag ---------- */
 const V=O.var, VM={}; V.forEach(v=>VM[v.id]=v);

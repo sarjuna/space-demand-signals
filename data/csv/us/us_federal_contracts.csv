@@ -1,0 +1,826 @@
+firm,agency,fiscal_year,obligations_usd_m
+SpaceX,NASA,2016,152
+SpaceX,DoD,2016,84
+SpaceX,All,2016,236
+Rocket Lab,NASA,2016,4
+Rocket Lab,DoD,2016,0
+Rocket Lab,All,2016,4
+Blue Origin,NASA,2016,1
+Blue Origin,DoD,2016,0
+Blue Origin,All,2016,1
+Firefly,NASA,2016,0
+Firefly,DoD,2016,0
+Firefly,All,2016,0
+Relativity,NASA,2016,0
+Relativity,DoD,2016,0
+Relativity,All,2016,0
+ABL,NASA,2016,0
+ABL,DoD,2016,0
+ABL,All,2016,0
+Virgin Orbit,NASA,2016,0
+Virgin Orbit,DoD,2016,0
+Virgin Orbit,All,2016,0
+Intuitive Machines,NASA,2016,0
+Intuitive Machines,DoD,2016,0
+Intuitive Machines,All,2016,0
+Astrobotic,NASA,2016,1
+Astrobotic,DoD,2016,0
+Astrobotic,All,2016,1
+Axiom,NASA,2016,0
+Axiom,DoD,2016,0
+Axiom,All,2016,0
+Sierra Space,NASA,2016,0
+Sierra Space,DoD,2016,0
+Sierra Space,All,2016,0
+Planet,NASA,2016,0
+Planet,DoD,2016,2
+Planet,All,2016,2
+Maxar,NASA,2016,2
+Maxar,DoD,2016,30
+Maxar,All,2016,35
+BlackSky,NASA,2016,0
+BlackSky,DoD,2016,2
+BlackSky,All,2016,2
+Spire,NASA,2016,0
+Spire,DoD,2016,0
+Spire,All,2016,0
+Capella,NASA,2016,0
+Capella,DoD,2016,0
+Capella,All,2016,0
+Umbra,NASA,2016,0
+Umbra,DoD,2016,0
+Umbra,All,2016,0
+HawkEye 360,NASA,2016,0
+HawkEye 360,DoD,2016,0
+HawkEye 360,All,2016,0
+AST SpaceMobile,NASA,2016,0
+AST SpaceMobile,DoD,2016,0
+AST SpaceMobile,All,2016,0
+Terran Orbital,NASA,2016,1
+Terran Orbital,DoD,2016,1
+Terran Orbital,All,2016,2
+York Space,NASA,2016,0
+York Space,DoD,2016,0
+York Space,All,2016,0
+Redwire,NASA,2016,4
+Redwire,DoD,2016,3
+Redwire,All,2016,7
+Momentus,NASA,2016,0
+Momentus,DoD,2016,0
+Momentus,All,2016,0
+Impulse Space,NASA,2016,0
+Impulse Space,DoD,2016,0
+Impulse Space,All,2016,0
+True Anomaly,NASA,2016,0
+True Anomaly,DoD,2016,0
+True Anomaly,All,2016,0
+SpaceX,NASA,2017,80
+SpaceX,DoD,2017,106
+SpaceX,All,2017,186
+Rocket Lab,NASA,2017,0
+Rocket Lab,DoD,2017,0
+Rocket Lab,All,2017,0
+Blue Origin,NASA,2017,1
+Blue Origin,DoD,2017,0
+Blue Origin,All,2017,1
+Firefly,NASA,2017,0
+Firefly,DoD,2017,0
+Firefly,All,2017,0
+Relativity,NASA,2017,0
+Relativity,DoD,2017,0
+Relativity,All,2017,0
+ABL,NASA,2017,0
+ABL,DoD,2017,0
+ABL,All,2017,0
+Virgin Orbit,NASA,2017,0
+Virgin Orbit,DoD,2017,0
+Virgin Orbit,All,2017,0
+Intuitive Machines,NASA,2017,0
+Intuitive Machines,DoD,2017,0
+Intuitive Machines,All,2017,0
+Astrobotic,NASA,2017,0
+Astrobotic,DoD,2017,0
+Astrobotic,All,2017,0
+Axiom,NASA,2017,0
+Axiom,DoD,2017,0
+Axiom,All,2017,0
+Sierra Space,NASA,2017,0
+Sierra Space,DoD,2017,0
+Sierra Space,All,2017,0
+Planet,NASA,2017,0
+Planet,DoD,2017,0
+Planet,All,2017,0
+Maxar,NASA,2017,29
+Maxar,DoD,2017,19
+Maxar,All,2017,49
+BlackSky,NASA,2017,2
+BlackSky,DoD,2017,4
+BlackSky,All,2017,6
+Spire,NASA,2017,0
+Spire,DoD,2017,0
+Spire,All,2017,0
+Capella,NASA,2017,0
+Capella,DoD,2017,0
+Capella,All,2017,0
+Umbra,NASA,2017,0
+Umbra,DoD,2017,0
+Umbra,All,2017,0
+HawkEye 360,NASA,2017,0
+HawkEye 360,DoD,2017,0
+HawkEye 360,All,2017,0
+AST SpaceMobile,NASA,2017,0
+AST SpaceMobile,DoD,2017,0
+AST SpaceMobile,All,2017,0
+Terran Orbital,NASA,2017,6
+Terran Orbital,DoD,2017,0
+Terran Orbital,All,2017,6
+York Space,NASA,2017,0
+York Space,DoD,2017,0
+York Space,All,2017,0
+Redwire,NASA,2017,20
+Redwire,DoD,2017,5
+Redwire,All,2017,25
+Momentus,NASA,2017,0
+Momentus,DoD,2017,0
+Momentus,All,2017,0
+Impulse Space,NASA,2017,0
+Impulse Space,DoD,2017,0
+Impulse Space,All,2017,0
+True Anomaly,NASA,2017,0
+True Anomaly,DoD,2017,0
+True Anomaly,All,2017,0
+SpaceX,NASA,2018,120
+SpaceX,DoD,2018,268
+SpaceX,All,2018,388
+Rocket Lab,NASA,2018,0
+Rocket Lab,DoD,2018,7
+Rocket Lab,All,2018,7
+Blue Origin,NASA,2018,1
+Blue Origin,DoD,2018,0
+Blue Origin,All,2018,1
+Firefly,NASA,2018,0
+Firefly,DoD,2018,0
+Firefly,All,2018,0
+Relativity,NASA,2018,0
+Relativity,DoD,2018,0
+Relativity,All,2018,0
+ABL,NASA,2018,0
+ABL,DoD,2018,0
+ABL,All,2018,0
+Virgin Orbit,NASA,2018,0
+Virgin Orbit,DoD,2018,0
+Virgin Orbit,All,2018,0
+Intuitive Machines,NASA,2018,0
+Intuitive Machines,DoD,2018,0
+Intuitive Machines,All,2018,0
+Astrobotic,NASA,2018,1
+Astrobotic,DoD,2018,0
+Astrobotic,All,2018,1
+Axiom,NASA,2018,0
+Axiom,DoD,2018,0
+Axiom,All,2018,0
+Sierra Space,NASA,2018,0
+Sierra Space,DoD,2018,0
+Sierra Space,All,2018,0
+Planet,NASA,2018,0
+Planet,DoD,2018,0
+Planet,All,2018,0
+Maxar,NASA,2018,24
+Maxar,DoD,2018,38
+Maxar,All,2018,65
+BlackSky,NASA,2018,0
+BlackSky,DoD,2018,4
+BlackSky,All,2018,4
+Spire,NASA,2018,0
+Spire,DoD,2018,0
+Spire,All,2018,1
+Capella,NASA,2018,0
+Capella,DoD,2018,0
+Capella,All,2018,0
+Umbra,NASA,2018,0
+Umbra,DoD,2018,0
+Umbra,All,2018,0
+HawkEye 360,NASA,2018,0
+HawkEye 360,DoD,2018,0
+HawkEye 360,All,2018,0
+AST SpaceMobile,NASA,2018,0
+AST SpaceMobile,DoD,2018,0
+AST SpaceMobile,All,2018,0
+Terran Orbital,NASA,2018,3
+Terran Orbital,DoD,2018,2
+Terran Orbital,All,2018,5
+York Space,NASA,2018,0
+York Space,DoD,2018,0
+York Space,All,2018,0
+Redwire,NASA,2018,22
+Redwire,DoD,2018,3
+Redwire,All,2018,26
+Momentus,NASA,2018,0
+Momentus,DoD,2018,0
+Momentus,All,2018,0
+Impulse Space,NASA,2018,0
+Impulse Space,DoD,2018,0
+Impulse Space,All,2018,0
+True Anomaly,NASA,2018,0
+True Anomaly,DoD,2018,0
+True Anomaly,All,2018,0
+SpaceX,NASA,2019,170
+SpaceX,DoD,2019,374
+SpaceX,All,2019,544
+Rocket Lab,NASA,2019,0
+Rocket Lab,DoD,2019,0
+Rocket Lab,All,2019,0
+Blue Origin,NASA,2019,5
+Blue Origin,DoD,2019,1
+Blue Origin,All,2019,6
+Firefly,NASA,2019,0
+Firefly,DoD,2019,0
+Firefly,All,2019,0
+Relativity,NASA,2019,0
+Relativity,DoD,2019,0
+Relativity,All,2019,0
+ABL,NASA,2019,0
+ABL,DoD,2019,0
+ABL,All,2019,0
+Virgin Orbit,NASA,2019,0
+Virgin Orbit,DoD,2019,1
+Virgin Orbit,All,2019,1
+Intuitive Machines,NASA,2019,23
+Intuitive Machines,DoD,2019,0
+Intuitive Machines,All,2019,23
+Astrobotic,NASA,2019,42
+Astrobotic,DoD,2019,0
+Astrobotic,All,2019,42
+Axiom,NASA,2019,1
+Axiom,DoD,2019,0
+Axiom,All,2019,1
+Sierra Space,NASA,2019,0
+Sierra Space,DoD,2019,0
+Sierra Space,All,2019,0
+Planet,NASA,2019,7
+Planet,DoD,2019,0
+Planet,All,2019,7
+Maxar,NASA,2019,81
+Maxar,DoD,2019,74
+Maxar,All,2019,161
+BlackSky,NASA,2019,0
+BlackSky,DoD,2019,3
+BlackSky,All,2019,3
+Spire,NASA,2019,3
+Spire,DoD,2019,0
+Spire,All,2019,3
+Capella,NASA,2019,0
+Capella,DoD,2019,0
+Capella,All,2019,0
+Umbra,NASA,2019,0
+Umbra,DoD,2019,0
+Umbra,All,2019,0
+HawkEye 360,NASA,2019,0
+HawkEye 360,DoD,2019,0
+HawkEye 360,All,2019,0
+AST SpaceMobile,NASA,2019,0
+AST SpaceMobile,DoD,2019,0
+AST SpaceMobile,All,2019,0
+Terran Orbital,NASA,2019,0
+Terran Orbital,DoD,2019,2
+Terran Orbital,All,2019,2
+York Space,NASA,2019,0
+York Space,DoD,2019,0
+York Space,All,2019,0
+Redwire,NASA,2019,37
+Redwire,DoD,2019,7
+Redwire,All,2019,44
+Momentus,NASA,2019,0
+Momentus,DoD,2019,0
+Momentus,All,2019,0
+Impulse Space,NASA,2019,0
+Impulse Space,DoD,2019,0
+Impulse Space,All,2019,0
+True Anomaly,NASA,2019,0
+True Anomaly,DoD,2019,0
+True Anomaly,All,2019,0
+SpaceX,NASA,2020,169
+SpaceX,DoD,2020,287
+SpaceX,All,2020,456
+Rocket Lab,NASA,2020,10
+Rocket Lab,DoD,2020,0
+Rocket Lab,All,2020,10
+Blue Origin,NASA,2020,232
+Blue Origin,DoD,2020,1
+Blue Origin,All,2020,233
+Firefly,NASA,2020,0
+Firefly,DoD,2020,0
+Firefly,All,2020,0
+Relativity,NASA,2020,0
+Relativity,DoD,2020,0
+Relativity,All,2020,0
+ABL,NASA,2020,0
+ABL,DoD,2020,0
+ABL,All,2020,0
+Virgin Orbit,NASA,2020,0
+Virgin Orbit,DoD,2020,35
+Virgin Orbit,All,2020,35
+Intuitive Machines,NASA,2020,44
+Intuitive Machines,DoD,2020,0
+Intuitive Machines,All,2020,44
+Astrobotic,NASA,2020,116
+Astrobotic,DoD,2020,0
+Astrobotic,All,2020,116
+Axiom,NASA,2020,0
+Axiom,DoD,2020,0
+Axiom,All,2020,0
+Sierra Space,NASA,2020,0
+Sierra Space,DoD,2020,0
+Sierra Space,All,2020,0
+Planet,NASA,2020,13
+Planet,DoD,2020,0
+Planet,All,2020,14
+Maxar,NASA,2020,80
+Maxar,DoD,2020,63
+Maxar,All,2020,149
+BlackSky,NASA,2020,0
+BlackSky,DoD,2020,5
+BlackSky,All,2020,5
+Spire,NASA,2020,7
+Spire,DoD,2020,0
+Spire,All,2020,7
+Capella,NASA,2020,0
+Capella,DoD,2020,1
+Capella,All,2020,1
+Umbra,NASA,2020,0
+Umbra,DoD,2020,0
+Umbra,All,2020,0
+HawkEye 360,NASA,2020,0
+HawkEye 360,DoD,2020,0
+HawkEye 360,All,2020,1
+AST SpaceMobile,NASA,2020,0
+AST SpaceMobile,DoD,2020,0
+AST SpaceMobile,All,2020,0
+Terran Orbital,NASA,2020,1
+Terran Orbital,DoD,2020,3
+Terran Orbital,All,2020,4
+York Space,NASA,2020,0
+York Space,DoD,2020,17
+York Space,All,2020,17
+Redwire,NASA,2020,37
+Redwire,DoD,2020,26
+Redwire,All,2020,63
+Momentus,NASA,2020,0
+Momentus,DoD,2020,0
+Momentus,All,2020,0
+Impulse Space,NASA,2020,0
+Impulse Space,DoD,2020,0
+Impulse Space,All,2020,0
+True Anomaly,NASA,2020,0
+True Anomaly,DoD,2020,0
+True Anomaly,All,2020,0
+SpaceX,NASA,2021,887
+SpaceX,DoD,2021,564
+SpaceX,All,2021,1450
+Rocket Lab,NASA,2021,2
+Rocket Lab,DoD,2021,0
+Rocket Lab,All,2021,2
+Blue Origin,NASA,2021,281
+Blue Origin,DoD,2021,0
+Blue Origin,All,2021,281
+Firefly,NASA,2021,59
+Firefly,DoD,2021,0
+Firefly,All,2021,59
+Relativity,NASA,2021,2
+Relativity,DoD,2021,0
+Relativity,All,2021,2
+ABL,NASA,2021,0
+ABL,DoD,2021,0
+ABL,All,2021,0
+Virgin Orbit,NASA,2021,0
+Virgin Orbit,DoD,2021,2
+Virgin Orbit,All,2021,2
+Intuitive Machines,NASA,2021,82
+Intuitive Machines,DoD,2021,0
+Intuitive Machines,All,2021,82
+Astrobotic,NASA,2021,100
+Astrobotic,DoD,2021,2
+Astrobotic,All,2021,102
+Axiom,NASA,2021,2
+Axiom,DoD,2021,0
+Axiom,All,2021,2
+Sierra Space,NASA,2021,0
+Sierra Space,DoD,2021,0
+Sierra Space,All,2021,0
+Planet,NASA,2021,9
+Planet,DoD,2021,0
+Planet,All,2021,10
+Maxar,NASA,2021,81
+Maxar,DoD,2021,54
+Maxar,All,2021,140
+BlackSky,NASA,2021,0
+BlackSky,DoD,2021,3
+BlackSky,All,2021,3
+Spire,NASA,2021,6
+Spire,DoD,2021,0
+Spire,All,2021,8
+Capella,NASA,2021,0
+Capella,DoD,2021,5
+Capella,All,2021,5
+Umbra,NASA,2021,0
+Umbra,DoD,2021,2
+Umbra,All,2021,2
+HawkEye 360,NASA,2021,0
+HawkEye 360,DoD,2021,0
+HawkEye 360,All,2021,0
+AST SpaceMobile,NASA,2021,0
+AST SpaceMobile,DoD,2021,0
+AST SpaceMobile,All,2021,0
+Terran Orbital,NASA,2021,1
+Terran Orbital,DoD,2021,2
+Terran Orbital,All,2021,2
+York Space,NASA,2021,0
+York Space,DoD,2021,33
+York Space,All,2021,33
+Redwire,NASA,2021,42
+Redwire,DoD,2021,2
+Redwire,All,2021,44
+Momentus,NASA,2021,0
+Momentus,DoD,2021,0
+Momentus,All,2021,0
+Impulse Space,NASA,2021,0
+Impulse Space,DoD,2021,0
+Impulse Space,All,2021,0
+True Anomaly,NASA,2021,0
+True Anomaly,DoD,2021,0
+True Anomaly,All,2021,0
+SpaceX,NASA,2022,1357
+SpaceX,DoD,2022,759
+SpaceX,All,2022,2118
+Rocket Lab,NASA,2022,0
+Rocket Lab,DoD,2022,0
+Rocket Lab,All,2022,0
+Blue Origin,NASA,2022,14
+Blue Origin,DoD,2022,0
+Blue Origin,All,2022,14
+Firefly,NASA,2022,38
+Firefly,DoD,2022,18
+Firefly,All,2022,56
+Relativity,NASA,2022,0
+Relativity,DoD,2022,0
+Relativity,All,2022,0
+ABL,NASA,2022,0
+ABL,DoD,2022,0
+ABL,All,2022,0
+Virgin Orbit,NASA,2022,3
+Virgin Orbit,DoD,2022,0
+Virgin Orbit,All,2022,3
+Intuitive Machines,NASA,2022,95
+Intuitive Machines,DoD,2022,0
+Intuitive Machines,All,2022,95
+Astrobotic,NASA,2022,117
+Astrobotic,DoD,2022,0
+Astrobotic,All,2022,118
+Axiom,NASA,2022,48
+Axiom,DoD,2022,0
+Axiom,All,2022,48
+Sierra Space,NASA,2022,0
+Sierra Space,DoD,2022,0
+Sierra Space,All,2022,0
+Planet,NASA,2022,25
+Planet,DoD,2022,0
+Planet,All,2022,26
+Maxar,NASA,2022,57
+Maxar,DoD,2022,94
+Maxar,All,2022,158
+BlackSky,NASA,2022,2
+BlackSky,DoD,2022,2
+BlackSky,All,2022,3
+Spire,NASA,2022,6
+Spire,DoD,2022,0
+Spire,All,2022,30
+Capella,NASA,2022,0
+Capella,DoD,2022,0
+Capella,All,2022,0
+Umbra,NASA,2022,0
+Umbra,DoD,2022,-2
+Umbra,All,2022,-2
+HawkEye 360,NASA,2022,0
+HawkEye 360,DoD,2022,6
+HawkEye 360,All,2022,6
+AST SpaceMobile,NASA,2022,0
+AST SpaceMobile,DoD,2022,0
+AST SpaceMobile,All,2022,0
+Terran Orbital,NASA,2022,0
+Terran Orbital,DoD,2022,0
+Terran Orbital,All,2022,0
+York Space,NASA,2022,0
+York Space,DoD,2022,59
+York Space,All,2022,59
+Redwire,NASA,2022,26
+Redwire,DoD,2022,8
+Redwire,All,2022,34
+Momentus,NASA,2022,0
+Momentus,DoD,2022,0
+Momentus,All,2022,0
+Impulse Space,NASA,2022,0
+Impulse Space,DoD,2022,0
+Impulse Space,All,2022,0
+True Anomaly,NASA,2022,0
+True Anomaly,DoD,2022,0
+True Anomaly,All,2022,0
+SpaceX,NASA,2023,1569
+SpaceX,DoD,2023,856
+SpaceX,All,2023,2427
+Rocket Lab,NASA,2023,15
+Rocket Lab,DoD,2023,0
+Rocket Lab,All,2023,15
+Blue Origin,NASA,2023,441
+Blue Origin,DoD,2023,0
+Blue Origin,All,2023,441
+Firefly,NASA,2023,95
+Firefly,DoD,2023,1
+Firefly,All,2023,96
+Relativity,NASA,2023,-3
+Relativity,DoD,2023,1
+Relativity,All,2023,-2
+ABL,NASA,2023,0
+ABL,DoD,2023,0
+ABL,All,2023,0
+Virgin Orbit,NASA,2023,0
+Virgin Orbit,DoD,2023,0
+Virgin Orbit,All,2023,0
+Intuitive Machines,NASA,2023,49
+Intuitive Machines,DoD,2023,9
+Intuitive Machines,All,2023,59
+Astrobotic,NASA,2023,75
+Astrobotic,DoD,2023,2
+Astrobotic,All,2023,76
+Axiom,NASA,2023,75
+Axiom,DoD,2023,0
+Axiom,All,2023,75
+Sierra Space,NASA,2023,1
+Sierra Space,DoD,2023,23
+Sierra Space,All,2023,23
+Planet,NASA,2023,25
+Planet,DoD,2023,0
+Planet,All,2023,25
+Maxar,NASA,2023,13
+Maxar,DoD,2023,63
+Maxar,All,2023,85
+BlackSky,NASA,2023,0
+BlackSky,DoD,2023,2
+BlackSky,All,2023,2
+Spire,NASA,2023,8
+Spire,DoD,2023,0
+Spire,All,2023,11
+Capella,NASA,2023,2
+Capella,DoD,2023,0
+Capella,All,2023,2
+Umbra,NASA,2023,0
+Umbra,DoD,2023,1
+Umbra,All,2023,1
+HawkEye 360,NASA,2023,0
+HawkEye 360,DoD,2023,12
+HawkEye 360,All,2023,12
+AST SpaceMobile,NASA,2023,0
+AST SpaceMobile,DoD,2023,0
+AST SpaceMobile,All,2023,0
+Terran Orbital,NASA,2023,2
+Terran Orbital,DoD,2023,-1
+Terran Orbital,All,2023,0
+York Space,NASA,2023,0
+York Space,DoD,2023,6
+York Space,All,2023,6
+Redwire,NASA,2023,13
+Redwire,DoD,2023,6
+Redwire,All,2023,19
+Momentus,NASA,2023,0
+Momentus,DoD,2023,0
+Momentus,All,2023,0
+Impulse Space,NASA,2023,0
+Impulse Space,DoD,2023,0
+Impulse Space,All,2023,0
+True Anomaly,NASA,2023,0
+True Anomaly,DoD,2023,3
+True Anomaly,All,2023,3
+SpaceX,NASA,2024,1589
+SpaceX,DoD,2024,1811
+SpaceX,All,2024,3401
+Rocket Lab,NASA,2024,6
+Rocket Lab,DoD,2024,15
+Rocket Lab,All,2024,21
+Blue Origin,NASA,2024,509
+Blue Origin,DoD,2024,11
+Blue Origin,All,2024,520
+Firefly,NASA,2024,42
+Firefly,DoD,2024,3
+Firefly,All,2024,45
+Relativity,NASA,2024,0
+Relativity,DoD,2024,9
+Relativity,All,2024,9
+ABL,NASA,2024,0
+ABL,DoD,2024,0
+ABL,All,2024,0
+Virgin Orbit,NASA,2024,0
+Virgin Orbit,DoD,2024,0
+Virgin Orbit,All,2024,0
+Intuitive Machines,NASA,2024,104
+Intuitive Machines,DoD,2024,0
+Intuitive Machines,All,2024,104
+Astrobotic,NASA,2024,8
+Astrobotic,DoD,2024,1
+Astrobotic,All,2024,9
+Axiom,NASA,2024,134
+Axiom,DoD,2024,0
+Axiom,All,2024,134
+Sierra Space,NASA,2024,7
+Sierra Space,DoD,2024,17
+Sierra Space,All,2024,24
+Planet,NASA,2024,0
+Planet,DoD,2024,7
+Planet,All,2024,7
+Maxar,NASA,2024,23
+Maxar,DoD,2024,23
+Maxar,All,2024,52
+BlackSky,NASA,2024,0
+BlackSky,DoD,2024,5
+BlackSky,All,2024,5
+Spire,NASA,2024,11
+Spire,DoD,2024,14
+Spire,All,2024,34
+Capella,NASA,2024,0
+Capella,DoD,2024,10
+Capella,All,2024,10
+Umbra,NASA,2024,3
+Umbra,DoD,2024,0
+Umbra,All,2024,3
+HawkEye 360,NASA,2024,0
+HawkEye 360,DoD,2024,10
+HawkEye 360,All,2024,10
+AST SpaceMobile,NASA,2024,0
+AST SpaceMobile,DoD,2024,0
+AST SpaceMobile,All,2024,0
+Terran Orbital,NASA,2024,0
+Terran Orbital,DoD,2024,0
+Terran Orbital,All,2024,0
+York Space,NASA,2024,0
+York Space,DoD,2024,3
+York Space,All,2024,3
+Redwire,NASA,2024,6
+Redwire,DoD,2024,3
+Redwire,All,2024,9
+Momentus,NASA,2024,0
+Momentus,DoD,2024,0
+Momentus,All,2024,0
+Impulse Space,NASA,2024,0
+Impulse Space,DoD,2024,3
+Impulse Space,All,2024,3
+True Anomaly,NASA,2024,0
+True Anomaly,DoD,2024,2
+True Anomaly,All,2024,2
+SpaceX,NASA,2025,1349
+SpaceX,DoD,2025,1653
+SpaceX,All,2025,3010
+Rocket Lab,NASA,2025,14
+Rocket Lab,DoD,2025,5
+Rocket Lab,All,2025,19
+Blue Origin,NASA,2025,835
+Blue Origin,DoD,2025,101
+Blue Origin,All,2025,936
+Firefly,NASA,2025,111
+Firefly,DoD,2025,20
+Firefly,All,2025,131
+Relativity,NASA,2025,0
+Relativity,DoD,2025,0
+Relativity,All,2025,0
+ABL,NASA,2025,0
+ABL,DoD,2025,0
+ABL,All,2025,0
+Virgin Orbit,NASA,2025,0
+Virgin Orbit,DoD,2025,0
+Virgin Orbit,All,2025,0
+Intuitive Machines,NASA,2025,19
+Intuitive Machines,DoD,2025,8
+Intuitive Machines,All,2025,28
+Astrobotic,NASA,2025,25
+Astrobotic,DoD,2025,7
+Astrobotic,All,2025,32
+Axiom,NASA,2025,131
+Axiom,DoD,2025,0
+Axiom,All,2025,131
+Sierra Space,NASA,2025,11
+Sierra Space,DoD,2025,0
+Sierra Space,All,2025,11
+Planet,NASA,2025,33
+Planet,DoD,2025,16
+Planet,All,2025,50
+Maxar,NASA,2025,0
+Maxar,DoD,2025,18
+Maxar,All,2025,19
+BlackSky,NASA,2025,0
+BlackSky,DoD,2025,5
+BlackSky,All,2025,5
+Spire,NASA,2025,1
+Spire,DoD,2025,0
+Spire,All,2025,16
+Capella,NASA,2025,1
+Capella,DoD,2025,0
+Capella,All,2025,1
+Umbra,NASA,2025,1
+Umbra,DoD,2025,5
+Umbra,All,2025,6
+HawkEye 360,NASA,2025,0
+HawkEye 360,DoD,2025,6
+HawkEye 360,All,2025,6
+AST SpaceMobile,NASA,2025,0
+AST SpaceMobile,DoD,2025,0
+AST SpaceMobile,All,2025,0
+Terran Orbital,NASA,2025,13
+Terran Orbital,DoD,2025,0
+Terran Orbital,All,2025,13
+York Space,NASA,2025,0
+York Space,DoD,2025,6
+York Space,All,2025,6
+Redwire,NASA,2025,7
+Redwire,DoD,2025,2
+Redwire,All,2025,9
+Momentus,NASA,2025,8
+Momentus,DoD,2025,2
+Momentus,All,2025,10
+Impulse Space,NASA,2025,0
+Impulse Space,DoD,2025,37
+Impulse Space,All,2025,37
+True Anomaly,NASA,2025,0
+True Anomaly,DoD,2025,0
+True Anomaly,All,2025,0
+SpaceX,NASA,2026,716
+SpaceX,DoD,2026,2231
+SpaceX,All,2026,2958
+Rocket Lab,NASA,2026,20
+Rocket Lab,DoD,2026,112
+Rocket Lab,All,2026,132
+Blue Origin,NASA,2026,1314
+Blue Origin,DoD,2026,287
+Blue Origin,All,2026,1601
+Firefly,NASA,2026,174
+Firefly,DoD,2026,0
+Firefly,All,2026,174
+Relativity,NASA,2026,0
+Relativity,DoD,2026,0
+Relativity,All,2026,0
+ABL,NASA,2026,0
+ABL,DoD,2026,0
+ABL,All,2026,0
+Virgin Orbit,NASA,2026,0
+Virgin Orbit,DoD,2026,0
+Virgin Orbit,All,2026,0
+Intuitive Machines,NASA,2026,104
+Intuitive Machines,DoD,2026,0
+Intuitive Machines,All,2026,104
+Astrobotic,NASA,2026,72
+Astrobotic,DoD,2026,0
+Astrobotic,All,2026,72
+Axiom,NASA,2026,213
+Axiom,DoD,2026,0
+Axiom,All,2026,213
+Sierra Space,NASA,2026,11
+Sierra Space,DoD,2026,0
+Sierra Space,All,2026,11
+Planet,NASA,2026,10
+Planet,DoD,2026,8
+Planet,All,2026,17
+Maxar,NASA,2026,1
+Maxar,DoD,2026,12
+Maxar,All,2026,12
+BlackSky,NASA,2026,0
+BlackSky,DoD,2026,6
+BlackSky,All,2026,6
+Spire,NASA,2026,0
+Spire,DoD,2026,1
+Spire,All,2026,24
+Capella,NASA,2026,1
+Capella,DoD,2026,0
+Capella,All,2026,1
+Umbra,NASA,2026,2
+Umbra,DoD,2026,1
+Umbra,All,2026,2
+HawkEye 360,NASA,2026,0
+HawkEye 360,DoD,2026,23
+HawkEye 360,All,2026,23
+AST SpaceMobile,NASA,2026,0
+AST SpaceMobile,DoD,2026,0
+AST SpaceMobile,All,2026,0
+Terran Orbital,NASA,2026,1
+Terran Orbital,DoD,2026,0
+Terran Orbital,All,2026,1
+York Space,NASA,2026,0
+York Space,DoD,2026,3
+York Space,All,2026,3
+Redwire,NASA,2026,2
+Redwire,DoD,2026,35
+Redwire,All,2026,37
+Momentus,NASA,2026,2
+Momentus,DoD,2026,0
+Momentus,All,2026,2
+Impulse Space,NASA,2026,14
+Impulse Space,DoD,2026,9
+Impulse Space,All,2026,23
+True Anomaly,NASA,2026,0
+True Anomaly,DoD,2026,0
+True Anomaly,All,2026,0

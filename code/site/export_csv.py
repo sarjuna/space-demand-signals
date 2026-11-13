@@ -129,6 +129,10 @@ save(ul.rename(columns={"n": "launches", "fail": "launch_failures", "spx": "laun
 up = _up(); up.index = [str(p) for p in up.index]; up.index.name = "month"
 save(up.rename(columns={"starlink": "sats_starlink", "com": "sats_other_commercial", "gov": "sats_government", "oth": "sats_other"}), "us_satellites_monthly.csv")
 save(pd.DataFrame({"fiscal_year": list(_faa), "faa_licensed_operations": list(_faa.values())}), "us_faa_licensed_operations.csv", index=False)
+from load_us import contracts as _contracts
+_ct = _contracts().melt(id_vars=["firm", "agency"], var_name="fiscal_year", value_name="obligations_usd_m")
+_ct["fiscal_year"] = _ct.fiscal_year.str[2:].astype(int)
+save(_ct, "us_federal_contracts.csv", index=False)
 def wiki_raw(path, name):
     cols = {}
     for l in open(path):
