@@ -1,0 +1,467 @@
+{
+"CHN": [
+"CHN",
+"156",
+"China"
+],
+"USA": [
+"USA",
+"840",
+"United States"
+],
+"D": [
+"DEU",
+"276",
+"Germany"
+],
+"J": [
+"JPN",
+"392",
+"Japan"
+],
+"F": [
+"FRA",
+"250",
+"France"
+],
+"KOR": [
+"KOR",
+"410",
+"Korea, Republic of"
+],
+"IND": [
+"IND",
+"356",
+"India"
+],
+"G": [
+"GBR",
+"826",
+"United Kingdom"
+],
+"I": [
+"ITA",
+"380",
+"Italy"
+],
+"E": [
+"ESP",
+"724",
+"Spain"
+],
+"CAN": [
+"CAN",
+"124",
+"Canada"
+],
+"RUS": [
+"RUS",
+"643",
+"Russian Federation"
+],
+"UAE": [
+"ARE",
+"784",
+"United Arab Emirates"
+],
+"NOR": [
+"NOR",
+"578",
+"Norway"
+],
+"POL": [
+"POL",
+"616",
+"Poland"
+],
+"TUR": [
+"TUR",
+"792",
+"Türkiye"
+],
+"RRW": [
+"RWA",
+"646",
+"Rwanda"
+],
+"B": [
+"BRA",
+"076",
+"Brazil"
+],
+"FIN": [
+"FIN",
+"246",
+"Finland"
+],
+"AUS": [
+"AUS",
+"036",
+"Australia"
+],
+"HOL": [
+"NLD",
+"528",
+"Netherlands"
+],
+"ARG": [
+"ARG",
+"032",
+"Argentina"
+],
+"THA": [
+"THA",
+"764",
+"Thailand"
+],
+"GRC": [
+"GRC",
+"300",
+"Greece"
+],
+"LUX": [
+"LUX",
+"442",
+"Luxembourg"
+],
+"ISR": [
+"ISR",
+"376",
+"Israel"
+],
+"S": [
+"SWE",
+"752",
+"Sweden"
+],
+"CZE": [
+"CZE",
+"203",
+"Czechia"
+],
+"EGY": [
+"EGY",
+"818",
+"Egypt"
+],
+"VTN": [
+"VNM",
+"704",
+"Viet Nam"
+],
+"DNK": [
+"DNK",
+"208",
+"Denmark"
+],
+"BEL": [
+"BEL",
+"056",
+"Belgium"
+],
+"SNG": [
+"SGP",
+"702",
+"Singapore"
+],
+"INS": [
+"IDN",
+"360",
+"Indonesia"
+],
+"SUI": [
+"CHE",
+"756",
+"Switzerland"
+],
+"PHL": [
+"PHL",
+"608",
+"Philippines"
+],
+"PAK": [
+"PAK",
+"586",
+"Pakistan"
+],
+"POR": [
+"PRT",
+"620",
+"Portugal"
+],
+"HNG": [
+"HUN",
+"348",
+"Hungary"
+],
+"BUL": [
+"BGR",
+"100",
+"Bulgaria"
+],
+"LTU": [
+"LTU",
+"440",
+"Lithuania"
+],
+"IRN": [
+"IRN",
+"364",
+"Iran, Islamic Republic of"
+],
+"SLM": [
+"SLB",
+"090",
+"Solomon Islands"
+],
+"ARS": [
+"SAU",
+"682",
+"Saudi Arabia"
+],
+"KAZ": [
+"KAZ",
+"398",
+"Kazakhstan"
+],
+"MLA": [
+"MYS",
+"458",
+"Malaysia"
+],
+"MEX": [
+"MEX",
+"484",
+"Mexico"
+],
+"EST": [
+"EST",
+"233",
+"Estonia"
+],
+"PNG": [
+"PNG",
+"598",
+"Papua New Guinea"
+],
+"ALG": [
+"DZA",
+"012",
+"Algeria"
+],
+"BLR": [
+"BLR",
+"112",
+"Belarus"
+],
+"AUT": [
+"AUT",
+"040",
+"Austria"
+],
+"LIE": [
+"LIE",
+"438",
+"Liechtenstein"
+],
+"UKR": [
+"UKR",
+"804",
+"Ukraine"
+],
+"CHL": [
+"CHL",
+"152",
+"Chile"
+],
+"SVN": [
+"SVN",
+"705",
+"Slovenia"
+],
+"NZL": [
+"NZL",
+"554",
+"New Zealand"
+],
+"DJI": [
+"DJI",
+"262",
+"Djibouti"
+],
+"ROU": [
+"ROU",
+"642",
+"Romania"
+],
+"MRC": [
+"MAR",
+"504",
+"Morocco"
+],
+"AFS": [
+"ZAF",
+"710",
+"South Africa"
+],
+"MNG": [
+"MNG",
+"496",
+"Mongolia"
+],
+"VEN": [
+"VEN",
+"862",
+"Venezuela, Bolivarian Republic of"
+],
+"BRM": [
+"MMR",
+"104",
+"Myanmar"
+],
+"EQA": [
+"ECU",
+"218",
+"Ecuador"
+],
+"CLM": [
+"COL",
+"170",
+"Colombia"
+],
+"ARM": [
+"ARM",
+"051",
+"Armenia"
+],
+"HRV": [
+"HRV",
+"191",
+"Croatia"
+],
+"OMA": [
+"OMN",
+"512",
+"Oman"
+],
+"TZA": [
+"TZA",
+"834",
+"Tanzania, United Republic of"
+],
+"SVK": [
+"SVK",
+"703",
+"Slovakia"
+],
+"LVA": [
+"LVA",
+"428",
+"Latvia"
+],
+"SDN": [
+"SDN",
+"729",
+"Sudan"
+],
+"ETH": [
+"ETH",
+"231",
+"Ethiopia"
+],
+"MDA": [
+"MDA",
+"498",
+"Moldova, Republic of"
+],
+"PRU": [
+"PER",
+"604",
+"Peru"
+],
+"UGA": [
+"UGA",
+"800",
+"Uganda"
+],
+"BTN": [
+"BTN",
+"064",
+"Bhutan"
+],
+"BFA": [
+"BFA",
+"854",
+"Burkina Faso"
+],
+"MCO": [
+"MCO",
+"492",
+"Monaco"
+],
+"KWT": [
+"KWT",
+"414",
+"Kuwait"
+],
+"KEN": [
+"KEN",
+"404",
+"Kenya"
+],
+"NIG": [
+"NGA",
+"566",
+"Nigeria"
+],
+"SEN": [
+"SEN",
+"686",
+"Senegal"
+],
+"TON": [
+"TON",
+"776",
+"Tonga"
+],
+"BOT": [
+"BWA",
+"072",
+"Botswana"
+],
+"BHR": [
+"BHR",
+"048",
+"Bahrain"
+],
+"NPL": [
+"NPL",
+"524",
+"Nepal"
+],
+"AZE": [
+"AZE",
+"031",
+"Azerbaijan"
+],
+"HND": [
+"HND",
+"340",
+"Honduras"
+],
+"PRG": [
+"PRY",
+"600",
+"Paraguay"
+],
+"MNE": [
+"MNE",
+"499",
+"Montenegro"
+],
+"TUN": [
+"TUN",
+"788",
+"Tunisia"
+]
+}

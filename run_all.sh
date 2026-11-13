@@ -9,6 +9,7 @@ echo "India: page data";           python3 code/india/make_dash.py
 echo "US: analysis (no Wikipedia)"; NO_WIKI=1 python3 code/us/analyse_us.py > /dev/null
 echo "US: analysis";               python3 code/us/analyse_us.py > /dev/null
 echo "US: page data";              python3 code/us/make_page_data.py
+echo "Global: ITU LEO filings";   python3 code/global/analyse_global.py > /dev/null
 echo "Quantum: analysis";          python3 code/quantum/analyse_quantum.py > /dev/null
 echo "Data: CSV exports";          python3 code/site/export_csv.py > /dev/null
 echo "Quantum: CSV exports";       python3 code/quantum/export_quantum_csv.py > /dev/null

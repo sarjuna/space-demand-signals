@@ -13,7 +13,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">')
 LOGO = ('<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.2" fill="var(--accent)"/>'
         '<ellipse cx="10" cy="10" rx="8.6" ry="3.6" fill="none" stroke="var(--ink-2)" stroke-width="1.3" transform="rotate(-28 10 10)"/></svg>')
-PAGES = [("index.html", "Overview"), ("india.html", "India"), ("us.html", "United States"), ("quantum.html", "Quantum (comparison)"), ("methods.html", "Methods &amp; data")]
+PAGES = [("index.html", "Overview"), ("india.html", "India"), ("us.html", "United States"), ("global.html", "Global filings"), ("quantum.html", "Quantum (comparison)"), ("methods.html", "Methods &amp; data")]
 
 
 def nav(cur):
@@ -85,6 +85,11 @@ Qd["space"] = dict(flag=U["stats"]["ols_PAI"]["flagship"], nai_trend=U["stats"][
                    ct_spacex_total=next(v for f, v in _ct["top"] if f == "SpaceX"), ipo_c=ipo["b_c01"], ipo_t=ipo["b_t01"])
 q_scripts = f'{data_tag(Qd)}\n{CHART}\n<script src="assets/charts.js"></script>\n<script>\n{open(SITE_SRC / "quantum_script.js").read()}\n</script>'
 
+# ---------- Global ITU LEO filings ----------
+G = json.load(open(ROOT / "data/derived/global/global.json"))
+D3 = '<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>\n<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson-client/3.1.0/topojson-client.min.js"></script>'
+g_scripts = f'{data_tag(G)}\n{CHART}\n{D3}\n<script src="assets/charts.js"></script>\n<script>\n{open(SITE_SRC / "global_script.js").read()}\n</script>'
+
 RB = {c: O["idx"][c]["robustness"] for c in ("india", "us")}
 methods_body = open(SITE_SRC / "methods_body.html").read()
 for k, v in {"IN_G": f'r = {RB["india"]["r_google"]:.2f}', "US_G": f'r = {RB["us"]["r_google"]:.2f}', "IN_W": f'r = {RB["india"]["r_wiki"]:.2f}',
@@ -96,6 +101,8 @@ DEF = {
                    open(SITE_SRC / "overview_body.html").read(), ov_scripts),
     "india.html": ("India · Space Demand Signals", "India: does public, investor and parliamentary discourse track launches, commercial satellites and private capital?", in_body, in_scripts),
     "us.html": ("United States · Space Demand Signals", "United States: do attention, sentiment, NewSpace stock prices and federal policy track launches, satellites and licensed operations?", us_body, us_scripts),
+    "global.html": ("Global LEO filings · Space Demand Signals", "Map of every active ITU filing for low Earth orbit satellite systems, by filing country: filings, networks and satellites.",
+                    open(SITE_SRC / "global_body.html").read(), g_scripts),
     "quantum.html": ("Quantum computing · Space Demand Signals", "Comparison case: does public attention to quantum computing track its commercial build-out, and do the space-sector patterns recur?",
                      open(SITE_SRC / "quantum_body.html").read(), q_scripts),
     "methods.html": ("Methods · Space Demand Signals", "Sources, methods, verification and limitations for the India and US space demand-signal dashboards.",

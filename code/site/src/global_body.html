@@ -1,0 +1,71 @@
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Space Economy Initiative · Centre for India and Global Business · Working dashboard · Global</div>
+  <h1>Global LEO filings</h1>
+  <p class="lede">Before a country's operators can use radio frequencies for a satellite system, its national administration must file the system with the International Telecommunication Union (ITU). These filings are the earliest public record of planned satellites. This page maps every active ITU filing for a non-geostationary system with orbits in low Earth orbit (apogee up to 2,000 km), by the country that filed it.</p>
+  <div class="meta">
+    <span>Data: <b>ITU Space Networks System</b>, up to <b>BR IFIC No 3084 (10 Nov 2026)</b></span>
+    <span>Pulled <b>13 Nov 2026</b></span>
+    <span>Scope: <b>active non-geostationary filings with a LEO orbit</b></span>
+  </div>
+</header>
+
+<div class="findings" id="findings"></div>
+
+<section class="rq" id="map">
+  <div class="rq-head"><div class="rq-num">MAP</div><h2>Who is filing for low Earth orbit?</h2>
+  <p>Each country is shaded by its number of active LEO filings at the ITU (log scale). Switch to see distinct satellite networks, or the number of satellites in those filings. Hover or tap a country for details.</p></div>
+  <div class="panel">
+    <div class="controls"><div class="seg" role="group" aria-label="Map measure">
+      <button id="m-f" aria-pressed="true">Filings</button><button id="m-n" aria-pressed="false">Networks</button><button id="m-s" aria-pressed="false">Satellites in filings</button></div></div>
+    <div id="mapbox" style="position:relative;width:100%"><svg id="worldmap" role="img" aria-label="World map of ITU LEO satellite filings by country" style="width:100%;height:auto;display:block"></svg>
+      <div id="tip" style="position:absolute;pointer-events:none;display:none;background:var(--surface);border:1px solid var(--axis);border-radius:6px;padding:8px 10px;font-size:12.5px;box-shadow:0 2px 8px rgba(0,0,0,.12);max-width:260px"></div></div>
+    <div id="maplegend" style="margin-top:8px"></div>
+    <div class="statline" id="sl-map"></div>
+  </div>
+</section>
+
+<section class="rq" id="rank">
+  <div class="rq-head"><div class="rq-num">RANK</div><h2>The leading filers and the stage they have reached</h2>
+  <p>A filing passes through stages. Advance publication (API) announces a planned system; a coordination request (CR/C) starts negotiations with other operators and fixes the system's priority date; notification asks for the frequencies to be recorded in the Master International Frequency Register. Each bar counts filings by their current notice type.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Top 20 countries by active LEO filings</h3><div class="sub">Filings by notice type. The notifying administration is the country that filed.</div><div class="legend" id="lg-rank"></div>
+      <div class="chartbox tall"><canvas id="c-rank"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read1"></div></div>
+  </div>
+</section>
+
+<section class="rq" id="time">
+  <div class="rq-head"><div class="rq-num">TIME</div><h2>When were the filings received?</h2>
+  <p>Active LEO filings by the year the ITU received the notice. Older systems that have since been withdrawn or suppressed are not counted, so earlier years are understated. 2026 runs to 10 November.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Active LEO filings by year of receipt</h3><div class="sub">Stacked by notice type.</div><div class="legend" id="lg-yr"></div>
+      <div class="chartbox"><canvas id="c-yr"></canvas></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read2"></div></div>
+  </div>
+</section>
+
+<section class="rq" id="paper">
+  <div class="rq-head"><div class="rq-num">SCALE</div><h2>Millions of satellites on paper</h2>
+  <p>The largest single filings, by the number of satellites they describe. A network's count is the largest number in any of its notices.</p></div>
+  <div class="grid2">
+    <div class="panel"><h3>The 20 largest LEO filings</h3><div id="t-top"></div></div>
+    <div class="panel read"><h3>Reading</h3><div id="read3"></div></div>
+  </div>
+</section>
+
+<section class="rq" id="all">
+  <div class="rq-head"><div class="rq-num">ALL</div><h2>Every filing country</h2><p>All 93 administrations with at least one active LEO filing. Download the full table on the Methods &amp; data page.</p></div>
+  <div class="tablewrap" style="max-height:520px;overflow:auto"><table id="t-all"><thead><tr><th>#</th><th>Country</th><th class="num">Filings</th><th class="num">API</th><th class="num">Coordination</th><th class="num">Notification</th><th class="num">Networks</th><th class="num">Satellites in filings</th><th class="num">Received 2023–26</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section class="rq" id="limits">
+  <div class="rq-head"><div class="rq-num">DATA</div><h2>How to read these numbers</h2><p>Raw aggregates are in data/raw/global; the query script is code/global/pull_itu_leo_filings.js.</p></div>
+  <div class="panel read"><div id="lim"></div></div>
+</section>
+
+<section class="rq"><div class="rq-head"><div class="rq-num">SRC</div><h2>Sources</h2></div>
+<ol class="sources" id="src"></ol></section>
+
+<footer>Dr Arjuna Sathiaseelan · Space Economy Initiative, Centre for India and Global Business, Cambridge Judge Business School · Data pulled on 13 Nov 2026</footer>
+</div>
