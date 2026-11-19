@@ -46,7 +46,8 @@ Every value in every raw file in `data/raw/` appears in these tables. `code/site
 | `us_launch_failures.csv` | 18 | Each failed US orbital launch, with GCAT launch code |
 | `us_wikipedia_views.csv` | 130 | Raw monthly user views for the 11 articles and total English Wikipedia |
 | `us_markets_monthly_2019_2026.csv` | 85 | Market series from 2019-10 |
-| `us_events.csv` | 14 | Event study: t0, members, CAR [0,+1] and [0,+5] in %, t-statistics, for the basket and UFO |
+| `us_events.csv` | 14 | Event study (market-adjusted, superseded on the site by `us_events_market_model.csv`): t0, members, CAR [0,+1] and [0,+5] in %, t-statistics, for the basket and UFO |
+| `us_events_market_model.csv` | 16 | Event study used on the site and in the working paper: market model estimated over days −120 to −11; CAR [0,+1], [0,+5] and pre-window, with t-statistics, leave-one-firm-out range and UFO |
 | `us_event_windows_daily.csv` | 63 | Daily basket abnormal returns, days −10 to +10, for the IFT-5, SpaceX IPO and Artemis II windows |
 | `us_congress_space_bills.csv` | 415 | Every space-indexed bill or resolution, 113th–119th Congress, with title and topic code |
 | `us_congress_totals.csv` | 7 | All bills vs space bills per Congress |
@@ -76,7 +77,8 @@ Every value in every raw file in `data/raw/` appears in these tables. `code/site
 | `india_nongov_payloads.csv` | 34 | Each non-government Indian satellite (academic and commercial), with launch ID |
 | `india_wikipedia_views.csv` | 136 | Raw monthly user views for the 13 articles and total English Wikipedia, from 2015-07 |
 | `india_markets_monthly.csv` | 130 | Basket and Nifty monthly log returns as pulled, months corrected for Yahoo's labelling; 2026-11 is a partial month not used in the analysis |
-| `india_events.csv` | 9 | Event study results |
+| `india_events.csv` | 9 | Event study results (market-adjusted, superseded on the site by `india_events_market_model.csv`) |
+| `india_events_market_model.csv` | 12 | Event study used on the site and in the working paper: market model estimated over days −120 to −11, with alternative day-0 timings |
 | `india_events_robustness_5firm.csv` | 9 | Same events with the basket limited to the five most space-exposed firms |
 | `india_event_window_chandrayaan3_daily.csv` | 21 | Daily abnormal returns, days −10 to +10, around the Chandrayaan-3 landing |
 | `india_funding_reports.csv` | 20 | Published space start-up funding figures by source and publication date, plus IN-SPACe application and authorisation counts |

@@ -6,22 +6,22 @@ kv('kv-us',[['Orbital launches 2016–25',O.us_total],['Listed NewSpace firms','
 
 document.getElementById('verdict-text').innerHTML=`
 <p><b>Attention is a poor proxy for build-out in both countries.</b> In India launch counts explain ${O.in_r2}% of monthly public attention; in the US attention rises with launches across the decade but does not move with them month to month. Wikipedia reading of the national space agency (ISRO, NASA) has declined in both countries, whether launches stalled (India) or soared (US). In both, attention spikes on a handful of spectacles (Chandrayaan-3; Crew Dragon, Artemis and the SpaceX listing).</p>
-<p><b>Markets react to few events.</b> Indian listed suppliers show no clear reaction to the Chandrayaan-3 landing once it is timed correctly (+2.9% over two days, t = 1.5; the landing came after the market closed), and India's NewSpace firms are not listed. In the US the sharpest move came when SpaceX itself listed: other NewSpace stocks fell ${O.ipo_c}% against the S&amp;P 500 on SpaceX's first trading days (t = ${O.ipo_t}). US price moves are followed by searches for the companies, not the other way round.</p>
+<p><b>Markets react to few events.</b> Indian listed suppliers show no clear reaction to the Chandrayaan-3 landing once it is timed correctly (+2.1% over two days, t = 1.1; the landing came after the market closed), and India's NewSpace firms are not listed. In the US the sharpest move came when SpaceX itself listed: other NewSpace stocks fell ${O.ipo_c}% against the S&amp;P 500 on SpaceX's first trading days (t = ${O.ipo_t}). US price moves are followed by searches for the companies, not the other way round.</p>
 <p><b>Policy discourse moves first.</b> India's parliamentary questions turned towards NewSpace right after the 2020 reforms (7% → 26% of space questions). US law turned commercial a decade earlier, in 2015, before the launch boom; US regulators have scaled with it since.</p>
 <p><b>Capital is the weakest link.</b> India has no reliable private-investment series: tracker figures for the same year differ 2.6-fold. The US has market prices and SEC filings, but no official US-only series either; the most-cited tracker reports global totals.</p>`;
 
 const T=[
  ['Does public attention track launch cadence?',
-  ['no','No','Launches explain 2% of monthly attention (R² 0.02); 66% once three flagship missions are added. Annual ρ = −0.04.'],
-  ['mixed','Trend only','Annual ρ = 0.82 for NewSpace attention, but launches add nothing month to month once the shared trend is removed (t = −1.42). Flagship months add +2.1 SD to public attention. NASA\'s share of Wikipedia reading fell 30% as launches rose eightfold.']],
+  ['no','No','Launches, a trend and calendar months explain 16% of monthly attention; 70% once flagship missions are added. A launch raises attention by about 0.2 to 0.4 SD in its month. Annual ρ = −0.04.'],
+  ['mixed','Trend only','Annual ρ = 0.82 for NewSpace attention, but launches add nothing month to month (launch-month response at most 0.06 SD). Flagship months add 3.7 SD to public attention. NASA\'s share of Wikipedia reading fell 30% as launches rose eightfold.']],
  ['Do investors price space events?',
-  ['no','No clear reaction','Chandrayaan-3 landing: +2.9% vs the Nifty over two days from the first session after the landing (t = 1.5). Space Policy 2023: +7.0% over six days, not robust. Launch failures: no reaction.'],
-  ['yes','Yes, selectively','SpaceX IPO: peers −18.3% over two days (t = −2.5). Artemis II: UFO ETF +6.1% (t = 2.1), borderline. Starship tests, lunar landings and the 2025 executive order: no significant reaction.']],
+  ['no','No clear reaction','Chandrayaan-3 landing: +2.1% against the market over two days from the first session after the landing (t = 1.1). Space Policy 2023: +6.7% over six days (t = 2.0), borderline. Launch failures: no reaction.'],
+  ['yes','Yes, selectively','SpaceX listing: peers −24.1% over two days (t = −3.5), the only event that survives correction for multiple testing. Artemis II: UFO ETF +5.3% (t = 1.9), not significant. Starship tests, lunar landings and the 2025 executive order: no significant reaction.']],
  ['Does attention lead prices?',
   ['mixed','No lead; prices lead','NewSpace attention does not predict basket returns (p ≥ 0.43). In a VAR, share-price rises are followed by more NewSpace attention about three months later (p = 0.002; 3 of 5 versions). The listed basket is mainly defence and aerospace suppliers.'],
   ['no','Prices lead searches','Basket returns Granger-cause Google searches for space firms at lags 1–3 (p ≈ 0.02), but not Wikipedia reading or Hacker News volume. No attention measure predicts returns, and in a VAR neither direction is robust.']],
  ['Does policy activity lead or follow build-out?',
-  ['yes','Leads','NewSpace share of Lok Sabha space questions: 6.9% before the 2020 reforms, 26.4% after (p < 10⁻⁶), ahead of private launches.'],
+  ['yes','Leads','NewSpace share of Lok Sabha space questions: 6.9% before the June 2020 reforms, 26.4% in September 2020–2023 (p < 10⁻⁷); 7.1% in sessions before 2020 and 25.7% in 2021–2025. Ahead of private launches.'],
   ['mixed','Led early','Commercial legislating came early, in 2015–16. Commercial share of space bills 6.1% → 11.0% (not significant). FCC space rulemaking tracks launch cadence (ρ = 0.88).']],
  ['What does sentiment say?',
   ['no','Too thin to measure','Only 286 Hacker News stories in a decade; GDELT news tone available for three months only.'],
@@ -53,6 +53,9 @@ const both=c=>c.q_gap; const qs=X.us.quarters;
 let since=null;{const gi=X.india.q_gap,gu=X.us.q_gap;let k=qs.length-1;while(k>=0&&gi[k]>0&&gu[k]>0)k--;for(let j=k;j>=0;j--){if(gi[j]>0&&gu[j]>0){since=qs[j];break}}}
 const TH=5; // gap beyond ±5 points (half a standard deviation) counts as clearly ahead
 const ST=c=>{const g=L[c].gap;return g>TH?'ahead':g<-TH?'behind':'level'};
+// India's label is not robust: across seven reasonable constructions of the index its 2026 Q3 gap ranges from -8.4 to +15.2 points
+// (Sathiaseelan, Attention without Capacity?, Table 10). Only the US label holds under every construction.
+const ROBUST={india:false,us:true}; const RANGE={india:'−8.4 to +15.2'};
 const prevG=c=>X[c].q_gap[X[c].q_gap.length-2];
 const phrase=c=>{const st=ST(c),n=NM[c].replace('United States','the United States');
  if(st==='ahead')return `has run well ahead of the build-out in ${n}`;
@@ -62,7 +65,7 @@ const boMax=c=>Math.max(...X[c].q_bo);
 const boMove=(c,unit='points')=>{const d=L[c].d_buildout;return Math.abs(d)<1?`was roughly flat (${sg(d)} ${unit})`:(d>0?'rose ':'eased ')+Math.abs(d).toFixed(1)+' '+unit};
 const order=ST('us')==='ahead'?['us','india']:['india','us'];
 document.getElementById('hl-eyebrow').textContent=`Space Signals Index · ${qlab(L.us.quarter)}`;
-document.getElementById('headline').textContent=`Attention to space ${phrase(order[0])}, and ${phrase(order[1]).replace(/^(has|is) /,'$1 ').replace(/ the build-out in /,' it in ')}.`;
+document.getElementById('headline').textContent=ROBUST.india?`Attention to space ${phrase(order[0])}, and ${phrase(order[1]).replace(/^(has|is) /,'$1 ').replace(/ the build-out in /,' it in ')}.`:`Attention to space ${phrase('us')}; in India the comparison is too close to call.`;
 const usMax=Math.abs(Math.max(...X.us.q_att)-L.us.attention)<0.06;
 const widest=c=>{const g=X[c].q_gap,k=g.length-1;for(let j=k-1;j>=0;j--)if(g[j]>=g[k])return X[c].quarters[j].slice(0,4);return null};
 const wu=widest('us');
@@ -74,9 +77,9 @@ document.getElementById('prov').textContent=`${qlab(L.us.quarter)} values are pr
 document.getElementById('idx-cards').innerHTML=['india','us'].map(c=>{const l=L[c],nr=negRun(c);
  const cell=(lab,v,d,extra='')=>`<div><span class="lab">${lab}</span><span class="val">${typeof v==='number'?v.toFixed(1):v}</span><span class="chg">${d}${extra}</span></div>`;
  const note=`Build-out ${boMove(c)} in the quarter.`;
- return `<div class="idx"><div class="idx-top"><h3>${NM[c]}</h3><span class="tag ${{ahead:'t-mixed',level:'t-level',behind:'t-yes'}[ST(c)]}"><i></i>${{ahead:'Attention ahead',level:'In line',behind:'Build-out ahead'}[ST(c)]}</span></div>
+ return `<div class="idx"><div class="idx-top"><h3>${NM[c]}</h3>${ROBUST[c]?`<span class="tag ${{ahead:'t-mixed',level:'t-level',behind:'t-yes'}[ST(c)]}"><i></i>${{ahead:'Attention ahead',level:'In line',behind:'Build-out ahead'}[ST(c)]}</span>`:`<span class="tag t-level"><i></i>Too close to call</span>`}</div>
  <div class="idx-nums">${cell('Attention',l.attention,`${sg(l.d_attention)} vs ${qlab(l.prev_quarter)}`)}${cell('Build-out',l.buildout,`${sg(l.d_buildout)} vs ${qlab(l.prev_quarter)}`)}${cell('Gap',sg(l.gap),`${sg(l.d_gap)} vs ${qlab(l.prev_quarter)}`)}</div>
- <p>${note}${posRun(c)>1?` Attention has been clearly ahead (by more than ${TH} points) for ${posRun(c)} quarters, since ${qlab(X[c].quarters[X[c].quarters.length-posRun(c)])}.`:''}${nr?` Before this, build-out had been clearly ahead (by more than ${TH} points) for ${nr[0]} quarter${nr[0]>1?'s':''} (${qlab(nr[1])}${nr[0]>1?` to ${qlab(nr[2])}`:''}).`:''}</p></div>`}).join('');
+ <p>${ROBUST[c]?'':`The label depends on how the index is built: across seven reasonable versions, the ${qlab(l.quarter)} gap ranges from ${RANGE[c]} points, so it can read behind, in line or ahead. `}${note}${posRun(c)>1?` Attention has been clearly ahead (by more than ${TH} points) for ${posRun(c)} quarters, since ${qlab(X[c].quarters[X[c].quarters.length-posRun(c)])}.`:''}${nr?` Before this, build-out had been clearly ahead (by more than ${TH} points) for ${nr[0]} quarter${nr[0]>1?'s':''} (${qlab(nr[1])}${nr[0]>1?` to ${qlab(nr[2])}`:''}).`:''}</p></div>`}).join('');
 // chart
 const evPlugin={id:'ev',afterDatasetsDraw(ch,_,o){const {ctx,chartArea:a,scales:{x}}=ch;const c=C();ctx.save();ctx.font="11px 'IBM Plex Mono', monospace";
  (o.ev||[]).forEach(([m,t],i)=>{const k=ch.data.labels.indexOf(m);if(k<0)return;const px=x.getPixelForValue(k);ctx.strokeStyle=c.muted;ctx.setLineDash([3,3]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(px,a.top+14+(i%2)*14);ctx.lineTo(px,a.bottom);ctx.stroke();ctx.setLineDash([]);
@@ -100,11 +103,11 @@ onTheme(drawIdx);
 const AUD=[
  ['For investors','Separate spectacle from substance.',[
   `<b>Watch the gap.</b> US attention is ${Math.abs(L.us.gap).toFixed(1)} points ahead of build-out; in India the two are ${ST('india')==='level'?'level':sg(L.india.gap)+' points apart'}. The gap has swung both ways in both countries since 2016, so read it as a temperature check, not a forecast. India's gap is small, and its label changes under reasonable alternative ways of building the index, so treat it as uncertain.`,
-  `<b>Markets rarely price single events.</b> Timed from the first session after the landing, the Chandrayaan-3 result for Indian listed suppliers is +2.9% over two days (t = 1.5, not significant), and launch failures produced no significant move. The one large US reaction came when SpaceX itself listed.`,
+  `<b>Markets rarely price single events.</b> Timed from the first session after the landing, the Chandrayaan-3 result for Indian listed suppliers is +2.1% over two days (t = 1.1, not significant), and launch failures produced no significant move. The one large US reaction came when SpaceX itself listed.`,
   `<b>Attention does not lead prices.</b> Time-series (VAR) tests find no case in which attention reliably leads share prices. There is some evidence of the reverse (in India, price rises are followed by more attention about three months later), but it holds in only some model versions.`,
   `<b>Mind concentration.</b> SpaceX flew 94% of US launches in 2025, and India’s NewSpace firms are not listed.`]],
  ['For policymakers','Read public interest and private capital directly.',[
-  `<b>Reform moves the conversation first.</b> After India’s 2020 reforms, NewSpace questions in the Lok Sabha rose from 6.9% to 26.4% of space questions, ahead of private launches.`,
+  `<b>Reform moves the conversation first.</b> After India’s 2020 reforms, NewSpace questions in the Lok Sabha rose from 6.9% to 26.4% of space questions (September 2020–2023), ahead of private launches.`,
   `<b>More launches have not meant more attention.</b> The share of Wikipedia reading going to NASA fell 30% from 2016 to 2025 while US launches rose almost eightfold.`,
   `<b>Private capital is not measured.</b> Published figures for India’s 2021 start-up funding differ 2.6-fold, and the US has no official US-only series. An official investment series would be the biggest single data gain.`,
   `<b>A quarterly check.</b> The index shows whether public interest is keeping pace with programmes and reforms.`]],

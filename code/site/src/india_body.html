@@ -35,9 +35,9 @@
 <!-- RQ2 -->
 <section class="rq" id="rq2">
   <div class="rq-head"><div class="rq-num">RQ2</div><h2>Do investors react to space events, and does attention lead prices?</h2>
-  <p>Investor proxy: equal-weight basket of seven NSE-listed aerospace and defence suppliers (MTAR, Paras, Astra Microwave, Centum, Data Patterns, Apollo Micro, Azad Engineering), measured as return in excess of the Nifty 50. The first five have documented ISRO/space business; Apollo Micro and Azad are mainly defence and aerospace. Robustness: using only the five space-exposed firms, the Chandrayaan-3 two-day result is +3.5% (t = 1.8, not significant) and the Space Policy 2023 result weakens to t = 1.9. Defence news is a confound throughout.</p></div>
+  <p>Investor proxy: equal-weight basket of seven NSE-listed aerospace and defence suppliers (MTAR, Paras, Astra Microwave, Centum, Data Patterns, Apollo Micro, Azad Engineering), measured as return in excess of the Nifty 50. The first five have documented ISRO/space business; Apollo Micro and Azad are mainly defence and aerospace. Robustness: dropping any one firm leaves the Chandrayaan-3 two-day result between +1.3% and +3.0%. Defence news is a confound throughout.</p></div>
   <div class="grid2">
-    <div class="panel"><h3>Abnormal return around the Chandrayaan-3 landing</h3><div class="sub">Basket minus Nifty, daily, cumulative from day −10. Landing at 18:04 IST on 23 Aug 2023, after the 15:30 close, so day 0 is 24 Aug. Day −1 (23 Aug) is before the landing.</div>
+    <div class="panel"><h3>Abnormal return around the Chandrayaan-3 landing</h3><div class="sub">Basket minus Nifty (market-adjusted, for illustration; the table uses the market model), daily, cumulative from day −10. Landing at 18:04 IST on 23 Aug 2023, after the 15:30 close, so day 0 is 24 Aug. Day −1 (23 Aug) is before the landing.</div>
       <div class="chartbox"><canvas id="c-c3"></canvas></div></div>
     <div class="panel"><h3>Lead–lag: NewSpace attention vs basket</h3><div class="sub">Correlation of monthly ΔNAI at t with excess return at t+k. Positive k: attention leads prices. Filled bars: p &lt; 0.05 (uncorrected for 13 lags).</div>
       <div class="chartbox"><canvas id="c-xc"></canvas></div></div>
@@ -96,7 +96,7 @@
   <div class="panel read"><h3>Method notes</h3>
     <p><b>Indices.</b> Each component is log(1+x), z-scored over its own available months, then averaged; a month needs ≥4 PAI or ≥5 NAI components. Wikipedia views are divided by total English-Wikipedia user views to remove platform-wide trends. ISRO's article moved title in Jun 2023; both titles are summed.</p>
     <p><b>Attention regression.</b> OLS of monthly PAI on orbital launches, failures and a flagship-mission dummy (Chandrayaan-2 Jul–Sep 2019; Chandrayaan-3, Aditya-L1 and Gaganyaan TV-D1 Jul–Oct 2023), HAC standard errors (3 lags).</p>
-    <p><b>Event study.</b> Market-adjusted abnormal returns (basket minus Nifty 50, log), t = CAR / (σ<sub>AR</sub>·√L) with σ from days −120 to −11. t0 is the first trading day on or after the event.</p>
+    <p><b>Event study.</b> Market-model abnormal returns (basket against the Nifty 50, model estimated over days −120 to −11), t = CAR / (σ<sub>AR</sub>·√L). t0 is the first trading day on or after the event.</p>
     <p><b>Lead–lag.</b> Granger F-tests (lags 1–3) on stationary series (ADF p &lt; 0.01), Sep 2020–Oct 2026 for NAI (73 months) and Feb 2016–Oct 2026 for PAI (128 months). A permutation test (2,000 shuffles) checks the one significant PAI lag.</p>
     <p><b>Parliament topics.</b> Rule-based keyword classifier on question titles, first match wins in the order NewSpace → policy → sustainability/security → international → exploration → launch/infrastructure → applications → budget/workforce. Titles were read once to tune rules; a few remain borderline (for example "Space Programmes for Socio Economic Development" is counted as NewSpace).</p>
   </div>
